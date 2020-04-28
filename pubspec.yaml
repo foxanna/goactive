@@ -8,11 +8,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  get_it: ^4.0.2
+  injectable: ^0.3.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner:
   extra_pedantic: ^1.2.0
+  injectable_generator: ^0.3.4
 
 flutter:
   uses-material-design: true
