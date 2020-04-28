@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:goactive/feed_page.dart';
+import 'package:goactive/styles/theme.dart';
 
 class GoActiveApplication extends StatelessWidget {
   const GoActiveApplication({Key key}) : super(key: key);
@@ -7,10 +8,7 @@ class GoActiveApplication extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
+        theme: createTheme(),
         home: const FeedPage(),
       );
 }
