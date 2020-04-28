@@ -16,7 +16,9 @@ dev_dependencies:
     sdk: flutter
   build_runner:
   extra_pedantic: ^1.2.0
+  freezed: ^0.10.7
   injectable_generator: ^0.3.4
+  json_serializable: ^3.3.0
 
 flutter:
   uses-material-design: true
