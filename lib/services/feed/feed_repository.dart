@@ -28,7 +28,7 @@ class FeedRepository implements IFeedRepository {
       final feed = await _apiService.getFeed(
           lastActivityId: _feedBackup.isNotEmpty ? _feedBackup.last.id : null);
       _feedBackup.addAll(feed ?? <Activity>[]);
-      _feedController.sink.add(_feedBackup);
+      _feedController.sink.add(List.from(_feedBackup));
     } on Exception catch (e) {
       _feedController.sink.addError(e);
     }
