@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:goactive/feed_page.dart';
+import 'package:goactive/screens/feed/feed_page.dart';
 import 'package:goactive/styles/theme.dart';
 
 class GoActiveApplication extends StatelessWidget {
