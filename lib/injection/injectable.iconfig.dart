@@ -4,6 +4,10 @@
 // InjectableConfigGenerator
 // **************************************************************************
 
+import 'package:goactive/api/services/http/http_service.dart';
+import 'package:goactive/api/services/http/i_http_service.dart';
 import 'package:get_it/get_it.dart';
 
-void $initGetIt(GetIt g, {String environment}) {}
+void $initGetIt(GetIt g, {String environment}) {
+  g.registerLazySingleton<IHttpService>(() => HttpService());
+}
