@@ -8,8 +8,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cached_network_image: ^2.1.0+1
   get_it: ^4.0.2
   injectable: ^0.3.0
+  flutter_bloc: ^4.0.0
 
 dev_dependencies:
   flutter_test:
