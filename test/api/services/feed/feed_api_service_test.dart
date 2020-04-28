@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:goactive/api/services/feed/feed_service.dart';
+import 'package:goactive/api/services/feed/feed_api_service.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../../data_generator.dart';
@@ -15,10 +15,10 @@ void main() {
         .toList();
 
     final httpServiceMock = HttpServiceMock();
-    when(httpServiceMock.get(Uri(path: '/feed')))
+    when(httpServiceMock.get(Uri(path: '/feed', query: 'last=')))
         .thenAnswer((_) => Future.value(jsonEncode(expectedFeed)));
 
-    final feedService = FeedService(httpService: httpServiceMock);
+    final feedService = FeedApiService(httpService: httpServiceMock);
 
     // Act
     final feed = await feedService.getFeed();
