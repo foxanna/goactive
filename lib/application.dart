@@ -7,7 +7,7 @@ class GoActiveApplication extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Go Active',
         theme: createTheme(),
         home: const FeedPage(),
       );
