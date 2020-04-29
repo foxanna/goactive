@@ -26,3 +26,8 @@ Activity generateTestActivity(int id) => Activity(
       interested: id % 10,
       attending: id % 10,
     );
+
+List<Activity> generateTestActivities(int count, {int firstId = 0}) =>
+    Iterable<int>.generate(count, (x) => x + firstId)
+        .map((id) => generateTestActivity(id))
+        .toList();
