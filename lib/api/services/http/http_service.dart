@@ -15,6 +15,8 @@ class HttpService implements IHttpService {
     switch (uri.path) {
       case '/feed':
         return feedStubApiResponses[uri.queryParameters['last']];
+      case '/user':
+        return userStubApiResponse;
       default:
         throw ArgumentError();
     }
