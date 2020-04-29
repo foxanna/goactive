@@ -104,7 +104,7 @@ class FeedListTile extends StatelessWidget {
       child: Row(
         children: [
           Text(
-            DateFormat.yMd().add_Hm().format(activity.date.toLocal()),
+            dateFormat.format(activity.date.toLocal()),
             style: textStyle,
           ),
           const Spacer(),
