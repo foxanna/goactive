@@ -28,6 +28,7 @@ flutter test
 
 * Loading events list
 * Pagination loading
+* Portrait/landscape mode
 * Interested/Attending flags
 * Creating new events
 * Editing own events
