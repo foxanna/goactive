@@ -42,4 +42,11 @@ class FeedRepository implements IFeedRepository {
     _feedBackup[index] = activity;
     _feedController.sink.add(List.from(_feedBackup));
   }
+
+  @override
+  Future<void> createActivity(Activity activity) async {
+    final newActivity = await _apiService.createActivity(activity);
+    _feedBackup.insert(0, newActivity);
+    _feedController.sink.add(List.from(_feedBackup));
+  }
 }

@@ -6,4 +6,6 @@ abstract class IFeedRepository {
   Future<void> requestMoreData();
 
   Future<void> updateActivity(Activity activity);
+
+  Future<void> createActivity(Activity activity);
 }
