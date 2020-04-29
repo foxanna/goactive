@@ -1,7 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:goactive/api/models/activity.dart';
+import 'package:goactive/features/activity_details/presentation/activity_details_page.dart';
+import 'package:goactive/features/feed/presentation/styles/colors.dart';
 import 'package:goactive/features/feed/presentation/styles/dimensions.dart';
+import 'package:goactive/styles/misc.dart';
 import 'package:goactive/widgets/image_bottom_gradient.dart';
 import 'package:goactive/styles/dimensions.dart';
 import 'package:intl/intl.dart';
@@ -55,8 +58,9 @@ class FeedListTile extends StatelessWidget {
                 radius: userAvatarRadius,
                 backgroundImage:
                     CachedNetworkImageProvider(activity.organizer.avatar),
+                backgroundColor: stubColor,
               ),
-              const SizedBox(height: defaultSpacing),
+              const SizedBox(width: defaultSpacing),
               Text(
                 activity.organizer.name,
                 maxLines: 1,
@@ -89,9 +93,12 @@ class FeedListTile extends StatelessWidget {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            CachedNetworkImage(
-              imageUrl: activity.image,
-              fit: BoxFit.cover,
+            Hero(
+              tag: activity.image,
+              child: CachedNetworkImage(
+                imageUrl: activity.image,
+                fit: BoxFit.cover,
+              ),
             ),
             ImageBottomGradient(
               child: Align(
@@ -122,17 +129,17 @@ class FeedListTile extends StatelessWidget {
             Icons.star,
             color: color,
           ),
-          const SizedBox(height: defaultSpacing),
+          const SizedBox(width: defaultSpacing),
           Text(
             '${activity.interested}',
             style: textStyle,
           ),
-          const SizedBox(height: defaultSpacing * 2),
+          const SizedBox(width: defaultSpacing * 2),
           Icon(
             Icons.check,
             color: color,
           ),
-          const SizedBox(height: defaultSpacing),
+          const SizedBox(width: defaultSpacing),
           Text(
             '${activity.attending}',
             style: textStyle,

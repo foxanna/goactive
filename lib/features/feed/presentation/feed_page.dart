@@ -18,6 +18,7 @@ class FeedPage extends StatelessWidget {
         child: const Scaffold(
           body: PageBackground(
             child: CustomScrollView(
+              physics: BouncingScrollPhysics(),
               slivers: [
                 FeedPageAppBar(),
                 FeedPageContent(),
