@@ -13,21 +13,31 @@ class FeedListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Card(
-        child: MediaQuery.of(context).orientation == Orientation.portrait
-            ? Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  _buildImageLayout(context),
-                  _buildDetailsLayout(context),
-                ],
-              )
-            : Row(
-                children: [
-                  Expanded(child: _buildImageLayout(context)),
-                  Expanded(child: _buildDetailsLayout(context)),
-                ],
+        child: InkWell(
+          child: MediaQuery.of(context).orientation == Orientation.portrait
+              ? Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    _buildImageLayout(context),
+                    _buildDetailsLayout(context),
+                  ],
+                )
+              : Row(
+                  children: [
+                    Expanded(child: _buildImageLayout(context)),
+                    Expanded(child: _buildDetailsLayout(context)),
+                  ],
+                ),
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute<dynamic>(
+              builder: (context) => ActivityDetailsPage(
+                activity: activity,
               ),
+            ),
+          ),
+        ),
       );
 
   Widget _buildDetailsLayout(BuildContext context) {
