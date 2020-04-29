@@ -15,8 +15,9 @@ import 'package:goactive/api/services/feed/feed_api_service.dart';
 import 'package:goactive/api/services/feed/i_feed_api_service.dart';
 import 'package:goactive/services/feed/feed_repository.dart';
 import 'package:goactive/services/feed/i_feed_repository.dart';
-import 'package:goactive/features/activity_details/bloc/activity_details_bloc.dart';
+import 'package:goactive/features/new_activity/bloc/new_activity_bloc.dart';
 import 'package:goactive/api/models/activity.dart';
+import 'package:goactive/features/activity_details/bloc/activity_details_bloc.dart';
 import 'package:goactive/features/feed/bloc/feed_bloc.dart';
 import 'package:get_it/get_it.dart';
 
@@ -32,6 +33,8 @@ void $initGetIt(GetIt g, {String environment}) {
       () => FeedApiService(httpService: g<IHttpService>()));
   g.registerLazySingleton<IFeedRepository>(
       () => FeedRepository(apiService: g<IFeedApiService>()));
+  g.registerFactoryParam<NewActivityBloc, Activity, dynamic>((activity, _) =>
+      NewActivityBloc(repository: g<IFeedRepository>(), activity: activity));
   g.registerFactoryParam<ActivityDetailsBloc, Activity, dynamic>(
       (activity, _) => ActivityDetailsBloc(
           repository: g<IFeedRepository>(), activity: activity));
