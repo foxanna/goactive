@@ -24,7 +24,9 @@ class _$ActivityTearOff {
       @JsonKey(name: 'location') Location location,
       @JsonKey(name: 'organizer') User organizer,
       @JsonKey(name: 'attending') int attending,
-      @JsonKey(name: 'interested') int interested}) {
+      @JsonKey(name: 'interested') int interested,
+      @JsonKey(name: 'isAttending') bool isAttending,
+      @JsonKey(name: 'isInterested') bool isInterested}) {
     return _Activity(
       id: id,
       image: image,
@@ -35,6 +37,8 @@ class _$ActivityTearOff {
       organizer: organizer,
       attending: attending,
       interested: interested,
+      isAttending: isAttending,
+      isInterested: isInterested,
     );
   }
 }
@@ -61,6 +65,10 @@ mixin _$Activity {
   int get attending;
   @JsonKey(name: 'interested')
   int get interested;
+  @JsonKey(name: 'isAttending')
+  bool get isAttending;
+  @JsonKey(name: 'isInterested')
+  bool get isInterested;
 
   Map<String, dynamic> toJson();
   $ActivityCopyWith<Activity> get copyWith;
@@ -78,7 +86,9 @@ abstract class $ActivityCopyWith<$Res> {
       @JsonKey(name: 'location') Location location,
       @JsonKey(name: 'organizer') User organizer,
       @JsonKey(name: 'attending') int attending,
-      @JsonKey(name: 'interested') int interested});
+      @JsonKey(name: 'interested') int interested,
+      @JsonKey(name: 'isAttending') bool isAttending,
+      @JsonKey(name: 'isInterested') bool isInterested});
 
   $LocationCopyWith<$Res> get location;
   $UserCopyWith<$Res> get organizer;
@@ -102,6 +112,8 @@ class _$ActivityCopyWithImpl<$Res> implements $ActivityCopyWith<$Res> {
     Object organizer = freezed,
     Object attending = freezed,
     Object interested = freezed,
+    Object isAttending = freezed,
+    Object isInterested = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -113,6 +125,10 @@ class _$ActivityCopyWithImpl<$Res> implements $ActivityCopyWith<$Res> {
       organizer: organizer == freezed ? _value.organizer : organizer as User,
       attending: attending == freezed ? _value.attending : attending as int,
       interested: interested == freezed ? _value.interested : interested as int,
+      isAttending:
+          isAttending == freezed ? _value.isAttending : isAttending as bool,
+      isInterested:
+          isInterested == freezed ? _value.isInterested : isInterested as bool,
     ));
   }
 
@@ -150,7 +166,9 @@ abstract class _$ActivityCopyWith<$Res> implements $ActivityCopyWith<$Res> {
       @JsonKey(name: 'location') Location location,
       @JsonKey(name: 'organizer') User organizer,
       @JsonKey(name: 'attending') int attending,
-      @JsonKey(name: 'interested') int interested});
+      @JsonKey(name: 'interested') int interested,
+      @JsonKey(name: 'isAttending') bool isAttending,
+      @JsonKey(name: 'isInterested') bool isInterested});
 
   @override
   $LocationCopyWith<$Res> get location;
@@ -177,6 +195,8 @@ class __$ActivityCopyWithImpl<$Res> extends _$ActivityCopyWithImpl<$Res>
     Object organizer = freezed,
     Object attending = freezed,
     Object interested = freezed,
+    Object isAttending = freezed,
+    Object isInterested = freezed,
   }) {
     return _then(_Activity(
       id: id == freezed ? _value.id : id as String,
@@ -188,6 +208,10 @@ class __$ActivityCopyWithImpl<$Res> extends _$ActivityCopyWithImpl<$Res>
       organizer: organizer == freezed ? _value.organizer : organizer as User,
       attending: attending == freezed ? _value.attending : attending as int,
       interested: interested == freezed ? _value.interested : interested as int,
+      isAttending:
+          isAttending == freezed ? _value.isAttending : isAttending as bool,
+      isInterested:
+          isInterested == freezed ? _value.isInterested : isInterested as bool,
     ));
   }
 }
@@ -203,7 +227,9 @@ class _$_Activity with DiagnosticableTreeMixin implements _Activity {
       @JsonKey(name: 'location') this.location,
       @JsonKey(name: 'organizer') this.organizer,
       @JsonKey(name: 'attending') this.attending,
-      @JsonKey(name: 'interested') this.interested});
+      @JsonKey(name: 'interested') this.interested,
+      @JsonKey(name: 'isAttending') this.isAttending,
+      @JsonKey(name: 'isInterested') this.isInterested});
 
   factory _$_Activity.fromJson(Map<String, dynamic> json) =>
       _$_$_ActivityFromJson(json);
@@ -235,10 +261,16 @@ class _$_Activity with DiagnosticableTreeMixin implements _Activity {
   @override
   @JsonKey(name: 'interested')
   final int interested;
+  @override
+  @JsonKey(name: 'isAttending')
+  final bool isAttending;
+  @override
+  @JsonKey(name: 'isInterested')
+  final bool isInterested;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Activity(id: $id, image: $image, title: $title, details: $details, date: $date, location: $location, organizer: $organizer, attending: $attending, interested: $interested)';
+    return 'Activity(id: $id, image: $image, title: $title, details: $details, date: $date, location: $location, organizer: $organizer, attending: $attending, interested: $interested, isAttending: $isAttending, isInterested: $isInterested)';
   }
 
   @override
@@ -254,7 +286,9 @@ class _$_Activity with DiagnosticableTreeMixin implements _Activity {
       ..add(DiagnosticsProperty('location', location))
       ..add(DiagnosticsProperty('organizer', organizer))
       ..add(DiagnosticsProperty('attending', attending))
-      ..add(DiagnosticsProperty('interested', interested));
+      ..add(DiagnosticsProperty('interested', interested))
+      ..add(DiagnosticsProperty('isAttending', isAttending))
+      ..add(DiagnosticsProperty('isInterested', isInterested));
   }
 
   @override
@@ -283,7 +317,13 @@ class _$_Activity with DiagnosticableTreeMixin implements _Activity {
                     .equals(other.attending, attending)) &&
             (identical(other.interested, interested) ||
                 const DeepCollectionEquality()
-                    .equals(other.interested, interested)));
+                    .equals(other.interested, interested)) &&
+            (identical(other.isAttending, isAttending) ||
+                const DeepCollectionEquality()
+                    .equals(other.isAttending, isAttending)) &&
+            (identical(other.isInterested, isInterested) ||
+                const DeepCollectionEquality()
+                    .equals(other.isInterested, isInterested)));
   }
 
   @override
@@ -297,7 +337,9 @@ class _$_Activity with DiagnosticableTreeMixin implements _Activity {
       const DeepCollectionEquality().hash(location) ^
       const DeepCollectionEquality().hash(organizer) ^
       const DeepCollectionEquality().hash(attending) ^
-      const DeepCollectionEquality().hash(interested);
+      const DeepCollectionEquality().hash(interested) ^
+      const DeepCollectionEquality().hash(isAttending) ^
+      const DeepCollectionEquality().hash(isInterested);
 
   @override
   _$ActivityCopyWith<_Activity> get copyWith =>
@@ -319,7 +361,9 @@ abstract class _Activity implements Activity {
       @JsonKey(name: 'location') Location location,
       @JsonKey(name: 'organizer') User organizer,
       @JsonKey(name: 'attending') int attending,
-      @JsonKey(name: 'interested') int interested}) = _$_Activity;
+      @JsonKey(name: 'interested') int interested,
+      @JsonKey(name: 'isAttending') bool isAttending,
+      @JsonKey(name: 'isInterested') bool isInterested}) = _$_Activity;
 
   factory _Activity.fromJson(Map<String, dynamic> json) = _$_Activity.fromJson;
 
@@ -350,6 +394,12 @@ abstract class _Activity implements Activity {
   @override
   @JsonKey(name: 'interested')
   int get interested;
+  @override
+  @JsonKey(name: 'isAttending')
+  bool get isAttending;
+  @override
+  @JsonKey(name: 'isInterested')
+  bool get isInterested;
   @override
   _$ActivityCopyWith<_Activity> get copyWith;
 }

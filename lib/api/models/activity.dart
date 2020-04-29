@@ -18,6 +18,8 @@ abstract class Activity with _$Activity {
     @JsonKey(name: 'organizer') User organizer,
     @JsonKey(name: 'attending') int attending,
     @JsonKey(name: 'interested') int interested,
+    @JsonKey(name: 'isAttending') bool isAttending,
+    @JsonKey(name: 'isInterested') bool isInterested,
   }) = _Activity;
 
   factory Activity.fromJson(Map<String, dynamic> json) =>

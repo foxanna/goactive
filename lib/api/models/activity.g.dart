@@ -21,6 +21,8 @@ _$_Activity _$_$_ActivityFromJson(Map<String, dynamic> json) {
         : User.fromJson(json['organizer'] as Map<String, dynamic>),
     attending: json['attending'] as int,
     interested: json['interested'] as int,
+    isAttending: json['isAttending'] as bool,
+    isInterested: json['isInterested'] as bool,
   );
 }
 
@@ -35,4 +37,6 @@ Map<String, dynamic> _$_$_ActivityToJson(_$_Activity instance) =>
       'organizer': instance.organizer,
       'attending': instance.attending,
       'interested': instance.interested,
+      'isAttending': instance.isAttending,
+      'isInterested': instance.isInterested,
     };

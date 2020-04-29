@@ -22,7 +22,9 @@ const feedStubApiResponse1 = r'''[
         "email": "info@jazz-dnepr.com"
      },
      "attending": 325,
-     "interested": 480
+     "interested": 480,
+     "isAttending": true,
+     "isInterested": true
   },
   {
      "id": "75aae83f-402f-4d16-bd64-cb18d3a73c9a",
@@ -41,7 +43,9 @@ const feedStubApiResponse1 = r'''[
         "name": "Linda"
      },
      "attending": 2,
-     "interested": 8
+     "interested": 8,
+     "isAttending": false,
+     "isInterested": false
   }
 ]''';
 
