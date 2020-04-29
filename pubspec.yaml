@@ -11,7 +11,9 @@ dependencies:
   cached_network_image: ^2.1.0+1
   get_it: ^4.0.2
   injectable: ^0.3.0
+  intl: ^0.16.1
   flutter_bloc: ^4.0.0
+  shimmer: ^1.1.1
 
 dev_dependencies:
   flutter_test:
