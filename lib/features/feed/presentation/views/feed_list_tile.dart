@@ -126,7 +126,7 @@ class FeedListTile extends StatelessWidget {
           ),
           const Spacer(),
           Icon(
-            Icons.star,
+            activity.isInterested ? Icons.star : Icons.star_border,
             color: color,
           ),
           const SizedBox(width: defaultSpacing),
@@ -136,7 +136,7 @@ class FeedListTile extends StatelessWidget {
           ),
           const SizedBox(width: defaultSpacing * 2),
           Icon(
-            Icons.check,
+            activity.isAttending ? Icons.check : Icons.done_outline,
             color: color,
           ),
           const SizedBox(width: defaultSpacing),
