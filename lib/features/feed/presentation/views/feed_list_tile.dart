@@ -1,15 +1,16 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goactive/api/models/activity.dart';
 import 'package:goactive/features/activity_details/presentation/activity_details_page.dart';
-import 'package:goactive/features/feed/presentation/views/stub_user_avatar.dart';
-import 'package:goactive/styles/colors.dart';
+import 'package:goactive/features/authentication/bloc/authentication_bloc.dart';
 import 'package:goactive/features/feed/presentation/styles/dimensions.dart';
+import 'package:goactive/features/feed/presentation/views/stub_activity_image.dart';
+import 'package:goactive/features/feed/presentation/views/stub_user_avatar.dart';
+import 'package:goactive/features/new_activity/presentation/new_activity_page.dart';
+import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/styles/misc.dart';
 import 'package:goactive/widgets/image_bottom_gradient.dart';
-import 'package:goactive/styles/dimensions.dart';
-import 'package:goactive/features/feed/presentation/views/stub_activity_image.dart';
-import 'package:intl/intl.dart';
 
 class FeedListTile extends StatelessWidget {
   final Activity activity;
@@ -37,9 +38,19 @@ class FeedListTile extends StatelessWidget {
           onTap: () => Navigator.push(
             context,
             MaterialPageRoute<dynamic>(
-              builder: (context) => ActivityDetailsPage(
-                activity: activity,
-              ),
+              builder: (context) {
+                final state = context.bloc<AuthenticationBloc>().state
+                    as AuthenticatedAuthenticationState;
+                if (state != null && state.user.id == activity.organizer.id) {
+                  return NewActivityPage(
+                    activity: activity,
+                  );
+                } else {
+                  return ActivityDetailsPage(
+                    activity: activity,
+                  );
+                }
+              },
             ),
           ),
         ),
