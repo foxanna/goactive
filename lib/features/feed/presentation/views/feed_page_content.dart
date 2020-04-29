@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:goactive/screens/feed/bloc/feed_bloc.dart';
-import 'package:goactive/screens/feed/views/feed_list_view.dart';
+import 'package:goactive/features/feed/bloc/feed_bloc.dart';
+import 'package:goactive/features/feed/presentation/views/feed_list_view.dart';
 import 'package:goactive/widgets/error_message.dart';
 
 class FeedPageContent extends StatelessWidget {

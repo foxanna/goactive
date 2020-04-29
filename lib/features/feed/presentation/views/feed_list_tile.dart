@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:goactive/api/models/activity.dart';
-import 'package:goactive/screens/feed/styles/dimensions.dart';
+import 'package:goactive/features/feed/presentation/styles/dimensions.dart';
 import 'package:goactive/widgets/image_bottom_gradient.dart';
 import 'package:goactive/styles/dimensions.dart';
 import 'package:intl/intl.dart';

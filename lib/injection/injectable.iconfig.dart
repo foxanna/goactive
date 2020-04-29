@@ -15,7 +15,7 @@ import 'package:goactive/api/services/feed/feed_api_service.dart';
 import 'package:goactive/api/services/feed/i_feed_api_service.dart';
 import 'package:goactive/services/feed/feed_repository.dart';
 import 'package:goactive/services/feed/i_feed_repository.dart';
-import 'package:goactive/screens/feed/bloc/feed_bloc.dart';
+import 'package:goactive/features/feed/bloc/feed_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 void $initGetIt(GetIt g, {String environment}) {

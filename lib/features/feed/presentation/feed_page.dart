@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:goactive/features/feed/bloc/feed_bloc.dart';
+import 'package:goactive/features/feed/presentation/views/feed_page_app_bar.dart';
 import 'package:goactive/get_it.dart';
-import 'package:goactive/screens/feed/bloc/feed_bloc.dart';
-import 'package:goactive/screens/feed/views/feed_page_app_bar.dart';
-import 'package:goactive/screens/feed/views/feed_page_content.dart';
+import 'package:goactive/features/feed/presentation/views/feed_page_content.dart';
 import 'package:goactive/widgets/page_background.dart';
 
 class FeedPage extends StatelessWidget {

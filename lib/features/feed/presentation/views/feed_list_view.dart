@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:goactive/api/models/activity.dart';
-import 'package:goactive/screens/feed/views/feed_list_tile.dart';
-import 'package:goactive/screens/feed/views/feed_list_tile_stub.dart';
+import 'package:goactive/features/feed/presentation/views/feed_list_tile.dart';
+import 'package:goactive/features/feed/presentation/views/feed_list_tile_stub.dart';
 import 'package:goactive/styles/dimensions.dart';
 
 class FeedListView extends StatelessWidget {

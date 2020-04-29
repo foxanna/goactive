@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:goactive/screens/feed/styles/colors.dart';
-import 'package:goactive/screens/feed/styles/dimensions.dart';
+import 'package:goactive/features/feed/presentation/styles/colors.dart';
+import 'package:goactive/features/feed/presentation/styles/dimensions.dart';
 import 'package:goactive/styles/dimensions.dart';
 import 'package:shimmer/shimmer.dart';
 

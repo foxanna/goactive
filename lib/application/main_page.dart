@@ -4,7 +4,7 @@ import 'package:goactive/application/splash_page.dart';
 import 'package:goactive/application/unimplemented_page.dart';
 import 'package:goactive/features/authentication/bloc/authentication_bloc.dart';
 import 'package:goactive/get_it.dart';
-import 'package:goactive/screens/feed/feed_page.dart';
+import 'package:goactive/features/feed/presentation/feed_page.dart';
 import 'package:goactive/styles/theme.dart';
 
 class MainPage extends StatelessWidget {
