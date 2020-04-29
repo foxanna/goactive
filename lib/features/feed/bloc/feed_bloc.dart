@@ -48,7 +48,10 @@ class FeedBloc extends Bloc<FeedEvent, FeedState> {
   }
 
   Stream<FeedState> _onUpdatedFeedEvent(List<Activity> feed) async* {
-    yield FeedState.data(feed: feed, reachedEnd: feed == state.feed);
+    yield FeedState.data(
+      feed: feed,
+      reachedEnd: const DeepCollectionEquality().equals(feed, state.feed),
+    );
   }
 
   Stream<FeedState> _onFailedFeedEvent(Exception exception) async* {
