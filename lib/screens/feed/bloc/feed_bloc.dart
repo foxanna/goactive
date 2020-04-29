@@ -40,9 +40,11 @@ class FeedBloc extends Bloc<FeedEvent, FeedState> {
   }
 
   Stream<FeedState> _onLoadFeedEvent() async* {
-    yield FeedState.loading(feed: state.feed);
+    if (state is! LoadingFeedState) {
+      yield FeedState.loading(feed: state.feed);
 
-    await _repository.requestMoreData();
+      await _repository.requestMoreData();
+    }
   }
 
   Stream<FeedState> _onUpdatedFeedEvent(List<Activity> feed) async* {
