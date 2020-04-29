@@ -32,4 +32,14 @@ class FeedRepository implements IFeedRepository {
       _feedController.sink.addError(e);
     }
   }
+
+  @override
+  Future<void> updateActivity(Activity activity) async {
+    // emulate networking request
+    await Future<dynamic>.delayed(Duration.zero);
+
+    final index = _feedBackup.indexWhere((x) => x.id == activity.id);
+    _feedBackup[index] = activity;
+    _feedController.sink.add(List.from(_feedBackup));
+  }
 }

@@ -4,4 +4,6 @@ abstract class IFeedRepository {
   Stream<List<Activity>> get feed;
 
   Future<void> requestMoreData();
+
+  Future<void> updateActivity(Activity activity);
 }

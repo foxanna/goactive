@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:goactive/api/models/activity.dart';
 import 'package:goactive/services/feed/feed_repository.dart';
 import 'package:mockito/mockito.dart';
 
@@ -100,6 +101,35 @@ void main() {
             expectedFeed1,
             emitsError(expectedException),
             expectedFeed1.followedBy(expectedFeed2),
+          ]));
+    });
+  });
+
+  group('FeedRepository.updateActivity tests', () {
+    test('Streams updated activity feed', () async {
+      // Arrange
+      final originalFeed = generateTestActivities(20);
+      final newActivity = originalFeed.first.copyWith(
+        isAttending: !originalFeed.first.isAttending,
+      );
+      final expectedFeed = List<Activity>.from(originalFeed)..[0] = newActivity;
+
+      final feedApiServiceMock = FeedApiServiceMock();
+      when(feedApiServiceMock.getFeed(lastActivityId: null))
+          .thenAnswer((_) => Future.value(originalFeed));
+
+      final feedRepository = FeedRepository(apiService: feedApiServiceMock);
+
+      // Act
+      await feedRepository.requestMoreData();
+      await feedRepository.updateActivity(newActivity);
+
+      // Assert
+      expect(
+          feedRepository.feed,
+          emitsInOrder([
+            originalFeed,
+            expectedFeed,
           ]));
     });
   });
