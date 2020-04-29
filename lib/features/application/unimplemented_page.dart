@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:goactive/widgets/error_message.dart';
 import 'package:goactive/widgets/page_background.dart';
 
 class UnimplementedPage extends StatelessWidget {
