@@ -16,6 +16,20 @@ ThemeData createTheme() {
       ),
       margin: defaultPadding,
     ),
+    inputDecorationTheme: InputDecorationTheme(
+      focusColor: Colors.white,
+      labelStyle: TextStyle(color: Colors.white),
+      enabledBorder: UnderlineInputBorder(
+        borderSide: BorderSide(
+          color: Colors.white,
+        ),
+      ),
+      focusedBorder: UnderlineInputBorder(
+        borderSide: BorderSide(
+          color: Colors.white,
+        ),
+      ),
+    ),
   );
 
   return base;
