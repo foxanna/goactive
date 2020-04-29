@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goactive/screens/feed/bloc/feed_bloc.dart';
 import 'package:goactive/screens/feed/views/feed_list_view.dart';
-import 'package:goactive/screens/widgets/error_message.dart';
+import 'package:goactive/widgets/error_message.dart';
 
 class FeedPageContent extends StatelessWidget {
   const FeedPageContent({Key key}) : super(key: key);

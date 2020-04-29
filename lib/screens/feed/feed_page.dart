@@ -4,7 +4,7 @@ import 'package:goactive/get_it.dart';
 import 'package:goactive/screens/feed/bloc/feed_bloc.dart';
 import 'package:goactive/screens/feed/views/feed_page_app_bar.dart';
 import 'package:goactive/screens/feed/views/feed_page_content.dart';
-import 'package:goactive/screens/widgets/page_background.dart';
+import 'package:goactive/widgets/page_background.dart';
 
 class FeedPage extends StatelessWidget {
   const FeedPage({Key key}) : super(key: key);
