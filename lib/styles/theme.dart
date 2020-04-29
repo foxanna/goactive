@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goactive/styles/dimensions.dart';
 
 ThemeData createTheme() {
   final base = ThemeData(
@@ -13,7 +14,7 @@ ThemeData createTheme() {
           Radius.circular(16.0),
         ),
       ),
-      margin: const EdgeInsets.all(16.0),
+      margin: defaultPadding,
     ),
   );
 
