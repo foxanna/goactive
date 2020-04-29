@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:goactive/features/feed/presentation/styles/colors.dart';
+import 'package:goactive/features/feed/presentation/views/stub_user_avatar.dart';
+import 'package:goactive/styles/colors.dart';
 import 'package:goactive/features/feed/presentation/styles/dimensions.dart';
 import 'package:goactive/styles/dimensions.dart';
+import 'package:goactive/features/feed/presentation/views/stub_activity_image.dart';
 import 'package:shimmer/shimmer.dart';
 
 class FeedListTileStub extends StatelessWidget {
@@ -26,19 +28,8 @@ class FeedListTileStub extends StatelessWidget {
               ),
       );
 
-  Widget _buildImageLayout(BuildContext context) => Container(
+  Widget _buildImageLayout(BuildContext context) => const StubActivityImage(
         height: activityImageHeight,
-        color: stubColor,
-        child: Padding(
-          padding: defaultPadding,
-          child: Icon(
-            Icons.image,
-            size: activityImageHeight -
-                defaultPadding.top -
-                defaultPadding.bottom,
-            color: Colors.white,
-          ),
-        ),
       );
 
   Widget _buildDetailsLayout(BuildContext context) {
@@ -60,18 +51,9 @@ class FeedListTileStub extends StatelessWidget {
         children: [
           Row(
             children: [
-              CircleAvatar(
-                child: Icon(
-                  Icons.person,
-                  color: Colors.white,
-                ),
-                radius: userAvatarRadius,
-                backgroundColor: stubColor,
-              ),
+              const StubUserAvatar(),
               const SizedBox(width: defaultSpacing),
-              Expanded(
-                child: textStub,
-              ),
+              Expanded(child: textStub),
             ],
           ),
           const SizedBox(height: defaultSpacing * 2),

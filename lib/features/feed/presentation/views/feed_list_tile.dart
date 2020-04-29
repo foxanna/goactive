@@ -2,11 +2,13 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:goactive/api/models/activity.dart';
 import 'package:goactive/features/activity_details/presentation/activity_details_page.dart';
-import 'package:goactive/features/feed/presentation/styles/colors.dart';
+import 'package:goactive/features/feed/presentation/views/stub_user_avatar.dart';
+import 'package:goactive/styles/colors.dart';
 import 'package:goactive/features/feed/presentation/styles/dimensions.dart';
 import 'package:goactive/styles/misc.dart';
 import 'package:goactive/widgets/image_bottom_gradient.dart';
 import 'package:goactive/styles/dimensions.dart';
+import 'package:goactive/features/feed/presentation/views/stub_activity_image.dart';
 import 'package:intl/intl.dart';
 
 class FeedListTile extends StatelessWidget {
@@ -54,12 +56,13 @@ class FeedListTile extends StatelessWidget {
         children: [
           Row(
             children: [
-              CircleAvatar(
-                radius: userAvatarRadius,
-                backgroundImage:
-                    CachedNetworkImageProvider(activity.organizer.avatar),
-                backgroundColor: stubColor,
-              ),
+              if (activity.organizer.avatar != null)
+                CircleAvatar(
+                    radius: userAvatarRadius,
+                    backgroundImage:
+                        CachedNetworkImageProvider(activity.organizer.avatar))
+              else
+                StubUserAvatar(),
               const SizedBox(width: defaultSpacing),
               Text(
                 activity.organizer.name,
@@ -93,13 +96,18 @@ class FeedListTile extends StatelessWidget {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            Hero(
-              tag: activity.image,
-              child: CachedNetworkImage(
-                imageUrl: activity.image,
-                fit: BoxFit.cover,
+            if (activity.image != null)
+              Hero(
+                tag: activity.image,
+                child: CachedNetworkImage(
+                  imageUrl: activity.image,
+                  fit: BoxFit.cover,
+                ),
+              )
+            else
+              StubActivityImage(
+                height: activityImageHeight,
               ),
-            ),
             ImageBottomGradient(
               child: Align(
                 alignment: Alignment.bottomCenter,
