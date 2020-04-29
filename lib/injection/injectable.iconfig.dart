@@ -10,6 +10,7 @@ import 'package:goactive/api/services/user/user_api_service.dart';
 import 'package:goactive/api/services/user/i_user_api_service.dart';
 import 'package:goactive/services/user/user_repository.dart';
 import 'package:goactive/services/user/i_user_repository.dart';
+import 'package:goactive/authentication/bloc/authentication_bloc.dart';
 import 'package:goactive/api/services/feed/feed_api_service.dart';
 import 'package:goactive/api/services/feed/i_feed_api_service.dart';
 import 'package:goactive/services/feed/feed_repository.dart';
@@ -23,6 +24,8 @@ void $initGetIt(GetIt g, {String environment}) {
       () => UserApiService(httpService: g<IHttpService>()));
   g.registerLazySingleton<IUserRepository>(
       () => UserRepository(apiService: g<IUserApiService>()));
+  g.registerFactory<AuthenticationBloc>(
+      () => AuthenticationBloc(repository: g<IUserRepository>()));
   g.registerLazySingleton<IFeedApiService>(
       () => FeedApiService(httpService: g<IHttpService>()));
   g.registerLazySingleton<IFeedRepository>(
