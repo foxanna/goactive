@@ -16,8 +16,7 @@ class FeedRepository implements IFeedRepository {
 
   FeedRepository({
     @required IFeedApiService apiService,
-  })  : assert(apiService != null),
-        _apiService = apiService;
+  }) : _apiService = apiService;
 
   @override
   Stream<List<Activity>> get feed => _feedController.stream;

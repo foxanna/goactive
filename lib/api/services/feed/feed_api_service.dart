@@ -13,8 +13,7 @@ class FeedApiService implements IFeedApiService {
 
   const FeedApiService({
     @required IHttpService httpService,
-  })  : assert(httpService != null),
-        _httpService = httpService;
+  }) : _httpService = httpService;
 
   @override
   Future<Iterable<Activity>> getFeed({String lastActivityId}) async {
