@@ -6,8 +6,7 @@ import 'package:goactive/api/services/feed/i_feed_api_service.dart';
 import 'package:goactive/services/feed/i_feed_repository.dart';
 import 'package:injectable/injectable.dart';
 
-@lazySingleton
-@RegisterAs(IFeedRepository)
+@LazySingleton(as: IFeedRepository)
 class FeedRepository implements IFeedRepository {
   final IFeedApiService _apiService;
 

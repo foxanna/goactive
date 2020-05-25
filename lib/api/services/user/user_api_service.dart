@@ -6,8 +6,7 @@ import 'package:goactive/api/services/http/i_http_service.dart';
 import 'package:goactive/api/services/user/i_user_api_service.dart';
 import 'package:injectable/injectable.dart';
 
-@lazySingleton
-@RegisterAs(IUserApiService)
+@LazySingleton(as: IUserApiService)
 class UserApiService implements IUserApiService {
   final IHttpService _httpService;
 

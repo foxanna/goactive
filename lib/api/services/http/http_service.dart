@@ -2,8 +2,7 @@ import 'package:goactive/api/services/http/i_http_service.dart';
 import 'package:goactive/api/services/http/stub_api_responses.dart';
 import 'package:injectable/injectable.dart';
 
-@lazySingleton
-@RegisterAs(IHttpService)
+@LazySingleton(as: IHttpService)
 class HttpService implements IHttpService {
   const HttpService();
 
