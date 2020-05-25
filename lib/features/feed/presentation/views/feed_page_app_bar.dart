@@ -18,7 +18,7 @@ class FeedPageAppBar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text(value.user.name),
-                SizedBox(width: defaultSpacing),
+                const SizedBox(width: defaultSpacing),
                 CircleAvatar(
                   backgroundImage:
                       CachedNetworkImageProvider(value.user.avatar),

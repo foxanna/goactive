@@ -1,8 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:goactive/api/models/activity.dart';
-import 'package:goactive/api/services/feed/feed_api_service.dart';
 import 'package:goactive/api/services/user/user_api_service.dart';
 import 'package:mockito/mockito.dart';
 

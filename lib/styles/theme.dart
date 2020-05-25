@@ -6,17 +6,17 @@ ThemeData createTheme() {
     brightness: Brightness.light,
     primarySwatch: Colors.pink,
     visualDensity: VisualDensity.adaptivePlatformDensity,
-    cardTheme: CardTheme(
+    cardTheme: const CardTheme(
       clipBehavior: Clip.hardEdge,
       color: Colors.white,
-      shape: const RoundedRectangleBorder(
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
           Radius.circular(16.0),
         ),
       ),
       margin: defaultPadding,
     ),
-    inputDecorationTheme: InputDecorationTheme(
+    inputDecorationTheme: const InputDecorationTheme(
       focusColor: Colors.white,
       labelStyle: TextStyle(color: Colors.white),
       enabledBorder: UnderlineInputBorder(

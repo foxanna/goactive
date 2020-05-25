@@ -24,7 +24,7 @@ class _NewActivityTitleState extends State<NewActivityTitle> {
         condition: (oldState, newState) =>
             oldState.activity.title != newState.activity.title,
         builder: (context, state) => TextField(
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
           controller: _textController..text = state.activity.title,
           decoration: const InputDecoration(labelText: 'title'),
           onChanged: (value) => context

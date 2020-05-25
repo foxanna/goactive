@@ -67,7 +67,7 @@ class ActivityDetailsBloc
 
     try {
       await _repository.updateActivity(newActivity);
-    } on Exception catch (e) {
+    } on Exception {
       yield ActivityDetailsState(activity: oldActivity);
     }
   }

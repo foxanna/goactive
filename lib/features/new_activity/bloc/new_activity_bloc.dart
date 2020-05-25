@@ -45,7 +45,7 @@ class NewActivityBloc extends Bloc<NewActivityEvent, NewActivityState> {
             await _repository.updateActivity(state.activity);
           }
           yield NewActivityState.created(activity: state.activity);
-        } on Exception catch (e) {
+        } on Exception {
           NewActivityState.editing(activity: state.activity);
         }
       },

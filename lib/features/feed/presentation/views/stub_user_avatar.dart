@@ -6,7 +6,7 @@ class StubUserAvatar extends StatelessWidget {
   const StubUserAvatar({Key key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => CircleAvatar(
+  Widget build(BuildContext context) => const CircleAvatar(
         child: Icon(
           Icons.person,
           color: Colors.white,

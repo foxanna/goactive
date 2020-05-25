@@ -24,7 +24,7 @@ class _NewActivityDetailsState extends State<NewActivityDetails> {
         condition: (oldState, newState) =>
             oldState.activity.details != newState.activity.details,
         builder: (context, state) => TextField(
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
           controller: _textController..text = state.activity.details,
           decoration: const InputDecoration(labelText: 'details'),
           onChanged: (value) => context

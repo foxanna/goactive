@@ -7,11 +7,11 @@ class ImageBottomGradient extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: const [Colors.transparent, Color(0xBD000000)],
+            colors: [Colors.transparent, Color(0xBD000000)],
             stops: [0.7, 1.0],
           ),
         ),

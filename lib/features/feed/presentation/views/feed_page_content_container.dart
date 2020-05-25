@@ -18,7 +18,7 @@ class _FeedPageContentContainerState extends State<FeedPageContentContainer> {
   @override
   Widget build(BuildContext context) => CustomScrollView(
         controller: _scrollController,
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         slivers: widget.slivers,
       );
 

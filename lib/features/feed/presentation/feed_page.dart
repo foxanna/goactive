@@ -27,7 +27,7 @@ class FeedPage extends StatelessWidget {
             ),
           ),
           floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute<dynamic>(

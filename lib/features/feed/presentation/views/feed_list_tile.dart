@@ -73,7 +73,7 @@ class FeedListTile extends StatelessWidget {
                     backgroundImage:
                         CachedNetworkImageProvider(activity.organizer.avatar))
               else
-                StubUserAvatar(),
+                const StubUserAvatar(),
               const SizedBox(width: defaultSpacing),
               Text(
                 activity.organizer.name,
@@ -116,7 +116,7 @@ class FeedListTile extends StatelessWidget {
                 ),
               )
             else
-              StubActivityImage(
+              const StubActivityImage(
                 height: activityImageHeight,
               ),
             ImageBottomGradient(
@@ -130,7 +130,7 @@ class FeedListTile extends StatelessWidget {
       );
 
   Widget _buildImageBottomLayout(BuildContext context) {
-    final color = Colors.white;
+    const color = Colors.white;
     final textStyle = Theme.of(context).textTheme.subtitle1.copyWith(
           color: color,
         );

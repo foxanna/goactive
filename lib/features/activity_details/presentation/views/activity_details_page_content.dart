@@ -62,7 +62,7 @@ class ActivityDetailsPageContent extends StatelessWidget {
 
     return Row(
       children: [
-        Icon(Icons.place, color: Colors.grey),
+        const Icon(Icons.place, color: Colors.grey),
         const SizedBox(width: defaultSpacing),
         Expanded(
           child: RichText(

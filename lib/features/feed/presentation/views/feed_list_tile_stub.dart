@@ -33,7 +33,6 @@ class FeedListTileStub extends StatelessWidget {
       );
 
   Widget _buildDetailsLayout(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
     final textStub = Shimmer.fromColors(
       highlightColor: Colors.white,
       baseColor: stubColor,
