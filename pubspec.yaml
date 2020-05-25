@@ -8,9 +8,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cached_network_image: ^2.1.0+1
+  cached_network_image: ^2.2.0+1
   get_it: ^4.0.2
-  injectable: ^0.3.0
+  injectable: ^0.4.0
   intl: ^0.16.1
   flutter_bloc: ^4.0.0
   shimmer: ^1.1.1
@@ -20,8 +20,8 @@ dev_dependencies:
     sdk: flutter
   build_runner:
   extra_pedantic: ^1.2.0
-  freezed: ^0.10.7
-  injectable_generator: ^0.3.4
+  freezed: ^0.10.9
+  injectable_generator: ^0.4.0
   json_serializable: ^3.3.0
   mockito: ^4.1.1
 
