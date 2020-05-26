@@ -5,6 +5,7 @@ analyzer:
     - lib/**/*.g.dart
     - lib/**/*.iconfig.dart
     - lib/**/*.freezed.dart
+    - lib/**/*.i69n.dart
   strong-mode:
     implicit-casts: false
     implicit-dynamic: true
