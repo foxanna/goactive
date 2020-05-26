@@ -1,9 +1,7 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goactive/features/authentication/bloc/authentication_bloc.dart';
 import 'package:goactive/features/feed/presentation/styles/dimensions.dart';
-import 'package:goactive/widgets/stub_user_avatar.dart';
 import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/widgets/user_avatar.dart';
 

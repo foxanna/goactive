@@ -1,17 +1,7 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goactive/api/models/activity.dart';
-import 'package:goactive/features/authentication/bloc/authentication_bloc.dart';
 import 'package:goactive/features/feed/presentation/styles/dimensions.dart';
-import 'package:goactive/features/feed/presentation/views/feed_list_tile_image_section.dart';
-import 'package:goactive/features/feed/presentation/views/stub_activity_image.dart';
-import 'package:goactive/widgets/stub_user_avatar.dart';
-import 'package:goactive/routes/router.gr.dart';
 import 'package:goactive/styles/dimensions.dart';
-import 'package:goactive/styles/misc.dart';
-import 'package:goactive/widgets/image_bottom_gradient.dart';
 import 'package:goactive/widgets/user_avatar.dart';
 
 class FeedListTileDetailsSection extends StatelessWidget {
