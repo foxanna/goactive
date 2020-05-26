@@ -3,15 +3,20 @@ import 'package:goactive/features/feed/presentation/styles/dimensions.dart';
 import 'package:goactive/styles/colors.dart';
 
 class StubUserAvatar extends StatelessWidget {
-  const StubUserAvatar({Key key}) : super(key: key);
+  final double radius;
+
+  const StubUserAvatar({
+    Key key,
+    this.radius = userAvatarRadius,
+  }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => const CircleAvatar(
-        child: Icon(
+  Widget build(BuildContext context) => CircleAvatar(
+        child: const Icon(
           Icons.person,
           color: Colors.white,
         ),
-        radius: userAvatarRadius,
+        radius: radius,
         backgroundColor: stubColor,
       );
 }

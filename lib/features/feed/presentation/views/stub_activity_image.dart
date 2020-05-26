@@ -8,18 +8,16 @@ class StubActivityImage extends StatelessWidget {
   const StubActivityImage({Key key, this.height = 0}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: height,
-      color: stubColor,
-      child: Padding(
-        padding: defaultPadding,
-        child: Icon(
-          Icons.image,
-          size: height - defaultPadding.top - defaultPadding.bottom,
-          color: Colors.white,
+  Widget build(BuildContext context) => Container(
+        height: height,
+        color: stubColor,
+        child: Padding(
+          padding: defaultPadding,
+          child: Icon(
+            Icons.image,
+            size: height - defaultPadding.top - defaultPadding.bottom,
+            color: Colors.white,
+          ),
         ),
-      ),
-    );
-  }
+      );
 }
