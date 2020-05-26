@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:goactive/styles/dimensions.dart';
 
@@ -30,6 +31,10 @@ ThemeData createTheme() {
         ),
       ),
     ),
+    cupertinoOverrideTheme: const CupertinoThemeData(
+      primaryColor: Colors.white,
+    ),
+    cursorColor: Colors.white,
   );
 
   return base;
