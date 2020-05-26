@@ -23,16 +23,14 @@ class AuthenticationBloc
   AuthenticationState get initialState => const AuthenticationState.initial();
 
   @override
-  Stream<AuthenticationState> mapEventToState(
-    AuthenticationEvent event,
-  ) async* {
-    yield* _onInitEvent();
-//    yield* event.when(
-//      init: () => _onInitEvent(),
+  Stream<AuthenticationState> mapEventToState(AuthenticationEvent e) async* {
+    yield* _onInitEvent(e as _InitAuthenticationEvent);
+//    yield* event.map(
+//      init: _onInitEvent,
 //    );
   }
 
-  Stream<AuthenticationState> _onInitEvent() async* {
+  Stream<AuthenticationState> _onInitEvent(_InitAuthenticationEvent e) async* {
     final user = await _repository.getCurrentUser();
 
     if (user != null) {

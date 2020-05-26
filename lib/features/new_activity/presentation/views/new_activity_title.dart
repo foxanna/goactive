@@ -30,7 +30,7 @@ class _NewActivityTitleState extends State<NewActivityTitle> {
           decoration: InputDecoration(labelText: context.translate().title),
           onChanged: (value) => context
               .bloc<NewActivityBloc>()
-              .add(NewActivityEvent.updateTitle(value)),
+              .add(NewActivityEvent.updateTitle(title: value)),
         ),
       );
 }

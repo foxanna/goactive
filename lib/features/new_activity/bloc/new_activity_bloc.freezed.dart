@@ -16,15 +16,15 @@ class _$NewActivityEventTearOff {
     return const _CreateNewActivityEvent();
   }
 
-  _UpdateTitleNewActivityEvent updateTitle(String title) {
+  _UpdateTitleNewActivityEvent updateTitle({@required String title}) {
     return _UpdateTitleNewActivityEvent(
-      title,
+      title: title,
     );
   }
 
-  _UpdateDetailsNewActivityEvent updateDetails(String details) {
+  _UpdateDetailsNewActivityEvent updateDetails({@required String details}) {
     return _UpdateDetailsNewActivityEvent(
-      details,
+      details: details,
     );
   }
 }
@@ -195,13 +195,14 @@ class __$UpdateTitleNewActivityEventCopyWithImpl<$Res>
     Object title = freezed,
   }) {
     return _then(_UpdateTitleNewActivityEvent(
-      title == freezed ? _value.title : title as String,
+      title: title == freezed ? _value.title : title as String,
     ));
   }
 }
 
 class _$_UpdateTitleNewActivityEvent implements _UpdateTitleNewActivityEvent {
-  const _$_UpdateTitleNewActivityEvent(this.title) : assert(title != null);
+  const _$_UpdateTitleNewActivityEvent({@required this.title})
+      : assert(title != null);
 
   @override
   final String title;
@@ -286,7 +287,7 @@ class _$_UpdateTitleNewActivityEvent implements _UpdateTitleNewActivityEvent {
 }
 
 abstract class _UpdateTitleNewActivityEvent implements NewActivityEvent {
-  const factory _UpdateTitleNewActivityEvent(String title) =
+  const factory _UpdateTitleNewActivityEvent({@required String title}) =
       _$_UpdateTitleNewActivityEvent;
 
   String get title;
@@ -319,14 +320,14 @@ class __$UpdateDetailsNewActivityEventCopyWithImpl<$Res>
     Object details = freezed,
   }) {
     return _then(_UpdateDetailsNewActivityEvent(
-      details == freezed ? _value.details : details as String,
+      details: details == freezed ? _value.details : details as String,
     ));
   }
 }
 
 class _$_UpdateDetailsNewActivityEvent
     implements _UpdateDetailsNewActivityEvent {
-  const _$_UpdateDetailsNewActivityEvent(this.details)
+  const _$_UpdateDetailsNewActivityEvent({@required this.details})
       : assert(details != null);
 
   @override
@@ -412,7 +413,7 @@ class _$_UpdateDetailsNewActivityEvent
 }
 
 abstract class _UpdateDetailsNewActivityEvent implements NewActivityEvent {
-  const factory _UpdateDetailsNewActivityEvent(String details) =
+  const factory _UpdateDetailsNewActivityEvent({@required String details}) =
       _$_UpdateDetailsNewActivityEvent;
 
   String get details;

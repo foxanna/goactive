@@ -30,7 +30,7 @@ class _NewActivityDetailsState extends State<NewActivityDetails> {
           decoration: InputDecoration(labelText: context.translate().details),
           onChanged: (value) => context
               .bloc<NewActivityBloc>()
-              .add(NewActivityEvent.updateDetails(value)),
+              .add(NewActivityEvent.updateDetails(details: value)),
         ),
       );
 }

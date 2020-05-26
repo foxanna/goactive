@@ -16,15 +16,15 @@ class _$FeedEventTearOff {
     return const _LoadFeedEvent();
   }
 
-  _UpdatedFeedEvent updated(List<Activity> feed) {
+  _UpdatedFeedEvent updated({@required List<Activity> feed}) {
     return _UpdatedFeedEvent(
-      feed,
+      feed: feed,
     );
   }
 
-  _FailedFeedEvent failed(Exception e) {
+  _FailedFeedEvent failed({@required Exception exception}) {
     return _FailedFeedEvent(
-      e,
+      exception: exception,
     );
   }
 }
@@ -37,13 +37,13 @@ mixin _$FeedEvent {
   Result when<Result extends Object>({
     @required Result load(),
     @required Result updated(List<Activity> feed),
-    @required Result failed(Exception e),
+    @required Result failed(Exception exception),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result load(),
     Result updated(List<Activity> feed),
-    Result failed(Exception e),
+    Result failed(Exception exception),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -111,7 +111,7 @@ class _$_LoadFeedEvent implements _LoadFeedEvent {
   Result when<Result extends Object>({
     @required Result load(),
     @required Result updated(List<Activity> feed),
-    @required Result failed(Exception e),
+    @required Result failed(Exception exception),
   }) {
     assert(load != null);
     assert(updated != null);
@@ -124,7 +124,7 @@ class _$_LoadFeedEvent implements _LoadFeedEvent {
   Result maybeWhen<Result extends Object>({
     Result load(),
     Result updated(List<Activity> feed),
-    Result failed(Exception e),
+    Result failed(Exception exception),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -189,13 +189,13 @@ class __$UpdatedFeedEventCopyWithImpl<$Res>
     Object feed = freezed,
   }) {
     return _then(_UpdatedFeedEvent(
-      feed == freezed ? _value.feed : feed as List<Activity>,
+      feed: feed == freezed ? _value.feed : feed as List<Activity>,
     ));
   }
 }
 
 class _$_UpdatedFeedEvent implements _UpdatedFeedEvent {
-  const _$_UpdatedFeedEvent(this.feed) : assert(feed != null);
+  const _$_UpdatedFeedEvent({@required this.feed}) : assert(feed != null);
 
   @override
   final List<Activity> feed;
@@ -226,7 +226,7 @@ class _$_UpdatedFeedEvent implements _UpdatedFeedEvent {
   Result when<Result extends Object>({
     @required Result load(),
     @required Result updated(List<Activity> feed),
-    @required Result failed(Exception e),
+    @required Result failed(Exception exception),
   }) {
     assert(load != null);
     assert(updated != null);
@@ -239,7 +239,7 @@ class _$_UpdatedFeedEvent implements _UpdatedFeedEvent {
   Result maybeWhen<Result extends Object>({
     Result load(),
     Result updated(List<Activity> feed),
-    Result failed(Exception e),
+    Result failed(Exception exception),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -279,7 +279,8 @@ class _$_UpdatedFeedEvent implements _UpdatedFeedEvent {
 }
 
 abstract class _UpdatedFeedEvent implements FeedEvent {
-  const factory _UpdatedFeedEvent(List<Activity> feed) = _$_UpdatedFeedEvent;
+  const factory _UpdatedFeedEvent({@required List<Activity> feed}) =
+      _$_UpdatedFeedEvent;
 
   List<Activity> get feed;
   _$UpdatedFeedEventCopyWith<_UpdatedFeedEvent> get copyWith;
@@ -289,7 +290,7 @@ abstract class _$FailedFeedEventCopyWith<$Res> {
   factory _$FailedFeedEventCopyWith(
           _FailedFeedEvent value, $Res Function(_FailedFeedEvent) then) =
       __$FailedFeedEventCopyWithImpl<$Res>;
-  $Res call({Exception e});
+  $Res call({Exception exception});
 }
 
 class __$FailedFeedEventCopyWithImpl<$Res> extends _$FeedEventCopyWithImpl<$Res>
@@ -303,36 +304,39 @@ class __$FailedFeedEventCopyWithImpl<$Res> extends _$FeedEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object e = freezed,
+    Object exception = freezed,
   }) {
     return _then(_FailedFeedEvent(
-      e == freezed ? _value.e : e as Exception,
+      exception:
+          exception == freezed ? _value.exception : exception as Exception,
     ));
   }
 }
 
 class _$_FailedFeedEvent implements _FailedFeedEvent {
-  const _$_FailedFeedEvent(this.e) : assert(e != null);
+  const _$_FailedFeedEvent({@required this.exception})
+      : assert(exception != null);
 
   @override
-  final Exception e;
+  final Exception exception;
 
   @override
   String toString() {
-    return 'FeedEvent.failed(e: $e)';
+    return 'FeedEvent.failed(exception: $exception)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _FailedFeedEvent &&
-            (identical(other.e, e) ||
-                const DeepCollectionEquality().equals(other.e, e)));
+            (identical(other.exception, exception) ||
+                const DeepCollectionEquality()
+                    .equals(other.exception, exception)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(e);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(exception);
 
   @override
   _$FailedFeedEventCopyWith<_FailedFeedEvent> get copyWith =>
@@ -343,12 +347,12 @@ class _$_FailedFeedEvent implements _FailedFeedEvent {
   Result when<Result extends Object>({
     @required Result load(),
     @required Result updated(List<Activity> feed),
-    @required Result failed(Exception e),
+    @required Result failed(Exception exception),
   }) {
     assert(load != null);
     assert(updated != null);
     assert(failed != null);
-    return failed(e);
+    return failed(exception);
   }
 
   @override
@@ -356,12 +360,12 @@ class _$_FailedFeedEvent implements _FailedFeedEvent {
   Result maybeWhen<Result extends Object>({
     Result load(),
     Result updated(List<Activity> feed),
-    Result failed(Exception e),
+    Result failed(Exception exception),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (failed != null) {
-      return failed(e);
+      return failed(exception);
     }
     return orElse();
   }
@@ -396,9 +400,10 @@ class _$_FailedFeedEvent implements _FailedFeedEvent {
 }
 
 abstract class _FailedFeedEvent implements FeedEvent {
-  const factory _FailedFeedEvent(Exception e) = _$_FailedFeedEvent;
+  const factory _FailedFeedEvent({@required Exception exception}) =
+      _$_FailedFeedEvent;
 
-  Exception get e;
+  Exception get exception;
   _$FailedFeedEventCopyWith<_FailedFeedEvent> get copyWith;
 }
 

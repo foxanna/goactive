@@ -7,7 +7,9 @@ import 'package:goactive/api/models/activity.dart';
 import 'package:injectable/injectable.dart';
 
 part 'feed_event.dart';
+
 part 'feed_state.dart';
+
 part 'feed_bloc.freezed.dart';
 
 @injectable
@@ -20,8 +22,9 @@ class FeedBloc extends Bloc<FeedEvent, FeedState> {
     @required IFeedRepository repository,
   }) : _repository = repository {
     _feedSubscription = _repository.feed.listen(
-      (feed) => add(FeedEvent.updated(feed)),
-      onError: (Object error) => add(FeedEvent.failed(error as Exception)),
+      (feed) => add(FeedEvent.updated(feed: feed)),
+      onError: (Object error) =>
+          add(FeedEvent.failed(exception: error as Exception)),
     );
   }
 
@@ -29,17 +32,15 @@ class FeedBloc extends Bloc<FeedEvent, FeedState> {
   FeedState get initialState => FeedState.initial();
 
   @override
-  Stream<FeedState> mapEventToState(
-    FeedEvent event,
-  ) async* {
-    yield* event.when(
-      load: () => _onLoadFeedEvent(),
-      updated: (feed) => _onUpdatedFeedEvent(feed),
-      failed: (exception) => _onFailedFeedEvent(exception),
+  Stream<FeedState> mapEventToState(FeedEvent e) async* {
+    yield* e.map(
+      load: _onLoadFeedEvent,
+      updated: _onUpdatedFeedEvent,
+      failed: _onFailedFeedEvent,
     );
   }
 
-  Stream<FeedState> _onLoadFeedEvent() async* {
+  Stream<FeedState> _onLoadFeedEvent(_LoadFeedEvent e) async* {
     if (state is! LoadingFeedState) {
       yield FeedState.loading(feed: state.feed);
 
@@ -47,15 +48,15 @@ class FeedBloc extends Bloc<FeedEvent, FeedState> {
     }
   }
 
-  Stream<FeedState> _onUpdatedFeedEvent(List<Activity> feed) async* {
+  Stream<FeedState> _onUpdatedFeedEvent(_UpdatedFeedEvent e) async* {
     yield FeedState.data(
-      feed: feed,
-      reachedEnd: const DeepCollectionEquality().equals(feed, state.feed),
+      feed: e.feed,
+      reachedEnd: const DeepCollectionEquality().equals(e.feed, state.feed),
     );
   }
 
-  Stream<FeedState> _onFailedFeedEvent(Exception exception) async* {
-    yield FeedState.error(feed: state.feed, exception: exception);
+  Stream<FeedState> _onFailedFeedEvent(_FailedFeedEvent e) async* {
+    yield FeedState.error(feed: state.feed, exception: e.exception);
   }
 
   @override

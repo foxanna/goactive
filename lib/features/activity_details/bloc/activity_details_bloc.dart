@@ -26,16 +26,15 @@ class ActivityDetailsBloc
       ActivityDetailsState(activity: activity);
 
   @override
-  Stream<ActivityDetailsState> mapEventToState(
-    ActivityDetailsEvent event,
-  ) async* {
-    yield* event.when(
-      interested: () => _onInterestedActivityDetailsEvent(),
-      attending: () => _onAttendingActivityDetailsEvent(),
+  Stream<ActivityDetailsState> mapEventToState(ActivityDetailsEvent e) async* {
+    yield* e.map(
+      interested: _onInterestedActivityDetailsEvent,
+      attending: _onAttendingActivityDetailsEvent,
     );
   }
 
-  Stream<ActivityDetailsState> _onInterestedActivityDetailsEvent() async* {
+  Stream<ActivityDetailsState> _onInterestedActivityDetailsEvent(
+      _InterestedActivityDetailsEvent e) async* {
     final oldActivity = state.activity;
 
     final newActivity = oldActivity.copyWith(
@@ -48,7 +47,8 @@ class ActivityDetailsBloc
     yield* _updateActivity(newActivity, oldActivity);
   }
 
-  Stream<ActivityDetailsState> _onAttendingActivityDetailsEvent() async* {
+  Stream<ActivityDetailsState> _onAttendingActivityDetailsEvent(
+      _AttendingActivityDetailsEvent e) async* {
     final oldActivity = state.activity;
 
     final newActivity = oldActivity.copyWith(
