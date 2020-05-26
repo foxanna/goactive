@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:goactive/features/feed/presentation/styles/dimensions.dart';
 import 'package:goactive/styles/colors.dart';
 
 class StubUserAvatar extends StatelessWidget {
@@ -7,7 +6,7 @@ class StubUserAvatar extends StatelessWidget {
 
   const StubUserAvatar({
     Key key,
-    this.radius = userAvatarRadius,
+    this.radius,
   }) : super(key: key);
 
   @override

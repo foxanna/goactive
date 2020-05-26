@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:goactive/features/feed/presentation/styles/dimensions.dart';
-import 'package:goactive/features/feed/presentation/views/stub_user_avatar.dart';
 import 'package:goactive/styles/colors.dart';
 import 'package:goactive/styles/dimensions.dart';
+import 'package:goactive/widgets/user_avatar.dart';
 import 'package:shimmer/shimmer.dart';
 
 class FeedListTileStubDetailsSection extends StatelessWidget {
@@ -27,7 +27,7 @@ class FeedListTileStubDetailsSection extends StatelessWidget {
         children: [
           Row(
             children: [
-              const StubUserAvatar(),
+              const UserAvatar(radius: userAvatarRadius),
               const SizedBox(width: defaultSpacing),
               Expanded(child: textStub),
             ],

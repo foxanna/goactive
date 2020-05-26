@@ -7,11 +7,12 @@ import 'package:goactive/features/authentication/bloc/authentication_bloc.dart';
 import 'package:goactive/features/feed/presentation/styles/dimensions.dart';
 import 'package:goactive/features/feed/presentation/views/feed_list_tile_image_section.dart';
 import 'package:goactive/features/feed/presentation/views/stub_activity_image.dart';
-import 'package:goactive/features/feed/presentation/views/stub_user_avatar.dart';
+import 'package:goactive/widgets/stub_user_avatar.dart';
 import 'package:goactive/routes/router.gr.dart';
 import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/styles/misc.dart';
 import 'package:goactive/widgets/image_bottom_gradient.dart';
+import 'package:goactive/widgets/user_avatar.dart';
 
 class FeedListTileDetailsSection extends StatelessWidget {
   final Activity activity;
@@ -30,13 +31,10 @@ class FeedListTileDetailsSection extends StatelessWidget {
         children: [
           Row(
             children: [
-              if (activity.organizer.avatar != null)
-                CircleAvatar(
-                    radius: userAvatarRadius,
-                    backgroundImage:
-                        CachedNetworkImageProvider(activity.organizer.avatar))
-              else
-                const StubUserAvatar(),
+              UserAvatar(
+                avatar: activity.organizer.avatar,
+                radius: userAvatarRadius,
+              ),
               const SizedBox(width: defaultSpacing),
               Text(
                 activity.organizer.name,

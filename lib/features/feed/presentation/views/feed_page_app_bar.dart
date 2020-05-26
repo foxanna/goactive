@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goactive/features/authentication/bloc/authentication_bloc.dart';
 import 'package:goactive/features/feed/presentation/styles/dimensions.dart';
-import 'package:goactive/features/feed/presentation/views/stub_user_avatar.dart';
+import 'package:goactive/widgets/stub_user_avatar.dart';
 import 'package:goactive/styles/dimensions.dart';
+import 'package:goactive/widgets/user_avatar.dart';
 
 class FeedPageAppBar extends StatelessWidget {
   static const _userAvatarRadius = userAvatarRadius * 1.5;
@@ -22,16 +23,10 @@ class FeedPageAppBar extends StatelessWidget {
               children: [
                 Text(value.user.name),
                 const SizedBox(width: defaultSpacing),
-                if (value.user.avatar != null)
-                  CircleAvatar(
-                    backgroundImage:
-                        CachedNetworkImageProvider(value.user.avatar),
-                    radius: _userAvatarRadius,
-                  )
-                else
-                  const StubUserAvatar(
-                    radius: _userAvatarRadius,
-                  ),
+                UserAvatar(
+                  avatar: value.user.avatar,
+                  radius: _userAvatarRadius,
+                ),
               ],
             ),
             orElse: () => Container(),
