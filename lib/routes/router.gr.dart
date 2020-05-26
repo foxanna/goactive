@@ -7,16 +7,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:goactive/features/application/main_page.dart';
 import 'package:goactive/features/feed/presentation/feed_page.dart';
 import 'package:goactive/features/activity_details/presentation/activity_details_page.dart';
 import 'package:goactive/api/models/activity.dart';
 import 'package:goactive/features/new_activity/presentation/new_activity_page.dart';
 
 abstract class Routes {
-  static const feedPage = '/';
+  static const mainPage = '/';
+  static const feedPage = '/feed-page';
   static const activityDetailsPage = '/activity-details-page';
   static const newActivityPage = '/new-activity-page';
   static const all = {
+    mainPage,
     feedPage,
     activityDetailsPage,
     newActivityPage,
@@ -35,6 +38,15 @@ class Router extends RouterBase {
   Route<dynamic> onGenerateRoute(RouteSettings settings) {
     final args = settings.arguments;
     switch (settings.name) {
+      case Routes.mainPage:
+        if (hasInvalidArgs<MainPageArguments>(args)) {
+          return misTypedArgsRoute<MainPageArguments>(args);
+        }
+        final typedArgs = args as MainPageArguments ?? MainPageArguments();
+        return MaterialPageRoute<dynamic>(
+          builder: (context) => MainPage(key: typedArgs.key),
+          settings: settings,
+        );
       case Routes.feedPage:
         if (hasInvalidArgs<FeedPageArguments>(args)) {
           return misTypedArgsRoute<FeedPageArguments>(args);
@@ -75,6 +87,12 @@ class Router extends RouterBase {
 // *************************************************************************
 // Arguments holder classes
 // **************************************************************************
+
+//MainPage arguments holder class
+class MainPageArguments {
+  final Key key;
+  MainPageArguments({this.key});
+}
 
 //FeedPage arguments holder class
 class FeedPageArguments {
