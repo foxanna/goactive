@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:goactive/styles/dimensions.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 ThemeData createTheme() {
   final base = ThemeData(
@@ -35,6 +36,7 @@ ThemeData createTheme() {
       primaryColor: Colors.white,
     ),
     cursorColor: Colors.white,
+    textTheme: GoogleFonts.ubuntuTextTheme(),
   );
 
   return base;
