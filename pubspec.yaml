@@ -8,6 +8,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  auto_route: ^0.5.0
   cached_network_image: ^2.2.0+1
   get_it: ^4.0.2
   injectable: ^0.4.0
@@ -18,6 +20,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  auto_route_generator: ^0.5.0
   build_runner:
   extra_pedantic: ^1.2.0
   freezed: ^0.10.9

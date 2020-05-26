@@ -1,13 +1,13 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goactive/api/models/activity.dart';
-import 'package:goactive/features/activity_details/presentation/activity_details_page.dart';
 import 'package:goactive/features/authentication/bloc/authentication_bloc.dart';
 import 'package:goactive/features/feed/presentation/styles/dimensions.dart';
 import 'package:goactive/features/feed/presentation/views/stub_activity_image.dart';
 import 'package:goactive/features/feed/presentation/views/stub_user_avatar.dart';
-import 'package:goactive/features/new_activity/presentation/new_activity_page.dart';
+import 'package:goactive/routes/router.gr.dart';
 import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/styles/misc.dart';
 import 'package:goactive/widgets/image_bottom_gradient.dart';
@@ -35,24 +35,7 @@ class FeedListTile extends StatelessWidget {
                     Expanded(child: _buildDetailsLayout(context)),
                   ],
                 ),
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute<dynamic>(
-              builder: (context) {
-                final state = context.bloc<AuthenticationBloc>().state
-                    as AuthenticatedAuthenticationState;
-                if (state != null && state.user.id == activity.organizer.id) {
-                  return NewActivityPage(
-                    activity: activity,
-                  );
-                } else {
-                  return ActivityDetailsPage(
-                    activity: activity,
-                  );
-                }
-              },
-            ),
-          ),
+          onTap: () => _onActivityTap(context),
         ),
       );
 
@@ -166,5 +149,21 @@ class FeedListTile extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void _onActivityTap(BuildContext context) {
+    final state = context.bloc<AuthenticationBloc>().state;
+    if (state is AuthenticatedAuthenticationState &&
+        state.user.id == activity.organizer.id) {
+      ExtendedNavigator.of(context).pushNamed(
+        Routes.newActivityPage,
+        arguments: NewActivityPageArguments(activity: activity),
+      );
+    } else {
+      ExtendedNavigator.of(context).pushNamed(
+        Routes.activityDetailsPage,
+        arguments: ActivityDetailsPageArguments(activity: activity),
+      );
+    }
   }
 }
