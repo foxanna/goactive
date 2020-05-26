@@ -8,10 +8,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   auto_route: ^0.5.0
   cached_network_image: ^2.2.0+1
   get_it: ^4.0.2
+  i69n: ^1.1.0
   injectable: ^0.4.0
   intl: ^0.16.1
   flutter_bloc: ^4.0.0
