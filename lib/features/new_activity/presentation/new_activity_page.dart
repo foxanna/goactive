@@ -5,6 +5,7 @@ import 'package:goactive/features/new_activity/bloc/new_activity_bloc.dart';
 import 'package:goactive/features/new_activity/presentation/views/new_activity_page_content.dart';
 import 'package:goactive/get_it.dart';
 import 'package:goactive/widgets/page_background.dart';
+import 'package:goactive/utils/extensions/context_extensions.dart';
 
 class NewActivityPage extends StatelessWidget {
   final Activity activity;
@@ -22,7 +23,7 @@ class NewActivityPage extends StatelessWidget {
           },
           child: Scaffold(
             appBar: AppBar(
-              title: const Text('Create your own experience'),
+              title: Text(context.translate().newActivityTitle),
               elevation: 0.0,
             ),
             body: const PageBackground(

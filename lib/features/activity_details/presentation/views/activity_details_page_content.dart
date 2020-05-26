@@ -9,6 +9,7 @@ import 'package:goactive/features/activity_details/bloc/activity_details_bloc.da
 import 'package:goactive/features/activity_details/presentation/styles/dimensions.dart';
 import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/styles/misc.dart';
+import 'package:goactive/utils/extensions/context_extensions.dart';
 
 class ActivityDetailsPageContent extends StatelessWidget {
   const ActivityDetailsPageContent({Key key}) : super(key: key);
@@ -59,6 +60,7 @@ class ActivityDetailsPageContent extends StatelessWidget {
 
   Widget _buildLocationLayout(BuildContext context, Location location) {
     final theme = Theme.of(context);
+    final translations = context.translate();
 
     return Row(
       children: [
@@ -73,8 +75,9 @@ class ActivityDetailsPageContent extends StatelessWidget {
               ),
               recognizer: TapGestureRecognizer()
                 ..onTap = () => Scaffold.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Navigating is not implementer yet'),
+                      SnackBar(
+                        content:
+                            Text(translations.notImplementedFeatureNavigate),
                       ),
                     ),
             ),
@@ -86,6 +89,7 @@ class ActivityDetailsPageContent extends StatelessWidget {
 
   Widget _buildOrganizerLayout(BuildContext context, User organizer) {
     final theme = Theme.of(context);
+    final translations = context.translate();
 
     return Row(
       children: [
@@ -109,9 +113,8 @@ class ActivityDetailsPageContent extends StatelessWidget {
               color: theme.primaryColor,
             ),
             onPressed: () => Scaffold.of(context).showSnackBar(
-              const SnackBar(
-                content:
-                    Text('Sending email to organizer is not implementer yet'),
+              SnackBar(
+                content: Text(translations.notImplementedFeatureEmail),
               ),
             ),
           ),
@@ -121,11 +124,12 @@ class ActivityDetailsPageContent extends StatelessWidget {
 
   Widget _buildStatsLayout(BuildContext context, Activity activity) {
     final theme = Theme.of(context);
+    final translations = context.translate();
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        const Text('Interested'),
+        Text(translations.interested),
         IconButton(
           icon: Icon(activity.isInterested ? Icons.star : Icons.star_border,
               color: theme.primaryColor),
@@ -135,7 +139,7 @@ class ActivityDetailsPageContent extends StatelessWidget {
         ),
         Text('${activity.interested}'),
         const SizedBox(width: defaultSpacing * 4),
-        const Text('Attending'),
+        Text(translations.attending),
         IconButton(
           icon: Icon(activity.isAttending ? Icons.check : Icons.done_outline,
               color: theme.primaryColor),

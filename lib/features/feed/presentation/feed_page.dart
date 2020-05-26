@@ -8,6 +8,7 @@ import 'package:goactive/features/feed/presentation/views/feed_page_content_cont
 import 'package:goactive/get_it.dart';
 import 'package:goactive/routes/router.gr.dart';
 import 'package:goactive/widgets/page_background.dart';
+import 'package:goactive/utils/extensions/context_extensions.dart';
 
 class FeedPage extends StatelessWidget {
   const FeedPage({Key key}) : super(key: key);
@@ -29,6 +30,7 @@ class FeedPage extends StatelessWidget {
           ),
           floatingActionButton: FloatingActionButton(
             child: const Icon(Icons.add),
+            tooltip: context.translate().tooltipCreate,
             onPressed: () => ExtendedNavigator.of(context).pushNamed(
               Routes.newActivityPage,
               arguments: NewActivityPageArguments(activity: null),

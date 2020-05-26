@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goactive/features/new_activity/bloc/new_activity_bloc.dart';
 import 'package:goactive/styles/dimensions.dart';
+import 'package:goactive/utils/extensions/context_extensions.dart';
 
 class NewActivitySaveButton extends StatelessWidget {
   const NewActivitySaveButton({Key key}) : super(key: key);
@@ -10,6 +11,7 @@ class NewActivitySaveButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final translations = context.translate();
 
     return BlocBuilder<NewActivityBloc, NewActivityState>(
       builder: (context, state) => Padding(
@@ -19,7 +21,7 @@ class NewActivitySaveButton extends StatelessWidget {
           child: state is CreatingNewActivityState
               ? const CircularProgressIndicator()
               : Text(
-                  'Save',
+                  translations.save,
                   style: theme.textTheme.headline5
                       .copyWith(color: theme.primaryColor),
                 ),

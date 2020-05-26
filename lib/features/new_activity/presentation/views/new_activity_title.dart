@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goactive/features/new_activity/bloc/new_activity_bloc.dart';
+import 'package:goactive/utils/extensions/context_extensions.dart';
 
 class NewActivityTitle extends StatefulWidget {
   const NewActivityTitle({Key key}) : super(key: key);
@@ -26,7 +27,7 @@ class _NewActivityTitleState extends State<NewActivityTitle> {
         builder: (context, state) => TextField(
           style: const TextStyle(color: Colors.white),
           controller: _textController..text = state.activity.title,
-          decoration: const InputDecoration(labelText: 'title'),
+          decoration: InputDecoration(labelText: context.translate().title),
           onChanged: (value) => context
               .bloc<NewActivityBloc>()
               .add(NewActivityEvent.updateTitle(value)),
