@@ -35,29 +35,28 @@ class NewActivityBloc extends Bloc<NewActivityEvent, NewActivityState> {
     NewActivityEvent event,
   ) async* {
     yield* event.map(
-      create: (_) async* {
+      create: (e) async* {
         try {
           validateActivity(state.activity);
+
           yield NewActivityState.creating(activity: state.activity);
+
           if (_initialActivity == null) {
             await _repository.createActivity(state.activity);
           } else {
             await _repository.updateActivity(state.activity);
           }
+
           yield NewActivityState.created(activity: state.activity);
         } on Exception {
           NewActivityState.editing(activity: state.activity);
         }
       },
       updateTitle: (e) async* {
-        yield state.copyWith(
-          activity: state.activity.copyWith(title: e.title),
-        );
+        yield state.copyWith.activity(title: e.title);
       },
       updateDetails: (e) async* {
-        yield state.copyWith(
-          activity: state.activity.copyWith(details: e.details),
-        );
+        yield state.copyWith.activity(details: e.details);
       },
     );
   }
