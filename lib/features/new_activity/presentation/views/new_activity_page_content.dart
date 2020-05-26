@@ -15,7 +15,9 @@ class NewActivityPageContent extends StatelessWidget {
           padding: defaultPadding,
           children: const [
             NewActivityTitle(),
+            SizedBox(height: defaultSpacing * 2),
             NewActivityDetails(),
+            SizedBox(height: defaultSpacing * 8),
             NewActivitySaveButton(),
           ],
         ),
