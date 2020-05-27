@@ -3,7 +3,7 @@
 ![screenshots](screenshots/screenshots.png)
 
 This repository contains a sample social event tracking app built with
-[Flutter](https://flutter.dev/).
+[Flutter](https://flutter.dev/)
 
 ## 💻 Launching
 
@@ -41,6 +41,6 @@ flutter test
 * Linting with `extra_pedantic`
 
 
-## Author  👩‍💻
+## 👩‍💻 Author  
 
-Created by [Anna Domashych](https://foxanna.github.io/).
+Created by [Anna Domashych](https://foxanna.github.io/)
