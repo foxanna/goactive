@@ -38,6 +38,7 @@ flutter test
 * Custom fonts with `google_fonts`
 * Generating app icon and name with `flutter_launcher_name` and
   `flutter_launcher_icons`
+* Unit tests with `flutter_test` and `mockito`
 * Linting with `extra_pedantic`
 
 
