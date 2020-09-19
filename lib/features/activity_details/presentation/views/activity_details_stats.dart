@@ -6,9 +6,9 @@ import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/utils/extensions/context_extensions.dart';
 
 class ActivityDetailsStats extends StatelessWidget {
-  final Activity activity;
-
   const ActivityDetailsStats({Key key, this.activity}) : super(key: key);
+
+  final Activity activity;
 
   @override
   Widget build(BuildContext context) {

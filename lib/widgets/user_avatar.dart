@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:goactive/widgets/stub_user_avatar.dart';
 
 class UserAvatar extends StatelessWidget {
+  const UserAvatar({Key key, this.avatar, this.radius}) : super(key: key);
+
   final String avatar;
   final double radius;
-
-  const UserAvatar({Key key, this.avatar, this.radius}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => avatar != null

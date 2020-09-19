@@ -5,11 +5,6 @@ import 'package:goactive/features/feed/presentation/views/feed_list_tile_stub.da
 import 'package:goactive/styles/dimensions.dart';
 
 class FeedListView extends StatelessWidget {
-  final List<Activity> feed;
-  final int trailingStubCount;
-  final Widget footer;
-  final int _childrenCount;
-
   const FeedListView({
     Key key,
     this.feed,
@@ -18,6 +13,12 @@ class FeedListView extends StatelessWidget {
   })  : _childrenCount =
             feed.length + trailingStubCount + (footer != null ? 1 : 0),
         super(key: key);
+
+  final List<Activity> feed;
+  final int trailingStubCount;
+  final Widget footer;
+
+  final int _childrenCount;
 
   @override
   Widget build(BuildContext context) => SliverPadding(

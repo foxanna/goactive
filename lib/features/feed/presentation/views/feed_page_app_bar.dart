@@ -6,9 +6,9 @@ import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/widgets/user_avatar.dart';
 
 class FeedPageAppBar extends StatelessWidget {
-  static const _userAvatarRadius = userAvatarRadius * 1.5;
-
   const FeedPageAppBar({Key key}) : super(key: key);
+
+  static const _userAvatarRadius = userAvatarRadius * 1.5;
 
   @override
   Widget build(BuildContext context) =>

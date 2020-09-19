@@ -8,14 +8,14 @@ import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: IFeedRepository)
 class FeedRepository implements IFeedRepository {
+  FeedRepository({
+    @required IFeedApiService apiService,
+  }) : _apiService = apiService;
+
   final IFeedApiService _apiService;
 
   final _feedBackup = <Activity>[];
   final _feedController = StreamController<List<Activity>>();
-
-  FeedRepository({
-    @required IFeedApiService apiService,
-  }) : _apiService = apiService;
 
   @override
   Stream<List<Activity>> get feed => _feedController.stream;

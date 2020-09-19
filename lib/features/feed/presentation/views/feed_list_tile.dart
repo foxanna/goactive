@@ -8,9 +8,9 @@ import 'package:goactive/features/feed/presentation/views/feed_list_tile_image_s
 import 'package:goactive/routes/router.gr.dart';
 
 class FeedListTile extends StatelessWidget {
-  final Activity activity;
-
   const FeedListTile({Key key, this.activity}) : super(key: key);
+
+  final Activity activity;
 
   @override
   Widget build(BuildContext context) => Card(

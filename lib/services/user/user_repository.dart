@@ -8,11 +8,11 @@ import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: IUserRepository)
 class UserRepository implements IUserRepository {
-  final IUserApiService _apiService;
-
   UserRepository({
     @required IUserApiService apiService,
   }) : _apiService = apiService;
+
+  final IUserApiService _apiService;
 
   @override
   Future<User> getCurrentUser() async {

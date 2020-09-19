@@ -12,9 +12,6 @@ part 'new_activity_state.dart';
 
 @injectable
 class NewActivityBloc extends Bloc<NewActivityEvent, NewActivityState> {
-  final IFeedRepository _repository;
-  final Activity _initialActivity;
-
   NewActivityBloc({
     @required IFeedRepository repository,
     @factoryParam @required @nullable Activity activity,
@@ -27,6 +24,9 @@ class NewActivityBloc extends Bloc<NewActivityEvent, NewActivityState> {
                 details: '',
               ),
         ));
+
+  final IFeedRepository _repository;
+  final Activity _initialActivity;
 
   @override
   Stream<NewActivityState> mapEventToState(NewActivityEvent e) async* {

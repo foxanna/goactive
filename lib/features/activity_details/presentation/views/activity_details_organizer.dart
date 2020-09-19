@@ -6,9 +6,9 @@ import 'package:goactive/utils/extensions/context_extensions.dart';
 import 'package:goactive/widgets/user_avatar.dart';
 
 class ActivityDetailsOrganizer extends StatelessWidget {
-  final User organizer;
-
   const ActivityDetailsOrganizer({Key key, this.organizer}) : super(key: key);
+
+  final User organizer;
 
   @override
   Widget build(BuildContext context) {

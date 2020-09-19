@@ -10,11 +10,11 @@ import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: IFeedApiService)
 class FeedApiService implements IFeedApiService {
-  final IHttpService _httpService;
-
   const FeedApiService({
     @required IHttpService httpService,
   }) : _httpService = httpService;
+
+  final IHttpService _httpService;
 
   @override
   Future<Iterable<Activity>> getFeed({String lastActivityId}) async {

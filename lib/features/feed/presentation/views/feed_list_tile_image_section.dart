@@ -7,9 +7,9 @@ import 'package:goactive/features/feed/presentation/views/stub_activity_image.da
 import 'package:goactive/widgets/image_bottom_gradient.dart';
 
 class FeedListTileImageSection extends StatelessWidget {
-  final Activity activity;
-
   const FeedListTileImageSection({Key key, this.activity}) : super(key: key);
+
+  final Activity activity;
 
   @override
   Widget build(BuildContext context) => SizedBox(

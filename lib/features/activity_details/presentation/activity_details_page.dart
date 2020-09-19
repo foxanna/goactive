@@ -7,13 +7,15 @@ import 'package:goactive/features/activity_details/presentation/views/activity_d
 import 'package:goactive/injection/ioc.dart';
 
 class ActivityDetailsPage extends StatelessWidget {
-  final Activity activity;
-
   const ActivityDetailsPage({Key key, this.activity}) : super(key: key);
+
+  final Activity activity;
 
   @override
   Widget build(BuildContext context) => BlocProvider(
-        create: (context) => resolveWithParameter<ActivityDetailsBloc, Activity>(parameter: activity),
+        create: (context) =>
+            resolveWithParameter<ActivityDetailsBloc, Activity>(
+                parameter: activity),
         child: const Scaffold(
           body: CustomScrollView(
             physics: BouncingScrollPhysics(),

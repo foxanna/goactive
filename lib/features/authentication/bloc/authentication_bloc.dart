@@ -13,12 +13,12 @@ part 'authentication_state.dart';
 @injectable
 class AuthenticationBloc
     extends Bloc<AuthenticationEvent, AuthenticationState> {
-  final IUserRepository _repository;
-
   AuthenticationBloc({
     @required IUserRepository repository,
   })  : _repository = repository,
         super(const AuthenticationState.initial());
+
+  final IUserRepository _repository;
 
   @override
   Stream<AuthenticationState> mapEventToState(AuthenticationEvent e) async* {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ErrorMessage extends StatelessWidget {
-  final Color textColor;
-
   const ErrorMessage({Key key, this.textColor}) : super(key: key);
+
+  final Color textColor;
 
   @override
   Widget build(BuildContext context) => Center(

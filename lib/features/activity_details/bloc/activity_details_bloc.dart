@@ -13,13 +13,13 @@ part 'activity_details_state.dart';
 @injectable
 class ActivityDetailsBloc
     extends Bloc<ActivityDetailsEvent, ActivityDetailsState> {
-  final IFeedRepository _repository;
-
   ActivityDetailsBloc({
     @required IFeedRepository repository,
     @factoryParam @required Activity activity,
   })  : _repository = repository,
         super(ActivityDetailsState(activity: activity));
+
+  final IFeedRepository _repository;
 
   @override
   Stream<ActivityDetailsState> mapEventToState(ActivityDetailsEvent e) async* {

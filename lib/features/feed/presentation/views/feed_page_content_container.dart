@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goactive/features/feed/bloc/feed_bloc.dart';
 
 class FeedPageContentContainer extends StatefulWidget {
-  final List<Widget> slivers;
-
   const FeedPageContentContainer({Key key, this.slivers}) : super(key: key);
+
+  final List<Widget> slivers;
 
   @override
   _FeedPageContentContainerState createState() =>

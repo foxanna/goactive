@@ -8,11 +8,11 @@ import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: IUserApiService)
 class UserApiService implements IUserApiService {
-  final IHttpService _httpService;
-
   const UserApiService({
     @required IHttpService httpService,
   }) : _httpService = httpService;
+
+  final IHttpService _httpService;
 
   @override
   Future<User> getCurrentUser(String token) async {

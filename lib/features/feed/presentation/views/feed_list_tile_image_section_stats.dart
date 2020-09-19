@@ -4,10 +4,10 @@ import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/styles/misc.dart';
 
 class FeedListTileImageSectionStats extends StatelessWidget {
-  final Activity activity;
-
   const FeedListTileImageSectionStats({Key key, this.activity})
       : super(key: key);
+
+  final Activity activity;
 
   @override
   Widget build(BuildContext context) {

@@ -5,9 +5,9 @@ import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/widgets/user_avatar.dart';
 
 class FeedListTileDetailsSection extends StatelessWidget {
-  final Activity activity;
-
   const FeedListTileDetailsSection({Key key, this.activity}) : super(key: key);
+
+  final Activity activity;
 
   @override
   Widget build(BuildContext context) {

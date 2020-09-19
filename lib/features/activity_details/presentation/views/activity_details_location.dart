@@ -5,9 +5,9 @@ import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/utils/extensions/context_extensions.dart';
 
 class ActivityDetailsLocation extends StatelessWidget {
-  final Location location;
-
   const ActivityDetailsLocation({Key key, this.location}) : super(key: key);
+
+  final Location location;
 
   @override
   Widget build(BuildContext context) {

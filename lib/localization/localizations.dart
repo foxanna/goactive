@@ -4,9 +4,9 @@ import 'package:goactive/localization/translations/translations.i69n.dart';
 const _supportedLocales = ['en'];
 
 class GoActiveLocalizations {
-  final Translations translations;
-
   const GoActiveLocalizations(this.translations);
+
+  final Translations translations;
 
   static final _translations = <String, Translations Function()>{
     'en': () => const Translations(),
