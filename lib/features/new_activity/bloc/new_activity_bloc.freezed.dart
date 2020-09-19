@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'new_activity_bloc.dart';
 
@@ -12,16 +12,19 @@ T _$identity<T>(T value) => value;
 class _$NewActivityEventTearOff {
   const _$NewActivityEventTearOff();
 
+// ignore: unused_element
   _CreateNewActivityEvent create() {
     return const _CreateNewActivityEvent();
   }
 
+// ignore: unused_element
   _UpdateTitleNewActivityEvent updateTitle({@required String title}) {
     return _UpdateTitleNewActivityEvent(
       title: title,
     );
   }
 
+// ignore: unused_element
   _UpdateDetailsNewActivityEvent updateDetails({@required String details}) {
     return _UpdateDetailsNewActivityEvent(
       details: details,
@@ -424,18 +427,21 @@ abstract class _UpdateDetailsNewActivityEvent implements NewActivityEvent {
 class _$NewActivityStateTearOff {
   const _$NewActivityStateTearOff();
 
+// ignore: unused_element
   EditingNewActivityState editing({@required Activity activity}) {
     return EditingNewActivityState(
       activity: activity,
     );
   }
 
+// ignore: unused_element
   CreatingNewActivityState creating({@required Activity activity}) {
     return CreatingNewActivityState(
       activity: activity,
     );
   }
 
+// ignore: unused_element
   CreatedNewActivityState created({@required Activity activity}) {
     return CreatedNewActivityState(
       activity: activity,

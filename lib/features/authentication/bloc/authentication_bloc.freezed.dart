@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'authentication_bloc.dart';
 
@@ -12,6 +12,7 @@ T _$identity<T>(T value) => value;
 class _$AuthenticationEventTearOff {
   const _$AuthenticationEventTearOff();
 
+// ignore: unused_element
   _InitAuthenticationEvent init() {
     return const _InitAuthenticationEvent();
   }
@@ -20,7 +21,26 @@ class _$AuthenticationEventTearOff {
 // ignore: unused_element
 const $AuthenticationEvent = _$AuthenticationEventTearOff();
 
-mixin _$AuthenticationEvent {}
+mixin _$AuthenticationEvent {
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result init(),
+  });
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result init(),
+    @required Result orElse(),
+  });
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result init(_InitAuthenticationEvent value),
+  });
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result init(_InitAuthenticationEvent value),
+    @required Result orElse(),
+  });
+}
 
 abstract class $AuthenticationEventCopyWith<$Res> {
   factory $AuthenticationEventCopyWith(
@@ -70,6 +90,50 @@ class _$_InitAuthenticationEvent implements _InitAuthenticationEvent {
 
   @override
   int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result init(),
+  }) {
+    assert(init != null);
+    return init();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result init(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (init != null) {
+      return init();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result init(_InitAuthenticationEvent value),
+  }) {
+    assert(init != null);
+    return init(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result init(_InitAuthenticationEvent value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (init != null) {
+      return init(this);
+    }
+    return orElse();
+  }
 }
 
 abstract class _InitAuthenticationEvent implements AuthenticationEvent {
@@ -79,20 +143,24 @@ abstract class _InitAuthenticationEvent implements AuthenticationEvent {
 class _$AuthenticationStateTearOff {
   const _$AuthenticationStateTearOff();
 
+// ignore: unused_element
   InitialAuthenticationState initial() {
     return const InitialAuthenticationState();
   }
 
+// ignore: unused_element
   AuthenticatedAuthenticationState authenticated({@required User user}) {
     return AuthenticatedAuthenticationState(
       user: user,
     );
   }
 
+// ignore: unused_element
   AuthenticatingAuthenticationState authenticating() {
     return const AuthenticatingAuthenticationState();
   }
 
+// ignore: unused_element
   UnauthenticatedAuthenticationState unauthenticated() {
     return const UnauthenticatedAuthenticationState();
   }

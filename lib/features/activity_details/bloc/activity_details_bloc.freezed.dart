@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'activity_details_bloc.dart';
 
@@ -12,10 +12,12 @@ T _$identity<T>(T value) => value;
 class _$ActivityDetailsEventTearOff {
   const _$ActivityDetailsEventTearOff();
 
+// ignore: unused_element
   _InterestedActivityDetailsEvent interested() {
     return const _InterestedActivityDetailsEvent();
   }
 
+// ignore: unused_element
   _AttendingActivityDetailsEvent attending() {
     return const _AttendingActivityDetailsEvent();
   }
@@ -253,6 +255,7 @@ abstract class _AttendingActivityDetailsEvent implements ActivityDetailsEvent {
 class _$ActivityDetailsStateTearOff {
   const _$ActivityDetailsStateTearOff();
 
+// ignore: unused_element
   _ActivityDetailsState call({@required Activity activity}) {
     return _ActivityDetailsState(
       activity: activity,

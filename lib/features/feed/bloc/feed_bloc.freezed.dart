@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'feed_bloc.dart';
 
@@ -12,16 +12,19 @@ T _$identity<T>(T value) => value;
 class _$FeedEventTearOff {
   const _$FeedEventTearOff();
 
+// ignore: unused_element
   _LoadFeedEvent load() {
     return const _LoadFeedEvent();
   }
 
+// ignore: unused_element
   _UpdatedFeedEvent updated({@required List<Activity> feed}) {
     return _UpdatedFeedEvent(
       feed: feed,
     );
   }
 
+// ignore: unused_element
   _FailedFeedEvent failed({@required Exception exception}) {
     return _FailedFeedEvent(
       exception: exception,
@@ -410,6 +413,7 @@ abstract class _FailedFeedEvent implements FeedEvent {
 class _$FeedStateTearOff {
   const _$FeedStateTearOff();
 
+// ignore: unused_element
   DataFeedState data(
       {@required List<Activity> feed, @required bool reachedEnd}) {
     return DataFeedState(
@@ -418,12 +422,14 @@ class _$FeedStateTearOff {
     );
   }
 
+// ignore: unused_element
   LoadingFeedState loading({@required List<Activity> feed}) {
     return LoadingFeedState(
       feed: feed,
     );
   }
 
+// ignore: unused_element
   ErrorFeedState error(
       {@required List<Activity> feed, @required Exception exception}) {
     return ErrorFeedState(
