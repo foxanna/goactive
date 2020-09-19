@@ -15,6 +15,7 @@ class FeedListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Card(
         child: InkWell(
+          onTap: () => _onActivityTap(context),
           child: MediaQuery.of(context).orientation == Orientation.portrait
               ? Column(
                   mainAxisSize: MainAxisSize.min,
@@ -34,7 +35,6 @@ class FeedListTile extends StatelessWidget {
                     ),
                   ],
                 ),
-          onTap: () => _onActivityTap(context),
         ),
       );
 

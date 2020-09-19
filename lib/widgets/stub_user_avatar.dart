@@ -11,11 +11,11 @@ class StubUserAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => CircleAvatar(
+        radius: radius,
+        backgroundColor: stubColor,
         child: const Icon(
           Icons.person,
           color: Colors.white,
         ),
-        radius: radius,
-        backgroundColor: stubColor,
       );
 }

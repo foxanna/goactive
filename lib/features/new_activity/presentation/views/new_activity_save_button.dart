@@ -18,13 +18,6 @@ class NewActivitySaveButton extends StatelessWidget {
         padding: defaultPadding,
         child: CupertinoButton(
           color: Colors.white,
-          child: state is CreatingNewActivityState
-              ? const CircularProgressIndicator()
-              : Text(
-                  translations.save,
-                  style: theme.textTheme.headline5
-                      .copyWith(color: theme.primaryColor),
-                ),
           borderRadius: BorderRadius.circular(32.0),
           disabledColor: Colors.white54,
           onPressed: state is EditingNewActivityState
@@ -32,6 +25,13 @@ class NewActivitySaveButton extends StatelessWidget {
                   .bloc<NewActivityBloc>()
                   .add(const NewActivityEvent.create())
               : null,
+          child: state is CreatingNewActivityState
+              ? const CircularProgressIndicator()
+              : Text(
+                  translations.save,
+                  style: theme.textTheme.headline5
+                      .copyWith(color: theme.primaryColor),
+                ),
         ),
       ),
     );

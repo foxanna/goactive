@@ -26,12 +26,12 @@ class FeedPage extends StatelessWidget {
             ),
           ),
           floatingActionButton: FloatingActionButton(
-            child: const Icon(Icons.add),
             tooltip: context.translate().tooltipCreate,
             onPressed: () => ExtendedNavigator.of(context).pushNamed(
               Routes.newActivityPage,
               arguments: NewActivityPageArguments(activity: null),
             ),
+            child: const Icon(Icons.add),
           ),
         ),
       );
