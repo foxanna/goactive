@@ -8,4 +8,6 @@ abstract class IFeedRepository {
   Future<void> updateActivity(Activity activity);
 
   Future<void> createActivity(Activity activity);
+
+  Future<void> dispose();
 }

@@ -48,4 +48,9 @@ class FeedRepository implements IFeedRepository {
     _feedBackup.insert(0, newActivity);
     _feedController.sink.add(List.from(_feedBackup));
   }
+
+  @override
+  Future<void> dispose() async {
+    await _feedController.close();
+  }
 }
