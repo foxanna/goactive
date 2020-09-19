@@ -63,9 +63,9 @@ void main() {
       // Assert
       expect(
           feedRepository.feed,
-          emitsInOrder([
+          emitsInOrder(<dynamic>[
             expectedFeed1,
-            expectedFeed1.followedBy(expectedFeed2),
+            expectedFeed1.followedBy(expectedFeed2).toList(),
           ]));
     });
 
@@ -97,7 +97,7 @@ void main() {
       // Assert
       expect(
           feedRepository.feed,
-          emitsInOrder([
+          emitsInOrder(<dynamic>[
             expectedFeed1,
             emitsError(expectedException),
             expectedFeed1.followedBy(expectedFeed2),
@@ -127,7 +127,7 @@ void main() {
       // Assert
       expect(
           feedRepository.feed,
-          emitsInOrder([
+          emitsInOrder(<dynamic>[
             originalFeed,
             expectedFeed,
           ]));
