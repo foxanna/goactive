@@ -29,10 +29,10 @@ dev_dependencies:
   extra_pedantic: ^1.2.0
   flutter_launcher_name: ^0.0.1
   flutter_launcher_icons: ^0.7.5
-  freezed: ^0.10.9
+  freezed: ^0.11.6
   google_fonts: ^1.1.0
   injectable_generator: ^0.4.0
-  json_serializable: ^3.3.0
+  json_serializable: ^3.4.1
   mockito: ^4.1.1
 
 flutter:
