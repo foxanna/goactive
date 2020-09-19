@@ -17,10 +17,8 @@ class AuthenticationBloc
 
   AuthenticationBloc({
     @required IUserRepository repository,
-  }) : _repository = repository;
-
-  @override
-  AuthenticationState get initialState => const AuthenticationState.initial();
+  })  : _repository = repository,
+        super(const AuthenticationState.initial());
 
   @override
   Stream<AuthenticationState> mapEventToState(AuthenticationEvent e) async* {

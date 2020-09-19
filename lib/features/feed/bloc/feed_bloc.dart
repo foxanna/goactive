@@ -7,9 +7,7 @@ import 'package:goactive/api/models/activity.dart';
 import 'package:injectable/injectable.dart';
 
 part 'feed_event.dart';
-
 part 'feed_state.dart';
-
 part 'feed_bloc.freezed.dart';
 
 @injectable
@@ -20,16 +18,14 @@ class FeedBloc extends Bloc<FeedEvent, FeedState> {
 
   FeedBloc({
     @required IFeedRepository repository,
-  }) : _repository = repository {
+  })  : _repository = repository,
+        super(FeedState.initial()) {
     _feedSubscription = _repository.feed.listen(
       (feed) => add(FeedEvent.updated(feed: feed)),
       onError: (Object error) =>
           add(FeedEvent.failed(exception: error as Exception)),
     );
   }
-
-  @override
-  FeedState get initialState => FeedState.initial();
 
   @override
   Stream<FeedState> mapEventToState(FeedEvent e) async* {

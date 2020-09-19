@@ -19,16 +19,14 @@ class NewActivityBloc extends Bloc<NewActivityEvent, NewActivityState> {
     @required IFeedRepository repository,
     @factoryParam @required @nullable Activity activity,
   })  : _repository = repository,
-        _initialActivity = activity;
-
-  @override
-  NewActivityState get initialState => NewActivityState.editing(
-        activity: _initialActivity ??
-            const Activity(
-              title: '',
-              details: '',
-            ),
-      );
+        _initialActivity = activity,
+        super(NewActivityState.editing(
+          activity: activity ??
+              const Activity(
+                title: '',
+                details: '',
+              ),
+        ));
 
   @override
   Stream<NewActivityState> mapEventToState(NewActivityEvent e) async* {

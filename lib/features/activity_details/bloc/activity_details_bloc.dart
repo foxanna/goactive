@@ -14,16 +14,12 @@ part 'activity_details_state.dart';
 class ActivityDetailsBloc
     extends Bloc<ActivityDetailsEvent, ActivityDetailsState> {
   final IFeedRepository _repository;
-  Activity activity;
 
   ActivityDetailsBloc({
     @required IFeedRepository repository,
-    @factoryParam @required this.activity,
-  }) : _repository = repository;
-
-  @override
-  ActivityDetailsState get initialState =>
-      ActivityDetailsState(activity: activity);
+    @factoryParam @required Activity activity,
+  })  : _repository = repository,
+        super(ActivityDetailsState(activity: activity));
 
   @override
   Stream<ActivityDetailsState> mapEventToState(ActivityDetailsEvent e) async* {
