@@ -17,7 +17,7 @@ class GoActiveApplication extends StatelessWidget {
           ..add(const AuthenticationEvent.init()),
         child: MaterialApp(
           theme: createTheme(),
-          localizationsDelegates: [
+          localizationsDelegates: const [
             GoActiveLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
