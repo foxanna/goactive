@@ -232,7 +232,7 @@ const feedStubApiResponse3 = r'''[
 
 const userStubApiResponse = r'''{
   "id": "631482bc-48f4-45f5-9e1e-1d105a943b98",
-  "avatar": "https://media-exp1.licdn.com/dms/image/C5603AQE-YPibgVZKQg/profile-displayphoto-shrink_200_200/0?e=1593648000&v=beta&t=3o2bsKr7nXC3gxMaEfvHJF7DhOJIu6de8GE7C1dg6bI",
+  "avatar": "https://raw.githubusercontent.com/foxanna/foxanna.github.io/master/assets/assets/images/my_photo.jpg",
   "name": "Anna",
   "email": "anna.domashych@gmail.com"
 }''';
