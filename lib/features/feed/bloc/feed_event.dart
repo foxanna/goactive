@@ -11,4 +11,6 @@ abstract class FeedEvent with _$FeedEvent {
   const factory FeedEvent.failed({
     @required Exception exception,
   }) = _FailedFeedEvent;
+
+  const factory FeedEvent.loadMoreRequested() = _LoadMoreRequestedFeedEvent;
 }

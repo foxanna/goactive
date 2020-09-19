@@ -41,15 +41,7 @@ class _FeedPageContentContainerState extends State<FeedPageContentContainer> {
 
   void _loadMoreIfRequested() {
     if (_scrollController.position.extentAfter < 500) {
-      _loadMore();
-    }
-  }
-
-  void _loadMore() {
-    final bloc = context.bloc<FeedBloc>();
-    final state = bloc.state;
-    if (state is DataFeedState && !state.reachedEnd) {
-      bloc.add(const FeedEvent.load());
+      context.bloc<FeedBloc>().add(const FeedEvent.loadMoreRequested());
     }
   }
 }

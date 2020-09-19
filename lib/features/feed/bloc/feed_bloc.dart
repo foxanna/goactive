@@ -30,13 +30,14 @@ class FeedBloc extends Bloc<FeedEvent, FeedState> {
   @override
   Stream<FeedState> mapEventToState(FeedEvent event) async* {
     yield* event.map(
-      load: _onLoadFeedEvent,
-      updated: _onUpdatedFeedEvent,
-      failed: _onFailedFeedEvent,
+      load: _onLoad,
+      updated: _onUpdated,
+      failed: _onFailed,
+      loadMoreRequested: _onLoadMoreRequested,
     );
   }
 
-  Stream<FeedState> _onLoadFeedEvent(_LoadFeedEvent event) async* {
+  Stream<FeedState> _onLoad(_LoadFeedEvent event) async* {
     if (state is! LoadingFeedState) {
       yield FeedState.loading(feed: state.feed);
 
@@ -44,14 +45,23 @@ class FeedBloc extends Bloc<FeedEvent, FeedState> {
     }
   }
 
-  Stream<FeedState> _onUpdatedFeedEvent(_UpdatedFeedEvent event) async* {
+  Stream<FeedState> _onLoadMoreRequested(
+      _LoadMoreRequestedFeedEvent event) async* {
+    final currentState = state;
+    if (currentState is DataFeedState && !currentState.reachedEnd) {
+      add(const FeedEvent.load());
+    }
+    yield state;
+  }
+
+  Stream<FeedState> _onUpdated(_UpdatedFeedEvent event) async* {
     yield FeedState.data(
       feed: event.feed,
       reachedEnd: const DeepCollectionEquality().equals(event.feed, state.feed),
     );
   }
 
-  Stream<FeedState> _onFailedFeedEvent(_FailedFeedEvent event) async* {
+  Stream<FeedState> _onFailed(_FailedFeedEvent event) async* {
     yield FeedState.error(feed: state.feed, exception: event.exception);
   }
 

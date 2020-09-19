@@ -30,6 +30,11 @@ class _$FeedEventTearOff {
       exception: exception,
     );
   }
+
+// ignore: unused_element
+  _LoadMoreRequestedFeedEvent loadMoreRequested() {
+    return const _LoadMoreRequestedFeedEvent();
+  }
 }
 
 // ignore: unused_element
@@ -41,12 +46,14 @@ mixin _$FeedEvent {
     @required Result load(),
     @required Result updated(List<Activity> feed),
     @required Result failed(Exception exception),
+    @required Result loadMoreRequested(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result load(),
     Result updated(List<Activity> feed),
     Result failed(Exception exception),
+    Result loadMoreRequested(),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -54,12 +61,14 @@ mixin _$FeedEvent {
     @required Result load(_LoadFeedEvent value),
     @required Result updated(_UpdatedFeedEvent value),
     @required Result failed(_FailedFeedEvent value),
+    @required Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result load(_LoadFeedEvent value),
     Result updated(_UpdatedFeedEvent value),
     Result failed(_FailedFeedEvent value),
+    Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
     @required Result orElse(),
   });
 }
@@ -115,10 +124,12 @@ class _$_LoadFeedEvent implements _LoadFeedEvent {
     @required Result load(),
     @required Result updated(List<Activity> feed),
     @required Result failed(Exception exception),
+    @required Result loadMoreRequested(),
   }) {
     assert(load != null);
     assert(updated != null);
     assert(failed != null);
+    assert(loadMoreRequested != null);
     return load();
   }
 
@@ -128,6 +139,7 @@ class _$_LoadFeedEvent implements _LoadFeedEvent {
     Result load(),
     Result updated(List<Activity> feed),
     Result failed(Exception exception),
+    Result loadMoreRequested(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -143,10 +155,12 @@ class _$_LoadFeedEvent implements _LoadFeedEvent {
     @required Result load(_LoadFeedEvent value),
     @required Result updated(_UpdatedFeedEvent value),
     @required Result failed(_FailedFeedEvent value),
+    @required Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
   }) {
     assert(load != null);
     assert(updated != null);
     assert(failed != null);
+    assert(loadMoreRequested != null);
     return load(this);
   }
 
@@ -156,6 +170,7 @@ class _$_LoadFeedEvent implements _LoadFeedEvent {
     Result load(_LoadFeedEvent value),
     Result updated(_UpdatedFeedEvent value),
     Result failed(_FailedFeedEvent value),
+    Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -230,10 +245,12 @@ class _$_UpdatedFeedEvent implements _UpdatedFeedEvent {
     @required Result load(),
     @required Result updated(List<Activity> feed),
     @required Result failed(Exception exception),
+    @required Result loadMoreRequested(),
   }) {
     assert(load != null);
     assert(updated != null);
     assert(failed != null);
+    assert(loadMoreRequested != null);
     return updated(feed);
   }
 
@@ -243,6 +260,7 @@ class _$_UpdatedFeedEvent implements _UpdatedFeedEvent {
     Result load(),
     Result updated(List<Activity> feed),
     Result failed(Exception exception),
+    Result loadMoreRequested(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -258,10 +276,12 @@ class _$_UpdatedFeedEvent implements _UpdatedFeedEvent {
     @required Result load(_LoadFeedEvent value),
     @required Result updated(_UpdatedFeedEvent value),
     @required Result failed(_FailedFeedEvent value),
+    @required Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
   }) {
     assert(load != null);
     assert(updated != null);
     assert(failed != null);
+    assert(loadMoreRequested != null);
     return updated(this);
   }
 
@@ -271,6 +291,7 @@ class _$_UpdatedFeedEvent implements _UpdatedFeedEvent {
     Result load(_LoadFeedEvent value),
     Result updated(_UpdatedFeedEvent value),
     Result failed(_FailedFeedEvent value),
+    Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -351,10 +372,12 @@ class _$_FailedFeedEvent implements _FailedFeedEvent {
     @required Result load(),
     @required Result updated(List<Activity> feed),
     @required Result failed(Exception exception),
+    @required Result loadMoreRequested(),
   }) {
     assert(load != null);
     assert(updated != null);
     assert(failed != null);
+    assert(loadMoreRequested != null);
     return failed(exception);
   }
 
@@ -364,6 +387,7 @@ class _$_FailedFeedEvent implements _FailedFeedEvent {
     Result load(),
     Result updated(List<Activity> feed),
     Result failed(Exception exception),
+    Result loadMoreRequested(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -379,10 +403,12 @@ class _$_FailedFeedEvent implements _FailedFeedEvent {
     @required Result load(_LoadFeedEvent value),
     @required Result updated(_UpdatedFeedEvent value),
     @required Result failed(_FailedFeedEvent value),
+    @required Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
   }) {
     assert(load != null);
     assert(updated != null);
     assert(failed != null);
+    assert(loadMoreRequested != null);
     return failed(this);
   }
 
@@ -392,6 +418,7 @@ class _$_FailedFeedEvent implements _FailedFeedEvent {
     Result load(_LoadFeedEvent value),
     Result updated(_UpdatedFeedEvent value),
     Result failed(_FailedFeedEvent value),
+    Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -408,6 +435,108 @@ abstract class _FailedFeedEvent implements FeedEvent {
 
   Exception get exception;
   _$FailedFeedEventCopyWith<_FailedFeedEvent> get copyWith;
+}
+
+abstract class _$LoadMoreRequestedFeedEventCopyWith<$Res> {
+  factory _$LoadMoreRequestedFeedEventCopyWith(
+          _LoadMoreRequestedFeedEvent value,
+          $Res Function(_LoadMoreRequestedFeedEvent) then) =
+      __$LoadMoreRequestedFeedEventCopyWithImpl<$Res>;
+}
+
+class __$LoadMoreRequestedFeedEventCopyWithImpl<$Res>
+    extends _$FeedEventCopyWithImpl<$Res>
+    implements _$LoadMoreRequestedFeedEventCopyWith<$Res> {
+  __$LoadMoreRequestedFeedEventCopyWithImpl(_LoadMoreRequestedFeedEvent _value,
+      $Res Function(_LoadMoreRequestedFeedEvent) _then)
+      : super(_value, (v) => _then(v as _LoadMoreRequestedFeedEvent));
+
+  @override
+  _LoadMoreRequestedFeedEvent get _value =>
+      super._value as _LoadMoreRequestedFeedEvent;
+}
+
+class _$_LoadMoreRequestedFeedEvent implements _LoadMoreRequestedFeedEvent {
+  const _$_LoadMoreRequestedFeedEvent();
+
+  @override
+  String toString() {
+    return 'FeedEvent.loadMoreRequested()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _LoadMoreRequestedFeedEvent);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result load(),
+    @required Result updated(List<Activity> feed),
+    @required Result failed(Exception exception),
+    @required Result loadMoreRequested(),
+  }) {
+    assert(load != null);
+    assert(updated != null);
+    assert(failed != null);
+    assert(loadMoreRequested != null);
+    return loadMoreRequested();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result load(),
+    Result updated(List<Activity> feed),
+    Result failed(Exception exception),
+    Result loadMoreRequested(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (loadMoreRequested != null) {
+      return loadMoreRequested();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result load(_LoadFeedEvent value),
+    @required Result updated(_UpdatedFeedEvent value),
+    @required Result failed(_FailedFeedEvent value),
+    @required Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
+  }) {
+    assert(load != null);
+    assert(updated != null);
+    assert(failed != null);
+    assert(loadMoreRequested != null);
+    return loadMoreRequested(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result load(_LoadFeedEvent value),
+    Result updated(_UpdatedFeedEvent value),
+    Result failed(_FailedFeedEvent value),
+    Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (loadMoreRequested != null) {
+      return loadMoreRequested(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadMoreRequestedFeedEvent implements FeedEvent {
+  const factory _LoadMoreRequestedFeedEvent() = _$_LoadMoreRequestedFeedEvent;
 }
 
 class _$FeedStateTearOff {
