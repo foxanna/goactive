@@ -28,15 +28,15 @@ class FeedBloc extends Bloc<FeedEvent, FeedState> {
   StreamSubscription<List<Activity>> _feedSubscription;
 
   @override
-  Stream<FeedState> mapEventToState(FeedEvent e) async* {
-    yield* e.map(
+  Stream<FeedState> mapEventToState(FeedEvent event) async* {
+    yield* event.map(
       load: _onLoadFeedEvent,
       updated: _onUpdatedFeedEvent,
       failed: _onFailedFeedEvent,
     );
   }
 
-  Stream<FeedState> _onLoadFeedEvent(_LoadFeedEvent e) async* {
+  Stream<FeedState> _onLoadFeedEvent(_LoadFeedEvent event) async* {
     if (state is! LoadingFeedState) {
       yield FeedState.loading(feed: state.feed);
 
@@ -44,15 +44,15 @@ class FeedBloc extends Bloc<FeedEvent, FeedState> {
     }
   }
 
-  Stream<FeedState> _onUpdatedFeedEvent(_UpdatedFeedEvent e) async* {
+  Stream<FeedState> _onUpdatedFeedEvent(_UpdatedFeedEvent event) async* {
     yield FeedState.data(
-      feed: e.feed,
-      reachedEnd: const DeepCollectionEquality().equals(e.feed, state.feed),
+      feed: event.feed,
+      reachedEnd: const DeepCollectionEquality().equals(event.feed, state.feed),
     );
   }
 
-  Stream<FeedState> _onFailedFeedEvent(_FailedFeedEvent e) async* {
-    yield FeedState.error(feed: state.feed, exception: e.exception);
+  Stream<FeedState> _onFailedFeedEvent(_FailedFeedEvent event) async* {
+    yield FeedState.error(feed: state.feed, exception: event.exception);
   }
 
   @override

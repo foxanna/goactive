@@ -22,15 +22,16 @@ class ActivityDetailsBloc
   final IFeedRepository _repository;
 
   @override
-  Stream<ActivityDetailsState> mapEventToState(ActivityDetailsEvent e) async* {
-    yield* e.map(
+  Stream<ActivityDetailsState> mapEventToState(
+      ActivityDetailsEvent event) async* {
+    yield* event.map(
       interested: _onInterestedActivityDetailsEvent,
       attending: _onAttendingActivityDetailsEvent,
     );
   }
 
   Stream<ActivityDetailsState> _onInterestedActivityDetailsEvent(
-      _InterestedActivityDetailsEvent e) async* {
+      _InterestedActivityDetailsEvent event) async* {
     final oldActivity = state.activity;
 
     final newActivity = oldActivity.copyWith(
@@ -44,7 +45,7 @@ class ActivityDetailsBloc
   }
 
   Stream<ActivityDetailsState> _onAttendingActivityDetailsEvent(
-      _AttendingActivityDetailsEvent e) async* {
+      _AttendingActivityDetailsEvent event) async* {
     final oldActivity = state.activity;
 
     final newActivity = oldActivity.copyWith(

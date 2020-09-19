@@ -21,14 +21,16 @@ class AuthenticationBloc
   final IUserRepository _repository;
 
   @override
-  Stream<AuthenticationState> mapEventToState(AuthenticationEvent e) async* {
-    yield* _onInitEvent(e as _InitAuthenticationEvent);
+  Stream<AuthenticationState> mapEventToState(
+      AuthenticationEvent event) async* {
+    yield* _onInitEvent(event as _InitAuthenticationEvent);
 //    yield* event.map(
 //      init: _onInitEvent,
 //    );
   }
 
-  Stream<AuthenticationState> _onInitEvent(_InitAuthenticationEvent e) async* {
+  Stream<AuthenticationState> _onInitEvent(
+      _InitAuthenticationEvent event) async* {
     final user = await _repository.getCurrentUser();
 
     if (user != null) {

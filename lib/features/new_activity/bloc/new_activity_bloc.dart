@@ -29,8 +29,8 @@ class NewActivityBloc extends Bloc<NewActivityEvent, NewActivityState> {
   final Activity _initialActivity;
 
   @override
-  Stream<NewActivityState> mapEventToState(NewActivityEvent e) async* {
-    yield* e.map(
+  Stream<NewActivityState> mapEventToState(NewActivityEvent event) async* {
+    yield* event.map(
       create: _onCreateNewActivityEvent,
       updateTitle: _onUpdateTitleNewActivityEvent,
       updateDetails: _onUpdateDetailsNewActivityEvent,
@@ -38,7 +38,7 @@ class NewActivityBloc extends Bloc<NewActivityEvent, NewActivityState> {
   }
 
   Stream<NewActivityState> _onCreateNewActivityEvent(
-      _CreateNewActivityEvent e) async* {
+      _CreateNewActivityEvent event) async* {
     try {
       validateActivity(state.activity);
 
@@ -57,13 +57,13 @@ class NewActivityBloc extends Bloc<NewActivityEvent, NewActivityState> {
   }
 
   Stream<NewActivityState> _onUpdateTitleNewActivityEvent(
-      _UpdateTitleNewActivityEvent e) async* {
-    yield state.copyWith.activity(title: e.title);
+      _UpdateTitleNewActivityEvent event) async* {
+    yield state.copyWith.activity(title: event.title);
   }
 
   Stream<NewActivityState> _onUpdateDetailsNewActivityEvent(
-      _UpdateDetailsNewActivityEvent e) async* {
-    yield state.copyWith.activity(details: e.details);
+      _UpdateDetailsNewActivityEvent event) async* {
+    yield state.copyWith.activity(details: event.details);
   }
 
   void validateActivity(Activity activity) {
