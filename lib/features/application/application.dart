@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:goactive/features/authentication/bloc/authentication_bloc.dart';
-import 'package:goactive/get_it.dart';
+import 'package:goactive/injection/ioc.dart';
 import 'package:goactive/localization/localizations.dart';
 import 'package:goactive/routes/router.gr.dart';
 import 'package:goactive/styles/theme.dart';
@@ -13,8 +13,8 @@ class GoActiveApplication extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => BlocProvider(
-        create: (context) =>
-            getIt<AuthenticationBloc>()..add(const AuthenticationEvent.init()),
+        create: (context) => resolve<AuthenticationBloc>()
+          ..add(const AuthenticationEvent.init()),
         child: MaterialApp(
           theme: createTheme(),
           localizationsDelegates: [

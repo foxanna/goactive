@@ -5,7 +5,7 @@ import 'package:goactive/features/feed/bloc/feed_bloc.dart';
 import 'package:goactive/features/feed/presentation/views/feed_page_app_bar.dart';
 import 'package:goactive/features/feed/presentation/views/feed_page_content.dart';
 import 'package:goactive/features/feed/presentation/views/feed_page_content_container.dart';
-import 'package:goactive/get_it.dart';
+import 'package:goactive/injection/ioc.dart';
 import 'package:goactive/routes/router.gr.dart';
 import 'package:goactive/widgets/page_background.dart';
 import 'package:goactive/utils/extensions/context_extensions.dart';
@@ -15,10 +15,7 @@ class FeedPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => BlocProvider(
-        create: (context) => getIt<FeedBloc>()
-          ..add(
-            const FeedEvent.load(),
-          ),
+        create: (context) => resolve<FeedBloc>()..add(const FeedEvent.load()),
         child: Scaffold(
           body: const PageBackground(
             child: FeedPageContentContainer(
