@@ -10,8 +10,8 @@ import 'package:flutter/material.dart' as _i6;
 import '../api/models/activity.dart' as _i7;
 import '../features/activity_details/presentation/activity_details_page.dart'
     as _i4;
-import '../features/application/main_page.dart' as _i2;
 import '../features/feed/presentation/feed_page.dart' as _i3;
+import '../features/main/main_page.dart' as _i2;
 import '../features/new_activity/presentation/new_activity_page.dart' as _i5;
 
 class GoActiveRouter extends _i1.RootStackRouter {
