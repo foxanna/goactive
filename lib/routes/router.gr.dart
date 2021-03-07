@@ -14,8 +14,8 @@ import '../features/application/main_page.dart' as _i2;
 import '../features/feed/presentation/feed_page.dart' as _i3;
 import '../features/new_activity/presentation/new_activity_page.dart' as _i5;
 
-class GoRouter extends _i1.RootStackRouter {
-  GoRouter();
+class GoActiveRouter extends _i1.RootStackRouter {
+  GoActiveRouter();
 
   @override
   final Map<String, _i1.PageFactory> pagesMap = {

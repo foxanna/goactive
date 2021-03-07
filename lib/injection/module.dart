@@ -2,7 +2,7 @@ import 'package:goactive/routes/router.gr.dart';
 import 'package:injectable/injectable.dart';
 
 @module
-abstract class ExternalDependenciesModule {
+abstract class InjectableModule {
   @lazySingleton
-  GoRouter get router => GoRouter();
+  GoActiveRouter get router => GoActiveRouter();
 }

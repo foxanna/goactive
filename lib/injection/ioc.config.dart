@@ -30,8 +30,8 @@ import 'module.dart' as _i19; // ignore_for_file: unnecessary_lambdas
 _i1.GetIt $initGetIt(_i1.GetIt get,
     {String environment, _i2.EnvironmentFilter environmentFilter}) {
   final gh = _i2.GetItHelper(get, environment, environmentFilter);
-  final externalDependenciesModule = _$ExternalDependenciesModule();
-  gh.lazySingleton<_i3.GoRouter>(() => externalDependenciesModule.router);
+  final injectableModule = _$InjectableModule();
+  gh.lazySingleton<_i3.GoActiveRouter>(() => injectableModule.router);
   gh.lazySingleton<_i4.IHttpService>(() => _i5.HttpService());
   gh.lazySingleton<_i6.IUserApiService>(
       () => _i7.UserApiService(httpService: get<_i4.IHttpService>()));
@@ -54,4 +54,4 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   return get;
 }
 
-class _$ExternalDependenciesModule extends _i19.ExternalDependenciesModule {}
+class _$InjectableModule extends _i19.InjectableModule {}

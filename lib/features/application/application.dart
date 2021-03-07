@@ -25,8 +25,9 @@ class GoActiveApplication extends StatelessWidget {
             DefaultCupertinoLocalizations.delegate,
           ],
           supportedLocales: GoActiveLocalizations.supportedLocales,
-          routerDelegate: resolve<GoRouter>().delegate(),
-          routeInformationParser: resolve<GoRouter>().defaultRouteParser(),
+          routerDelegate: resolve<GoActiveRouter>().delegate(),
+          routeInformationParser:
+              resolve<GoActiveRouter>().defaultRouteParser(),
         ),
       );
 }

@@ -42,9 +42,10 @@ class FeedListTile extends StatelessWidget {
     final state = context.bloc<AuthenticationBloc>().state;
     if (state is AuthenticatedAuthenticationState &&
         state.user.id == activity.organizer.id) {
-      await resolve<GoRouter>().push(NewActivityPageRoute(activity: activity));
+      await resolve<GoActiveRouter>()
+          .push(NewActivityPageRoute(activity: activity));
     } else {
-      await resolve<GoRouter>()
+      await resolve<GoActiveRouter>()
           .push(ActivityDetailsPageRoute(activity: activity));
     }
   }
