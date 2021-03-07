@@ -9,6 +9,7 @@ part of 'activity_details_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$ActivityDetailsEventTearOff {
   const _$ActivityDetailsEventTearOff();
 
@@ -23,40 +24,44 @@ class _$ActivityDetailsEventTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ActivityDetailsEvent = _$ActivityDetailsEventTearOff();
 
+/// @nodoc
 mixin _$ActivityDetailsEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result interested(),
-    @required Result attending(),
+  TResult when<TResult extends Object>({
+    @required TResult interested(),
+    @required TResult attending(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result interested(),
-    Result attending(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult interested(),
+    TResult attending(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result interested(_InterestedActivityDetailsEvent value),
-    @required Result attending(_AttendingActivityDetailsEvent value),
+  TResult map<TResult extends Object>({
+    @required TResult interested(_InterestedActivityDetailsEvent value),
+    @required TResult attending(_AttendingActivityDetailsEvent value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result interested(_InterestedActivityDetailsEvent value),
-    Result attending(_AttendingActivityDetailsEvent value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult interested(_InterestedActivityDetailsEvent value),
+    TResult attending(_AttendingActivityDetailsEvent value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $ActivityDetailsEventCopyWith<$Res> {
   factory $ActivityDetailsEventCopyWith(ActivityDetailsEvent value,
           $Res Function(ActivityDetailsEvent) then) =
       _$ActivityDetailsEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$ActivityDetailsEventCopyWithImpl<$Res>
     implements $ActivityDetailsEventCopyWith<$Res> {
   _$ActivityDetailsEventCopyWithImpl(this._value, this._then);
@@ -66,6 +71,7 @@ class _$ActivityDetailsEventCopyWithImpl<$Res>
   final $Res Function(ActivityDetailsEvent) _then;
 }
 
+/// @nodoc
 abstract class _$InterestedActivityDetailsEventCopyWith<$Res> {
   factory _$InterestedActivityDetailsEventCopyWith(
           _InterestedActivityDetailsEvent value,
@@ -73,6 +79,7 @@ abstract class _$InterestedActivityDetailsEventCopyWith<$Res> {
       __$InterestedActivityDetailsEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$InterestedActivityDetailsEventCopyWithImpl<$Res>
     extends _$ActivityDetailsEventCopyWithImpl<$Res>
     implements _$InterestedActivityDetailsEventCopyWith<$Res> {
@@ -86,6 +93,7 @@ class __$InterestedActivityDetailsEventCopyWithImpl<$Res>
       super._value as _InterestedActivityDetailsEvent;
 }
 
+/// @nodoc
 class _$_InterestedActivityDetailsEvent
     implements _InterestedActivityDetailsEvent {
   const _$_InterestedActivityDetailsEvent();
@@ -105,9 +113,9 @@ class _$_InterestedActivityDetailsEvent
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result interested(),
-    @required Result attending(),
+  TResult when<TResult extends Object>({
+    @required TResult interested(),
+    @required TResult attending(),
   }) {
     assert(interested != null);
     assert(attending != null);
@@ -116,10 +124,10 @@ class _$_InterestedActivityDetailsEvent
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result interested(),
-    Result attending(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult interested(),
+    TResult attending(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (interested != null) {
@@ -130,9 +138,9 @@ class _$_InterestedActivityDetailsEvent
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result interested(_InterestedActivityDetailsEvent value),
-    @required Result attending(_AttendingActivityDetailsEvent value),
+  TResult map<TResult extends Object>({
+    @required TResult interested(_InterestedActivityDetailsEvent value),
+    @required TResult attending(_AttendingActivityDetailsEvent value),
   }) {
     assert(interested != null);
     assert(attending != null);
@@ -141,10 +149,10 @@ class _$_InterestedActivityDetailsEvent
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result interested(_InterestedActivityDetailsEvent value),
-    Result attending(_AttendingActivityDetailsEvent value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult interested(_InterestedActivityDetailsEvent value),
+    TResult attending(_AttendingActivityDetailsEvent value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (interested != null) {
@@ -159,6 +167,7 @@ abstract class _InterestedActivityDetailsEvent implements ActivityDetailsEvent {
       _$_InterestedActivityDetailsEvent;
 }
 
+/// @nodoc
 abstract class _$AttendingActivityDetailsEventCopyWith<$Res> {
   factory _$AttendingActivityDetailsEventCopyWith(
           _AttendingActivityDetailsEvent value,
@@ -166,6 +175,7 @@ abstract class _$AttendingActivityDetailsEventCopyWith<$Res> {
       __$AttendingActivityDetailsEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$AttendingActivityDetailsEventCopyWithImpl<$Res>
     extends _$ActivityDetailsEventCopyWithImpl<$Res>
     implements _$AttendingActivityDetailsEventCopyWith<$Res> {
@@ -179,6 +189,7 @@ class __$AttendingActivityDetailsEventCopyWithImpl<$Res>
       super._value as _AttendingActivityDetailsEvent;
 }
 
+/// @nodoc
 class _$_AttendingActivityDetailsEvent
     implements _AttendingActivityDetailsEvent {
   const _$_AttendingActivityDetailsEvent();
@@ -198,9 +209,9 @@ class _$_AttendingActivityDetailsEvent
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result interested(),
-    @required Result attending(),
+  TResult when<TResult extends Object>({
+    @required TResult interested(),
+    @required TResult attending(),
   }) {
     assert(interested != null);
     assert(attending != null);
@@ -209,10 +220,10 @@ class _$_AttendingActivityDetailsEvent
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result interested(),
-    Result attending(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult interested(),
+    TResult attending(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (attending != null) {
@@ -223,9 +234,9 @@ class _$_AttendingActivityDetailsEvent
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result interested(_InterestedActivityDetailsEvent value),
-    @required Result attending(_AttendingActivityDetailsEvent value),
+  TResult map<TResult extends Object>({
+    @required TResult interested(_InterestedActivityDetailsEvent value),
+    @required TResult attending(_AttendingActivityDetailsEvent value),
   }) {
     assert(interested != null);
     assert(attending != null);
@@ -234,10 +245,10 @@ class _$_AttendingActivityDetailsEvent
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result interested(_InterestedActivityDetailsEvent value),
-    Result attending(_AttendingActivityDetailsEvent value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult interested(_InterestedActivityDetailsEvent value),
+    TResult attending(_AttendingActivityDetailsEvent value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (attending != null) {
@@ -252,6 +263,7 @@ abstract class _AttendingActivityDetailsEvent implements ActivityDetailsEvent {
       _$_AttendingActivityDetailsEvent;
 }
 
+/// @nodoc
 class _$ActivityDetailsStateTearOff {
   const _$ActivityDetailsStateTearOff();
 
@@ -263,15 +275,19 @@ class _$ActivityDetailsStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ActivityDetailsState = _$ActivityDetailsStateTearOff();
 
+/// @nodoc
 mixin _$ActivityDetailsState {
   Activity get activity;
 
+  @JsonKey(ignore: true)
   $ActivityDetailsStateCopyWith<ActivityDetailsState> get copyWith;
 }
 
+/// @nodoc
 abstract class $ActivityDetailsStateCopyWith<$Res> {
   factory $ActivityDetailsStateCopyWith(ActivityDetailsState value,
           $Res Function(ActivityDetailsState) then) =
@@ -281,6 +297,7 @@ abstract class $ActivityDetailsStateCopyWith<$Res> {
   $ActivityCopyWith<$Res> get activity;
 }
 
+/// @nodoc
 class _$ActivityDetailsStateCopyWithImpl<$Res>
     implements $ActivityDetailsStateCopyWith<$Res> {
   _$ActivityDetailsStateCopyWithImpl(this._value, this._then);
@@ -309,6 +326,7 @@ class _$ActivityDetailsStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ActivityDetailsStateCopyWith<$Res>
     implements $ActivityDetailsStateCopyWith<$Res> {
   factory _$ActivityDetailsStateCopyWith(_ActivityDetailsState value,
@@ -321,6 +339,7 @@ abstract class _$ActivityDetailsStateCopyWith<$Res>
   $ActivityCopyWith<$Res> get activity;
 }
 
+/// @nodoc
 class __$ActivityDetailsStateCopyWithImpl<$Res>
     extends _$ActivityDetailsStateCopyWithImpl<$Res>
     implements _$ActivityDetailsStateCopyWith<$Res> {
@@ -341,6 +360,7 @@ class __$ActivityDetailsStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_ActivityDetailsState implements _ActivityDetailsState {
   const _$_ActivityDetailsState({@required this.activity})
       : assert(activity != null);
@@ -366,6 +386,7 @@ class _$_ActivityDetailsState implements _ActivityDetailsState {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(activity);
 
+  @JsonKey(ignore: true)
   @override
   _$ActivityDetailsStateCopyWith<_ActivityDetailsState> get copyWith =>
       __$ActivityDetailsStateCopyWithImpl<_ActivityDetailsState>(
@@ -379,5 +400,6 @@ abstract class _ActivityDetailsState implements ActivityDetailsState {
   @override
   Activity get activity;
   @override
+  @JsonKey(ignore: true)
   _$ActivityDetailsStateCopyWith<_ActivityDetailsState> get copyWith;
 }

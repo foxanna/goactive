@@ -12,6 +12,7 @@ Activity _$ActivityFromJson(Map<String, dynamic> json) {
   return _Activity.fromJson(json);
 }
 
+/// @nodoc
 class _$ActivityTearOff {
   const _$ActivityTearOff();
 
@@ -42,11 +43,18 @@ class _$ActivityTearOff {
       isInterested: isInterested,
     );
   }
+
+// ignore: unused_element
+  Activity fromJson(Map<String, Object> json) {
+    return Activity.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Activity = _$ActivityTearOff();
 
+/// @nodoc
 mixin _$Activity {
   @JsonKey(name: 'id')
   String get id;
@@ -72,9 +80,11 @@ mixin _$Activity {
   bool get isInterested;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ActivityCopyWith<Activity> get copyWith;
 }
 
+/// @nodoc
 abstract class $ActivityCopyWith<$Res> {
   factory $ActivityCopyWith(Activity value, $Res Function(Activity) then) =
       _$ActivityCopyWithImpl<$Res>;
@@ -95,6 +105,7 @@ abstract class $ActivityCopyWith<$Res> {
   $UserCopyWith<$Res> get organizer;
 }
 
+/// @nodoc
 class _$ActivityCopyWithImpl<$Res> implements $ActivityCopyWith<$Res> {
   _$ActivityCopyWithImpl(this._value, this._then);
 
@@ -154,6 +165,7 @@ class _$ActivityCopyWithImpl<$Res> implements $ActivityCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ActivityCopyWith<$Res> implements $ActivityCopyWith<$Res> {
   factory _$ActivityCopyWith(_Activity value, $Res Function(_Activity) then) =
       __$ActivityCopyWithImpl<$Res>;
@@ -177,6 +189,7 @@ abstract class _$ActivityCopyWith<$Res> implements $ActivityCopyWith<$Res> {
   $UserCopyWith<$Res> get organizer;
 }
 
+/// @nodoc
 class __$ActivityCopyWithImpl<$Res> extends _$ActivityCopyWithImpl<$Res>
     implements _$ActivityCopyWith<$Res> {
   __$ActivityCopyWithImpl(_Activity _value, $Res Function(_Activity) _then)
@@ -218,6 +231,8 @@ class __$ActivityCopyWithImpl<$Res> extends _$ActivityCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Activity with DiagnosticableTreeMixin implements _Activity {
   const _$_Activity(
       {@JsonKey(name: 'id') this.id,
@@ -342,6 +357,7 @@ class _$_Activity with DiagnosticableTreeMixin implements _Activity {
       const DeepCollectionEquality().hash(isAttending) ^
       const DeepCollectionEquality().hash(isInterested);
 
+  @JsonKey(ignore: true)
   @override
   _$ActivityCopyWith<_Activity> get copyWith =>
       __$ActivityCopyWithImpl<_Activity>(this, _$identity);
@@ -402,5 +418,6 @@ abstract class _Activity implements Activity {
   @JsonKey(name: 'isInterested')
   bool get isInterested;
   @override
+  @JsonKey(ignore: true)
   _$ActivityCopyWith<_Activity> get copyWith;
 }

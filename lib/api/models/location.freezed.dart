@@ -12,6 +12,7 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
   return _Location.fromJson(json);
 }
 
+/// @nodoc
 class _$LocationTearOff {
   const _$LocationTearOff();
 
@@ -26,11 +27,18 @@ class _$LocationTearOff {
       longitude: longitude,
     );
   }
+
+// ignore: unused_element
+  Location fromJson(Map<String, Object> json) {
+    return Location.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Location = _$LocationTearOff();
 
+/// @nodoc
 mixin _$Location {
   @JsonKey(name: 'name')
   String get name;
@@ -40,9 +48,11 @@ mixin _$Location {
   double get longitude;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $LocationCopyWith<Location> get copyWith;
 }
 
+/// @nodoc
 abstract class $LocationCopyWith<$Res> {
   factory $LocationCopyWith(Location value, $Res Function(Location) then) =
       _$LocationCopyWithImpl<$Res>;
@@ -52,6 +62,7 @@ abstract class $LocationCopyWith<$Res> {
       @JsonKey(name: 'longitude') double longitude});
 }
 
+/// @nodoc
 class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
   _$LocationCopyWithImpl(this._value, this._then);
 
@@ -73,6 +84,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   factory _$LocationCopyWith(_Location value, $Res Function(_Location) then) =
       __$LocationCopyWithImpl<$Res>;
@@ -83,6 +95,7 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       @JsonKey(name: 'longitude') double longitude});
 }
 
+/// @nodoc
 class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
     implements _$LocationCopyWith<$Res> {
   __$LocationCopyWithImpl(_Location _value, $Res Function(_Location) _then)
@@ -106,6 +119,8 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Location with DiagnosticableTreeMixin implements _Location {
   const _$_Location(
       {@JsonKey(name: 'name') this.name,
@@ -161,6 +176,7 @@ class _$_Location with DiagnosticableTreeMixin implements _Location {
       const DeepCollectionEquality().hash(latitude) ^
       const DeepCollectionEquality().hash(longitude);
 
+  @JsonKey(ignore: true)
   @override
   _$LocationCopyWith<_Location> get copyWith =>
       __$LocationCopyWithImpl<_Location>(this, _$identity);
@@ -189,5 +205,6 @@ abstract class _Location implements Location {
   @JsonKey(name: 'longitude')
   double get longitude;
   @override
+  @JsonKey(ignore: true)
   _$LocationCopyWith<_Location> get copyWith;
 }

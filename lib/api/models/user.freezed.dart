@@ -12,6 +12,7 @@ User _$UserFromJson(Map<String, dynamic> json) {
   return _User.fromJson(json);
 }
 
+/// @nodoc
 class _$UserTearOff {
   const _$UserTearOff();
 
@@ -28,11 +29,18 @@ class _$UserTearOff {
       email: email,
     );
   }
+
+// ignore: unused_element
+  User fromJson(Map<String, Object> json) {
+    return User.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $User = _$UserTearOff();
 
+/// @nodoc
 mixin _$User {
   @JsonKey(name: 'id')
   String get id;
@@ -44,9 +52,11 @@ mixin _$User {
   String get email;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $UserCopyWith<User> get copyWith;
 }
 
+/// @nodoc
 abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
@@ -57,6 +67,7 @@ abstract class $UserCopyWith<$Res> {
       @JsonKey(name: 'email') String email});
 }
 
+/// @nodoc
 class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   _$UserCopyWithImpl(this._value, this._then);
 
@@ -80,6 +91,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   factory _$UserCopyWith(_User value, $Res Function(_User) then) =
       __$UserCopyWithImpl<$Res>;
@@ -91,6 +103,7 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       @JsonKey(name: 'email') String email});
 }
 
+/// @nodoc
 class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
     implements _$UserCopyWith<$Res> {
   __$UserCopyWithImpl(_User _value, $Res Function(_User) _then)
@@ -116,6 +129,8 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_User with DiagnosticableTreeMixin implements _User {
   const _$_User(
       {@JsonKey(name: 'id') this.id,
@@ -177,6 +192,7 @@ class _$_User with DiagnosticableTreeMixin implements _User {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(email);
 
+  @JsonKey(ignore: true)
   @override
   _$UserCopyWith<_User> get copyWith =>
       __$UserCopyWithImpl<_User>(this, _$identity);
@@ -209,5 +225,6 @@ abstract class _User implements User {
   @JsonKey(name: 'email')
   String get email;
   @override
+  @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith;
 }

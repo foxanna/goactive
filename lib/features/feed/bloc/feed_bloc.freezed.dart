@@ -9,6 +9,7 @@ part of 'feed_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$FeedEventTearOff {
   const _$FeedEventTearOff();
 
@@ -37,47 +38,51 @@ class _$FeedEventTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $FeedEvent = _$FeedEventTearOff();
 
+/// @nodoc
 mixin _$FeedEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result load(),
-    @required Result updated(List<Activity> feed),
-    @required Result failed(Exception exception),
-    @required Result loadMoreRequested(),
+  TResult when<TResult extends Object>({
+    @required TResult load(),
+    @required TResult updated(List<Activity> feed),
+    @required TResult failed(Exception exception),
+    @required TResult loadMoreRequested(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result load(),
-    Result updated(List<Activity> feed),
-    Result failed(Exception exception),
-    Result loadMoreRequested(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult load(),
+    TResult updated(List<Activity> feed),
+    TResult failed(Exception exception),
+    TResult loadMoreRequested(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result load(_LoadFeedEvent value),
-    @required Result updated(_UpdatedFeedEvent value),
-    @required Result failed(_FailedFeedEvent value),
-    @required Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
+  TResult map<TResult extends Object>({
+    @required TResult load(_LoadFeedEvent value),
+    @required TResult updated(_UpdatedFeedEvent value),
+    @required TResult failed(_FailedFeedEvent value),
+    @required TResult loadMoreRequested(_LoadMoreRequestedFeedEvent value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result load(_LoadFeedEvent value),
-    Result updated(_UpdatedFeedEvent value),
-    Result failed(_FailedFeedEvent value),
-    Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult load(_LoadFeedEvent value),
+    TResult updated(_UpdatedFeedEvent value),
+    TResult failed(_FailedFeedEvent value),
+    TResult loadMoreRequested(_LoadMoreRequestedFeedEvent value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $FeedEventCopyWith<$Res> {
   factory $FeedEventCopyWith(FeedEvent value, $Res Function(FeedEvent) then) =
       _$FeedEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$FeedEventCopyWithImpl<$Res> implements $FeedEventCopyWith<$Res> {
   _$FeedEventCopyWithImpl(this._value, this._then);
 
@@ -86,12 +91,14 @@ class _$FeedEventCopyWithImpl<$Res> implements $FeedEventCopyWith<$Res> {
   final $Res Function(FeedEvent) _then;
 }
 
+/// @nodoc
 abstract class _$LoadFeedEventCopyWith<$Res> {
   factory _$LoadFeedEventCopyWith(
           _LoadFeedEvent value, $Res Function(_LoadFeedEvent) then) =
       __$LoadFeedEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$LoadFeedEventCopyWithImpl<$Res> extends _$FeedEventCopyWithImpl<$Res>
     implements _$LoadFeedEventCopyWith<$Res> {
   __$LoadFeedEventCopyWithImpl(
@@ -102,6 +109,7 @@ class __$LoadFeedEventCopyWithImpl<$Res> extends _$FeedEventCopyWithImpl<$Res>
   _LoadFeedEvent get _value => super._value as _LoadFeedEvent;
 }
 
+/// @nodoc
 class _$_LoadFeedEvent implements _LoadFeedEvent {
   const _$_LoadFeedEvent();
 
@@ -120,11 +128,11 @@ class _$_LoadFeedEvent implements _LoadFeedEvent {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result load(),
-    @required Result updated(List<Activity> feed),
-    @required Result failed(Exception exception),
-    @required Result loadMoreRequested(),
+  TResult when<TResult extends Object>({
+    @required TResult load(),
+    @required TResult updated(List<Activity> feed),
+    @required TResult failed(Exception exception),
+    @required TResult loadMoreRequested(),
   }) {
     assert(load != null);
     assert(updated != null);
@@ -135,12 +143,12 @@ class _$_LoadFeedEvent implements _LoadFeedEvent {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result load(),
-    Result updated(List<Activity> feed),
-    Result failed(Exception exception),
-    Result loadMoreRequested(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult load(),
+    TResult updated(List<Activity> feed),
+    TResult failed(Exception exception),
+    TResult loadMoreRequested(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (load != null) {
@@ -151,11 +159,11 @@ class _$_LoadFeedEvent implements _LoadFeedEvent {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result load(_LoadFeedEvent value),
-    @required Result updated(_UpdatedFeedEvent value),
-    @required Result failed(_FailedFeedEvent value),
-    @required Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
+  TResult map<TResult extends Object>({
+    @required TResult load(_LoadFeedEvent value),
+    @required TResult updated(_UpdatedFeedEvent value),
+    @required TResult failed(_FailedFeedEvent value),
+    @required TResult loadMoreRequested(_LoadMoreRequestedFeedEvent value),
   }) {
     assert(load != null);
     assert(updated != null);
@@ -166,12 +174,12 @@ class _$_LoadFeedEvent implements _LoadFeedEvent {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result load(_LoadFeedEvent value),
-    Result updated(_UpdatedFeedEvent value),
-    Result failed(_FailedFeedEvent value),
-    Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult load(_LoadFeedEvent value),
+    TResult updated(_UpdatedFeedEvent value),
+    TResult failed(_FailedFeedEvent value),
+    TResult loadMoreRequested(_LoadMoreRequestedFeedEvent value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (load != null) {
@@ -185,6 +193,7 @@ abstract class _LoadFeedEvent implements FeedEvent {
   const factory _LoadFeedEvent() = _$_LoadFeedEvent;
 }
 
+/// @nodoc
 abstract class _$UpdatedFeedEventCopyWith<$Res> {
   factory _$UpdatedFeedEventCopyWith(
           _UpdatedFeedEvent value, $Res Function(_UpdatedFeedEvent) then) =
@@ -192,6 +201,7 @@ abstract class _$UpdatedFeedEventCopyWith<$Res> {
   $Res call({List<Activity> feed});
 }
 
+/// @nodoc
 class __$UpdatedFeedEventCopyWithImpl<$Res>
     extends _$FeedEventCopyWithImpl<$Res>
     implements _$UpdatedFeedEventCopyWith<$Res> {
@@ -212,6 +222,7 @@ class __$UpdatedFeedEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_UpdatedFeedEvent implements _UpdatedFeedEvent {
   const _$_UpdatedFeedEvent({@required this.feed}) : assert(feed != null);
 
@@ -235,17 +246,18 @@ class _$_UpdatedFeedEvent implements _UpdatedFeedEvent {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(feed);
 
+  @JsonKey(ignore: true)
   @override
   _$UpdatedFeedEventCopyWith<_UpdatedFeedEvent> get copyWith =>
       __$UpdatedFeedEventCopyWithImpl<_UpdatedFeedEvent>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result load(),
-    @required Result updated(List<Activity> feed),
-    @required Result failed(Exception exception),
-    @required Result loadMoreRequested(),
+  TResult when<TResult extends Object>({
+    @required TResult load(),
+    @required TResult updated(List<Activity> feed),
+    @required TResult failed(Exception exception),
+    @required TResult loadMoreRequested(),
   }) {
     assert(load != null);
     assert(updated != null);
@@ -256,12 +268,12 @@ class _$_UpdatedFeedEvent implements _UpdatedFeedEvent {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result load(),
-    Result updated(List<Activity> feed),
-    Result failed(Exception exception),
-    Result loadMoreRequested(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult load(),
+    TResult updated(List<Activity> feed),
+    TResult failed(Exception exception),
+    TResult loadMoreRequested(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (updated != null) {
@@ -272,11 +284,11 @@ class _$_UpdatedFeedEvent implements _UpdatedFeedEvent {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result load(_LoadFeedEvent value),
-    @required Result updated(_UpdatedFeedEvent value),
-    @required Result failed(_FailedFeedEvent value),
-    @required Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
+  TResult map<TResult extends Object>({
+    @required TResult load(_LoadFeedEvent value),
+    @required TResult updated(_UpdatedFeedEvent value),
+    @required TResult failed(_FailedFeedEvent value),
+    @required TResult loadMoreRequested(_LoadMoreRequestedFeedEvent value),
   }) {
     assert(load != null);
     assert(updated != null);
@@ -287,12 +299,12 @@ class _$_UpdatedFeedEvent implements _UpdatedFeedEvent {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result load(_LoadFeedEvent value),
-    Result updated(_UpdatedFeedEvent value),
-    Result failed(_FailedFeedEvent value),
-    Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult load(_LoadFeedEvent value),
+    TResult updated(_UpdatedFeedEvent value),
+    TResult failed(_FailedFeedEvent value),
+    TResult loadMoreRequested(_LoadMoreRequestedFeedEvent value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (updated != null) {
@@ -307,9 +319,11 @@ abstract class _UpdatedFeedEvent implements FeedEvent {
       _$_UpdatedFeedEvent;
 
   List<Activity> get feed;
+  @JsonKey(ignore: true)
   _$UpdatedFeedEventCopyWith<_UpdatedFeedEvent> get copyWith;
 }
 
+/// @nodoc
 abstract class _$FailedFeedEventCopyWith<$Res> {
   factory _$FailedFeedEventCopyWith(
           _FailedFeedEvent value, $Res Function(_FailedFeedEvent) then) =
@@ -317,6 +331,7 @@ abstract class _$FailedFeedEventCopyWith<$Res> {
   $Res call({Exception exception});
 }
 
+/// @nodoc
 class __$FailedFeedEventCopyWithImpl<$Res> extends _$FeedEventCopyWithImpl<$Res>
     implements _$FailedFeedEventCopyWith<$Res> {
   __$FailedFeedEventCopyWithImpl(
@@ -337,6 +352,7 @@ class __$FailedFeedEventCopyWithImpl<$Res> extends _$FeedEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_FailedFeedEvent implements _FailedFeedEvent {
   const _$_FailedFeedEvent({@required this.exception})
       : assert(exception != null);
@@ -362,17 +378,18 @@ class _$_FailedFeedEvent implements _FailedFeedEvent {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(exception);
 
+  @JsonKey(ignore: true)
   @override
   _$FailedFeedEventCopyWith<_FailedFeedEvent> get copyWith =>
       __$FailedFeedEventCopyWithImpl<_FailedFeedEvent>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result load(),
-    @required Result updated(List<Activity> feed),
-    @required Result failed(Exception exception),
-    @required Result loadMoreRequested(),
+  TResult when<TResult extends Object>({
+    @required TResult load(),
+    @required TResult updated(List<Activity> feed),
+    @required TResult failed(Exception exception),
+    @required TResult loadMoreRequested(),
   }) {
     assert(load != null);
     assert(updated != null);
@@ -383,12 +400,12 @@ class _$_FailedFeedEvent implements _FailedFeedEvent {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result load(),
-    Result updated(List<Activity> feed),
-    Result failed(Exception exception),
-    Result loadMoreRequested(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult load(),
+    TResult updated(List<Activity> feed),
+    TResult failed(Exception exception),
+    TResult loadMoreRequested(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (failed != null) {
@@ -399,11 +416,11 @@ class _$_FailedFeedEvent implements _FailedFeedEvent {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result load(_LoadFeedEvent value),
-    @required Result updated(_UpdatedFeedEvent value),
-    @required Result failed(_FailedFeedEvent value),
-    @required Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
+  TResult map<TResult extends Object>({
+    @required TResult load(_LoadFeedEvent value),
+    @required TResult updated(_UpdatedFeedEvent value),
+    @required TResult failed(_FailedFeedEvent value),
+    @required TResult loadMoreRequested(_LoadMoreRequestedFeedEvent value),
   }) {
     assert(load != null);
     assert(updated != null);
@@ -414,12 +431,12 @@ class _$_FailedFeedEvent implements _FailedFeedEvent {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result load(_LoadFeedEvent value),
-    Result updated(_UpdatedFeedEvent value),
-    Result failed(_FailedFeedEvent value),
-    Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult load(_LoadFeedEvent value),
+    TResult updated(_UpdatedFeedEvent value),
+    TResult failed(_FailedFeedEvent value),
+    TResult loadMoreRequested(_LoadMoreRequestedFeedEvent value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (failed != null) {
@@ -434,9 +451,11 @@ abstract class _FailedFeedEvent implements FeedEvent {
       _$_FailedFeedEvent;
 
   Exception get exception;
+  @JsonKey(ignore: true)
   _$FailedFeedEventCopyWith<_FailedFeedEvent> get copyWith;
 }
 
+/// @nodoc
 abstract class _$LoadMoreRequestedFeedEventCopyWith<$Res> {
   factory _$LoadMoreRequestedFeedEventCopyWith(
           _LoadMoreRequestedFeedEvent value,
@@ -444,6 +463,7 @@ abstract class _$LoadMoreRequestedFeedEventCopyWith<$Res> {
       __$LoadMoreRequestedFeedEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$LoadMoreRequestedFeedEventCopyWithImpl<$Res>
     extends _$FeedEventCopyWithImpl<$Res>
     implements _$LoadMoreRequestedFeedEventCopyWith<$Res> {
@@ -456,6 +476,7 @@ class __$LoadMoreRequestedFeedEventCopyWithImpl<$Res>
       super._value as _LoadMoreRequestedFeedEvent;
 }
 
+/// @nodoc
 class _$_LoadMoreRequestedFeedEvent implements _LoadMoreRequestedFeedEvent {
   const _$_LoadMoreRequestedFeedEvent();
 
@@ -474,11 +495,11 @@ class _$_LoadMoreRequestedFeedEvent implements _LoadMoreRequestedFeedEvent {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result load(),
-    @required Result updated(List<Activity> feed),
-    @required Result failed(Exception exception),
-    @required Result loadMoreRequested(),
+  TResult when<TResult extends Object>({
+    @required TResult load(),
+    @required TResult updated(List<Activity> feed),
+    @required TResult failed(Exception exception),
+    @required TResult loadMoreRequested(),
   }) {
     assert(load != null);
     assert(updated != null);
@@ -489,12 +510,12 @@ class _$_LoadMoreRequestedFeedEvent implements _LoadMoreRequestedFeedEvent {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result load(),
-    Result updated(List<Activity> feed),
-    Result failed(Exception exception),
-    Result loadMoreRequested(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult load(),
+    TResult updated(List<Activity> feed),
+    TResult failed(Exception exception),
+    TResult loadMoreRequested(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadMoreRequested != null) {
@@ -505,11 +526,11 @@ class _$_LoadMoreRequestedFeedEvent implements _LoadMoreRequestedFeedEvent {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result load(_LoadFeedEvent value),
-    @required Result updated(_UpdatedFeedEvent value),
-    @required Result failed(_FailedFeedEvent value),
-    @required Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
+  TResult map<TResult extends Object>({
+    @required TResult load(_LoadFeedEvent value),
+    @required TResult updated(_UpdatedFeedEvent value),
+    @required TResult failed(_FailedFeedEvent value),
+    @required TResult loadMoreRequested(_LoadMoreRequestedFeedEvent value),
   }) {
     assert(load != null);
     assert(updated != null);
@@ -520,12 +541,12 @@ class _$_LoadMoreRequestedFeedEvent implements _LoadMoreRequestedFeedEvent {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result load(_LoadFeedEvent value),
-    Result updated(_UpdatedFeedEvent value),
-    Result failed(_FailedFeedEvent value),
-    Result loadMoreRequested(_LoadMoreRequestedFeedEvent value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult load(_LoadFeedEvent value),
+    TResult updated(_UpdatedFeedEvent value),
+    TResult failed(_FailedFeedEvent value),
+    TResult loadMoreRequested(_LoadMoreRequestedFeedEvent value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadMoreRequested != null) {
@@ -539,6 +560,7 @@ abstract class _LoadMoreRequestedFeedEvent implements FeedEvent {
   const factory _LoadMoreRequestedFeedEvent() = _$_LoadMoreRequestedFeedEvent;
 }
 
+/// @nodoc
 class _$FeedStateTearOff {
   const _$FeedStateTearOff();
 
@@ -568,48 +590,53 @@ class _$FeedStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $FeedState = _$FeedStateTearOff();
 
+/// @nodoc
 mixin _$FeedState {
   List<Activity> get feed;
 
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result data(List<Activity> feed, bool reachedEnd),
-    @required Result loading(List<Activity> feed),
-    @required Result error(List<Activity> feed, Exception exception),
+  TResult when<TResult extends Object>({
+    @required TResult data(List<Activity> feed, bool reachedEnd),
+    @required TResult loading(List<Activity> feed),
+    @required TResult error(List<Activity> feed, Exception exception),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result data(List<Activity> feed, bool reachedEnd),
-    Result loading(List<Activity> feed),
-    Result error(List<Activity> feed, Exception exception),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult data(List<Activity> feed, bool reachedEnd),
+    TResult loading(List<Activity> feed),
+    TResult error(List<Activity> feed, Exception exception),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result data(DataFeedState value),
-    @required Result loading(LoadingFeedState value),
-    @required Result error(ErrorFeedState value),
+  TResult map<TResult extends Object>({
+    @required TResult data(DataFeedState value),
+    @required TResult loading(LoadingFeedState value),
+    @required TResult error(ErrorFeedState value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result data(DataFeedState value),
-    Result loading(LoadingFeedState value),
-    Result error(ErrorFeedState value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult data(DataFeedState value),
+    TResult loading(LoadingFeedState value),
+    TResult error(ErrorFeedState value),
+    @required TResult orElse(),
   });
 
+  @JsonKey(ignore: true)
   $FeedStateCopyWith<FeedState> get copyWith;
 }
 
+/// @nodoc
 abstract class $FeedStateCopyWith<$Res> {
   factory $FeedStateCopyWith(FeedState value, $Res Function(FeedState) then) =
       _$FeedStateCopyWithImpl<$Res>;
   $Res call({List<Activity> feed});
 }
 
+/// @nodoc
 class _$FeedStateCopyWithImpl<$Res> implements $FeedStateCopyWith<$Res> {
   _$FeedStateCopyWithImpl(this._value, this._then);
 
@@ -627,6 +654,7 @@ class _$FeedStateCopyWithImpl<$Res> implements $FeedStateCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class $DataFeedStateCopyWith<$Res>
     implements $FeedStateCopyWith<$Res> {
   factory $DataFeedStateCopyWith(
@@ -636,6 +664,7 @@ abstract class $DataFeedStateCopyWith<$Res>
   $Res call({List<Activity> feed, bool reachedEnd});
 }
 
+/// @nodoc
 class _$DataFeedStateCopyWithImpl<$Res> extends _$FeedStateCopyWithImpl<$Res>
     implements $DataFeedStateCopyWith<$Res> {
   _$DataFeedStateCopyWithImpl(
@@ -658,6 +687,7 @@ class _$DataFeedStateCopyWithImpl<$Res> extends _$FeedStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$DataFeedState implements DataFeedState {
   const _$DataFeedState({@required this.feed, @required this.reachedEnd})
       : assert(feed != null),
@@ -690,16 +720,17 @@ class _$DataFeedState implements DataFeedState {
       const DeepCollectionEquality().hash(feed) ^
       const DeepCollectionEquality().hash(reachedEnd);
 
+  @JsonKey(ignore: true)
   @override
   $DataFeedStateCopyWith<DataFeedState> get copyWith =>
       _$DataFeedStateCopyWithImpl<DataFeedState>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result data(List<Activity> feed, bool reachedEnd),
-    @required Result loading(List<Activity> feed),
-    @required Result error(List<Activity> feed, Exception exception),
+  TResult when<TResult extends Object>({
+    @required TResult data(List<Activity> feed, bool reachedEnd),
+    @required TResult loading(List<Activity> feed),
+    @required TResult error(List<Activity> feed, Exception exception),
   }) {
     assert(data != null);
     assert(loading != null);
@@ -709,11 +740,11 @@ class _$DataFeedState implements DataFeedState {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result data(List<Activity> feed, bool reachedEnd),
-    Result loading(List<Activity> feed),
-    Result error(List<Activity> feed, Exception exception),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult data(List<Activity> feed, bool reachedEnd),
+    TResult loading(List<Activity> feed),
+    TResult error(List<Activity> feed, Exception exception),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (data != null) {
@@ -724,10 +755,10 @@ class _$DataFeedState implements DataFeedState {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result data(DataFeedState value),
-    @required Result loading(LoadingFeedState value),
-    @required Result error(ErrorFeedState value),
+  TResult map<TResult extends Object>({
+    @required TResult data(DataFeedState value),
+    @required TResult loading(LoadingFeedState value),
+    @required TResult error(ErrorFeedState value),
   }) {
     assert(data != null);
     assert(loading != null);
@@ -737,11 +768,11 @@ class _$DataFeedState implements DataFeedState {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result data(DataFeedState value),
-    Result loading(LoadingFeedState value),
-    Result error(ErrorFeedState value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult data(DataFeedState value),
+    TResult loading(LoadingFeedState value),
+    TResult error(ErrorFeedState value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (data != null) {
@@ -760,9 +791,11 @@ abstract class DataFeedState implements FeedState {
   List<Activity> get feed;
   bool get reachedEnd;
   @override
+  @JsonKey(ignore: true)
   $DataFeedStateCopyWith<DataFeedState> get copyWith;
 }
 
+/// @nodoc
 abstract class $LoadingFeedStateCopyWith<$Res>
     implements $FeedStateCopyWith<$Res> {
   factory $LoadingFeedStateCopyWith(
@@ -772,6 +805,7 @@ abstract class $LoadingFeedStateCopyWith<$Res>
   $Res call({List<Activity> feed});
 }
 
+/// @nodoc
 class _$LoadingFeedStateCopyWithImpl<$Res> extends _$FeedStateCopyWithImpl<$Res>
     implements $LoadingFeedStateCopyWith<$Res> {
   _$LoadingFeedStateCopyWithImpl(
@@ -791,6 +825,7 @@ class _$LoadingFeedStateCopyWithImpl<$Res> extends _$FeedStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$LoadingFeedState implements LoadingFeedState {
   const _$LoadingFeedState({@required this.feed}) : assert(feed != null);
 
@@ -814,16 +849,17 @@ class _$LoadingFeedState implements LoadingFeedState {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(feed);
 
+  @JsonKey(ignore: true)
   @override
   $LoadingFeedStateCopyWith<LoadingFeedState> get copyWith =>
       _$LoadingFeedStateCopyWithImpl<LoadingFeedState>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result data(List<Activity> feed, bool reachedEnd),
-    @required Result loading(List<Activity> feed),
-    @required Result error(List<Activity> feed, Exception exception),
+  TResult when<TResult extends Object>({
+    @required TResult data(List<Activity> feed, bool reachedEnd),
+    @required TResult loading(List<Activity> feed),
+    @required TResult error(List<Activity> feed, Exception exception),
   }) {
     assert(data != null);
     assert(loading != null);
@@ -833,11 +869,11 @@ class _$LoadingFeedState implements LoadingFeedState {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result data(List<Activity> feed, bool reachedEnd),
-    Result loading(List<Activity> feed),
-    Result error(List<Activity> feed, Exception exception),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult data(List<Activity> feed, bool reachedEnd),
+    TResult loading(List<Activity> feed),
+    TResult error(List<Activity> feed, Exception exception),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loading != null) {
@@ -848,10 +884,10 @@ class _$LoadingFeedState implements LoadingFeedState {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result data(DataFeedState value),
-    @required Result loading(LoadingFeedState value),
-    @required Result error(ErrorFeedState value),
+  TResult map<TResult extends Object>({
+    @required TResult data(DataFeedState value),
+    @required TResult loading(LoadingFeedState value),
+    @required TResult error(ErrorFeedState value),
   }) {
     assert(data != null);
     assert(loading != null);
@@ -861,11 +897,11 @@ class _$LoadingFeedState implements LoadingFeedState {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result data(DataFeedState value),
-    Result loading(LoadingFeedState value),
-    Result error(ErrorFeedState value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult data(DataFeedState value),
+    TResult loading(LoadingFeedState value),
+    TResult error(ErrorFeedState value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loading != null) {
@@ -882,9 +918,11 @@ abstract class LoadingFeedState implements FeedState {
   @override
   List<Activity> get feed;
   @override
+  @JsonKey(ignore: true)
   $LoadingFeedStateCopyWith<LoadingFeedState> get copyWith;
 }
 
+/// @nodoc
 abstract class $ErrorFeedStateCopyWith<$Res>
     implements $FeedStateCopyWith<$Res> {
   factory $ErrorFeedStateCopyWith(
@@ -894,6 +932,7 @@ abstract class $ErrorFeedStateCopyWith<$Res>
   $Res call({List<Activity> feed, Exception exception});
 }
 
+/// @nodoc
 class _$ErrorFeedStateCopyWithImpl<$Res> extends _$FeedStateCopyWithImpl<$Res>
     implements $ErrorFeedStateCopyWith<$Res> {
   _$ErrorFeedStateCopyWithImpl(
@@ -916,6 +955,7 @@ class _$ErrorFeedStateCopyWithImpl<$Res> extends _$FeedStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$ErrorFeedState implements ErrorFeedState {
   const _$ErrorFeedState({@required this.feed, @required this.exception})
       : assert(feed != null),
@@ -948,16 +988,17 @@ class _$ErrorFeedState implements ErrorFeedState {
       const DeepCollectionEquality().hash(feed) ^
       const DeepCollectionEquality().hash(exception);
 
+  @JsonKey(ignore: true)
   @override
   $ErrorFeedStateCopyWith<ErrorFeedState> get copyWith =>
       _$ErrorFeedStateCopyWithImpl<ErrorFeedState>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result data(List<Activity> feed, bool reachedEnd),
-    @required Result loading(List<Activity> feed),
-    @required Result error(List<Activity> feed, Exception exception),
+  TResult when<TResult extends Object>({
+    @required TResult data(List<Activity> feed, bool reachedEnd),
+    @required TResult loading(List<Activity> feed),
+    @required TResult error(List<Activity> feed, Exception exception),
   }) {
     assert(data != null);
     assert(loading != null);
@@ -967,11 +1008,11 @@ class _$ErrorFeedState implements ErrorFeedState {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result data(List<Activity> feed, bool reachedEnd),
-    Result loading(List<Activity> feed),
-    Result error(List<Activity> feed, Exception exception),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult data(List<Activity> feed, bool reachedEnd),
+    TResult loading(List<Activity> feed),
+    TResult error(List<Activity> feed, Exception exception),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (error != null) {
@@ -982,10 +1023,10 @@ class _$ErrorFeedState implements ErrorFeedState {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result data(DataFeedState value),
-    @required Result loading(LoadingFeedState value),
-    @required Result error(ErrorFeedState value),
+  TResult map<TResult extends Object>({
+    @required TResult data(DataFeedState value),
+    @required TResult loading(LoadingFeedState value),
+    @required TResult error(ErrorFeedState value),
   }) {
     assert(data != null);
     assert(loading != null);
@@ -995,11 +1036,11 @@ class _$ErrorFeedState implements ErrorFeedState {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result data(DataFeedState value),
-    Result loading(LoadingFeedState value),
-    Result error(ErrorFeedState value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult data(DataFeedState value),
+    TResult loading(LoadingFeedState value),
+    TResult error(ErrorFeedState value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (error != null) {
@@ -1018,5 +1059,6 @@ abstract class ErrorFeedState implements FeedState {
   List<Activity> get feed;
   Exception get exception;
   @override
+  @JsonKey(ignore: true)
   $ErrorFeedStateCopyWith<ErrorFeedState> get copyWith;
 }
