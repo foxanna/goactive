@@ -11,11 +11,11 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  auto_route: ^0.5.0
+  auto_route: ^1.0.0-beta.10
   cached_network_image: ^2.3.2+1
-  get_it: ^4.0.4
+  get_it: ^5.0.2
   i69n: ^1.1.0
-  injectable: ^1.0.4
+  injectable: ^1.1.2
   intl: ^0.16.1
   flutter_bloc: ^6.0.5
   shimmer: ^1.1.1
@@ -24,15 +24,15 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  auto_route_generator: ^0.5.0
+  auto_route_generator: ^1.0.0-beta.11
   build_runner:
   extra_pedantic: ^1.2.0
   flutter_launcher_name: ^0.0.1
   flutter_launcher_icons: ^0.7.5
-  freezed: ^0.11.6
+  freezed: ^0.12.7
   google_fonts: ^1.1.0
-  injectable_generator: ^1.0.4
-  json_serializable: ^3.4.1
+  injectable_generator: ^1.1.2
+  json_serializable: ^3.5.1
   mockito: ^4.1.1
 
 flutter:
