@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,7 +15,7 @@ class GoActiveApplication extends StatelessWidget {
   Widget build(BuildContext context) => BlocProvider(
         create: (context) => resolve<AuthenticationBloc>()
           ..add(const AuthenticationEvent.init()),
-        child: MaterialApp(
+        child: MaterialApp.router(
           theme: createTheme(),
           localizationsDelegates: const [
             GoActiveLocalizations.delegate,
@@ -26,7 +25,8 @@ class GoActiveApplication extends StatelessWidget {
             DefaultCupertinoLocalizations.delegate,
           ],
           supportedLocales: GoActiveLocalizations.supportedLocales,
-          builder: ExtendedNavigator<Router>(router: Router()),
+          routerDelegate: resolve<GoRouter>().delegate(),
+          routeInformationParser: resolve<GoRouter>().defaultRouteParser(),
         ),
       );
 }

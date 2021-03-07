@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goactive/features/feed/bloc/feed_bloc.dart';
@@ -28,10 +27,8 @@ class FeedPage extends StatelessWidget {
           ),
           floatingActionButton: FloatingActionButton(
             tooltip: context.watch<Translations>().tooltipCreate,
-            onPressed: () => ExtendedNavigator.of(context).pushNamed(
-              Routes.newActivityPage,
-              arguments: NewActivityPageArguments(activity: null),
-            ),
+            onPressed: () =>
+                resolve<GoRouter>().push(NewActivityPageRoute(activity: null)),
             child: const Icon(Icons.add),
           ),
         ),

@@ -4,112 +4,102 @@
 // AutoRouteGenerator
 // **************************************************************************
 
-import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:auto_route/auto_route.dart';
-import 'package:goactive/features/application/main_page.dart';
-import 'package:goactive/features/feed/presentation/feed_page.dart';
-import 'package:goactive/features/activity_details/presentation/activity_details_page.dart';
-import 'package:goactive/api/models/activity.dart';
-import 'package:goactive/features/new_activity/presentation/new_activity_page.dart';
+import 'package:auto_route/auto_route.dart' as _i1;
+import 'package:flutter/material.dart' as _i6;
 
-abstract class Routes {
-  static const mainPage = '/';
-  static const feedPage = '/feed-page';
-  static const activityDetailsPage = '/activity-details-page';
-  static const newActivityPage = '/new-activity-page';
-  static const all = {
-    mainPage,
-    feedPage,
-    activityDetailsPage,
-    newActivityPage,
-  };
-}
+import '../api/models/activity.dart' as _i7;
+import '../features/activity_details/presentation/activity_details_page.dart'
+    as _i4;
+import '../features/application/main_page.dart' as _i2;
+import '../features/feed/presentation/feed_page.dart' as _i3;
+import '../features/new_activity/presentation/new_activity_page.dart' as _i5;
 
-class Router extends RouterBase {
-  @override
-  Set<String> get allRoutes => Routes.all;
-
-  @Deprecated('call ExtendedNavigator.ofRouter<Router>() directly')
-  static ExtendedNavigatorState get navigator =>
-      ExtendedNavigator.ofRouter<Router>();
+class GoRouter extends _i1.RootStackRouter {
+  GoRouter();
 
   @override
-  Route<dynamic> onGenerateRoute(RouteSettings settings) {
-    final args = settings.arguments;
-    switch (settings.name) {
-      case Routes.mainPage:
-        if (hasInvalidArgs<MainPageArguments>(args)) {
-          return misTypedArgsRoute<MainPageArguments>(args);
-        }
-        final typedArgs = args as MainPageArguments ?? MainPageArguments();
-        return MaterialPageRoute<dynamic>(
-          builder: (context) => MainPage(key: typedArgs.key),
-          settings: settings,
-        );
-      case Routes.feedPage:
-        if (hasInvalidArgs<FeedPageArguments>(args)) {
-          return misTypedArgsRoute<FeedPageArguments>(args);
-        }
-        final typedArgs = args as FeedPageArguments ?? FeedPageArguments();
-        return MaterialPageRoute<dynamic>(
-          builder: (context) => FeedPage(key: typedArgs.key),
-          settings: settings,
-        );
-      case Routes.activityDetailsPage:
-        if (hasInvalidArgs<ActivityDetailsPageArguments>(args)) {
-          return misTypedArgsRoute<ActivityDetailsPageArguments>(args);
-        }
-        final typedArgs = args as ActivityDetailsPageArguments ??
-            ActivityDetailsPageArguments();
-        return MaterialPageRoute<dynamic>(
-          builder: (context) => ActivityDetailsPage(
-              key: typedArgs.key, activity: typedArgs.activity),
-          settings: settings,
-        );
-      case Routes.newActivityPage:
-        if (hasInvalidArgs<NewActivityPageArguments>(args)) {
-          return misTypedArgsRoute<NewActivityPageArguments>(args);
-        }
-        final typedArgs =
-            args as NewActivityPageArguments ?? NewActivityPageArguments();
-        return MaterialPageRoute<dynamic>(
-          builder: (context) =>
-              NewActivityPage(key: typedArgs.key, activity: typedArgs.activity),
-          settings: settings,
-        );
-      default:
-        return unknownRoutePage(settings.name);
+  final Map<String, _i1.PageFactory> pagesMap = {
+    MainPageRoute.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: const _i2.MainPage());
+    },
+    FeedPageRoute.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: const _i3.FeedPage());
+    },
+    ActivityDetailsPageRoute.name: (entry) {
+      var route = entry.routeData.as<ActivityDetailsPageRoute>();
+      return _i1.MaterialPageX(
+          entry: entry,
+          child: _i4.ActivityDetailsPage(
+              key: route.key, activity: route.activity));
+    },
+    NewActivityPageRoute.name: (entry) {
+      var route = entry.routeData.as<NewActivityPageRoute>();
+      return _i1.MaterialPageX(
+          entry: entry,
+          child: _i5.NewActivityPage(key: route.key, activity: route.activity));
     }
-  }
+  };
+
+  @override
+  List<_i1.RouteConfig> get routes => [
+        _i1.RouteConfig<MainPageRoute>(MainPageRoute.name,
+            path: '/', routeBuilder: (match) => MainPageRoute.fromMatch(match)),
+        _i1.RouteConfig<FeedPageRoute>(FeedPageRoute.name,
+            path: '/feed-page',
+            routeBuilder: (match) => FeedPageRoute.fromMatch(match)),
+        _i1.RouteConfig<ActivityDetailsPageRoute>(ActivityDetailsPageRoute.name,
+            path: '/activity-details-page',
+            routeBuilder: (match) => ActivityDetailsPageRoute.fromMatch(match)),
+        _i1.RouteConfig<NewActivityPageRoute>(NewActivityPageRoute.name,
+            path: '/new-activity-page',
+            routeBuilder: (match) => NewActivityPageRoute.fromMatch(match))
+      ];
 }
 
-// *************************************************************************
-// Arguments holder classes
-// **************************************************************************
+class MainPageRoute extends _i1.PageRouteInfo {
+  const MainPageRoute() : super(name, path: '/');
 
-//MainPage arguments holder class
-class MainPageArguments {
-  final Key key;
-  MainPageArguments({this.key});
+  MainPageRoute.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'MainPageRoute';
 }
 
-//FeedPage arguments holder class
-class FeedPageArguments {
-  final Key key;
-  FeedPageArguments({this.key});
+class FeedPageRoute extends _i1.PageRouteInfo {
+  const FeedPageRoute() : super(name, path: '/feed-page');
+
+  FeedPageRoute.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'FeedPageRoute';
 }
 
-//ActivityDetailsPage arguments holder class
-class ActivityDetailsPageArguments {
-  final Key key;
-  final Activity activity;
-  ActivityDetailsPageArguments({this.key, this.activity});
+class ActivityDetailsPageRoute extends _i1.PageRouteInfo {
+  ActivityDetailsPageRoute({this.key, this.activity})
+      : super(name, path: '/activity-details-page');
+
+  ActivityDetailsPageRoute.fromMatch(_i1.RouteMatch match)
+      : key = null,
+        activity = null,
+        super.fromMatch(match);
+
+  final _i6.Key key;
+
+  final _i7.Activity activity;
+
+  static const String name = 'ActivityDetailsPageRoute';
 }
 
-//NewActivityPage arguments holder class
-class NewActivityPageArguments {
-  final Key key;
-  final Activity activity;
-  NewActivityPageArguments({this.key, this.activity});
+class NewActivityPageRoute extends _i1.PageRouteInfo {
+  NewActivityPageRoute({this.key, this.activity})
+      : super(name, path: '/new-activity-page');
+
+  NewActivityPageRoute.fromMatch(_i1.RouteMatch match)
+      : key = null,
+        activity = null,
+        super.fromMatch(match);
+
+  final _i6.Key key;
+
+  final _i7.Activity activity;
+
+  static const String name = 'NewActivityPageRoute';
 }
