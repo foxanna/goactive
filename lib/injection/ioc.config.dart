@@ -28,7 +28,7 @@ import 'module.dart' as _i19; // ignore_for_file: unnecessary_lambdas
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
 _i1.GetIt $initGetIt(_i1.GetIt get,
-    {String environment, _i2.EnvironmentFilter environmentFilter}) {
+    {String? environment, _i2.EnvironmentFilter? environmentFilter}) {
   final gh = _i2.GetItHelper(get, environment, environmentFilter);
   final injectableModule = _$InjectableModule();
   gh.lazySingleton<_i3.GoActiveRouter>(() => injectableModule.router);
@@ -43,10 +43,10 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
       () => _i12.FeedApiService(httpService: get<_i4.IHttpService>()));
   gh.lazySingleton<_i13.IFeedRepository>(
       () => _i14.FeedRepository(apiService: get<_i11.IFeedApiService>()));
-  gh.factoryParam<_i15.NewActivityBloc, _i16.Activity, dynamic>((activity, _) =>
-      _i15.NewActivityBloc(
+  gh.factoryParam<_i15.NewActivityBloc, _i16.Activity?, dynamic>(
+      (activity, _) => _i15.NewActivityBloc(
           repository: get<_i13.IFeedRepository>(), activity: activity));
-  gh.factoryParam<_i17.ActivityDetailsBloc, _i16.Activity, dynamic>(
+  gh.factoryParam<_i17.ActivityDetailsBloc, _i16.Activity?, dynamic>(
       (activity, _) => _i17.ActivityDetailsBloc(
           repository: get<_i13.IFeedRepository>(), activity: activity));
   gh.factory<_i18.FeedBloc>(

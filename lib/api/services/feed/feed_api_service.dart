@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:flutter/foundation.dart';
 import 'package:goactive/api/models/activity.dart';
 import 'package:goactive/api/models/location.dart';
 import 'package:goactive/api/models/user.dart';
@@ -11,13 +10,13 @@ import 'package:injectable/injectable.dart';
 @LazySingleton(as: IFeedApiService)
 class FeedApiService implements IFeedApiService {
   const FeedApiService({
-    @required IHttpService httpService,
+    required IHttpService httpService,
   }) : _httpService = httpService;
 
   final IHttpService _httpService;
 
   @override
-  Future<Iterable<Activity>> getFeed({String lastActivityId}) async {
+  Future<Iterable<Activity>> getFeed({String? lastActivityId}) async {
     final response = await _httpService
         .get(Uri(path: '/feed', query: 'last=${lastActivityId ?? ''}'));
     final decoded = jsonDecode(response) as List;
@@ -43,6 +42,8 @@ class FeedApiService implements IFeedApiService {
       attending: 1,
       location: const Location(
         name: 'test location',
+        longitude: 20.0,
+        latitude: 30.0,
       ),
     );
   }

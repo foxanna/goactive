@@ -6,7 +6,7 @@ import 'package:goactive/features/new_activity/presentation/views/new_activity_t
 import 'package:goactive/styles/dimensions.dart';
 
 class NewActivityPageContent extends StatelessWidget {
-  const NewActivityPageContent({Key key}) : super(key: key);
+  const NewActivityPageContent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => SafeArea(

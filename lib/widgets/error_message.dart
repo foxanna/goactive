@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ErrorMessage extends StatelessWidget {
-  const ErrorMessage({Key key, this.textColor}) : super(key: key);
+  const ErrorMessage({
+    Key? key,
+    required this.textColor,
+  }) : super(key: key);
 
   final Color textColor;
 
@@ -10,7 +13,7 @@ class ErrorMessage extends StatelessWidget {
         child: Text(
           'Oops, something went wrong\nTry refreshing the page',
           textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.subtitle1.copyWith(
+          style: Theme.of(context).textTheme.subtitle1!.copyWith(
                 color: textColor,
               ),
         ),

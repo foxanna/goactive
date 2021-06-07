@@ -5,7 +5,10 @@ import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/utils/extensions/context_extensions.dart';
 
 class ActivityDetailsLocation extends StatelessWidget {
-  const ActivityDetailsLocation({Key key, this.location}) : super(key: key);
+  const ActivityDetailsLocation({
+    Key? key,
+    required this.location,
+  }) : super(key: key);
 
   final Location location;
 
@@ -22,11 +25,11 @@ class ActivityDetailsLocation extends StatelessWidget {
           child: RichText(
             text: TextSpan(
               text: location.name,
-              style: theme.textTheme.caption.copyWith(
+              style: theme.textTheme.caption!.copyWith(
                 decoration: TextDecoration.underline,
               ),
               recognizer: TapGestureRecognizer()
-                ..onTap = () => Scaffold.of(context).showSnackBar(
+                ..onTap = () => ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         content:
                             Text(translations.notImplementedFeatureNavigate),

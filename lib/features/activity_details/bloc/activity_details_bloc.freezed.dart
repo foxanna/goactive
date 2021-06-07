@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'activity_details_bloc.dart';
 
@@ -9,49 +9,53 @@ part of 'activity_details_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$ActivityDetailsEventTearOff {
   const _$ActivityDetailsEventTearOff();
 
-// ignore: unused_element
   _InterestedActivityDetailsEvent interested() {
     return const _InterestedActivityDetailsEvent();
   }
 
-// ignore: unused_element
   _AttendingActivityDetailsEvent attending() {
     return const _AttendingActivityDetailsEvent();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ActivityDetailsEvent = _$ActivityDetailsEventTearOff();
 
 /// @nodoc
 mixin _$ActivityDetailsEvent {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult interested(),
-    @required TResult attending(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() interested,
+    required TResult Function() attending,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult interested(),
-    TResult attending(),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? interested,
+    TResult Function()? attending,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult interested(_InterestedActivityDetailsEvent value),
-    @required TResult attending(_AttendingActivityDetailsEvent value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InterestedActivityDetailsEvent value) interested,
+    required TResult Function(_AttendingActivityDetailsEvent value) attending,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult interested(_InterestedActivityDetailsEvent value),
-    TResult attending(_AttendingActivityDetailsEvent value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InterestedActivityDetailsEvent value)? interested,
+    TResult Function(_AttendingActivityDetailsEvent value)? attending,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -94,6 +98,7 @@ class __$InterestedActivityDetailsEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_InterestedActivityDetailsEvent
     implements _InterestedActivityDetailsEvent {
   const _$_InterestedActivityDetailsEvent();
@@ -113,23 +118,20 @@ class _$_InterestedActivityDetailsEvent
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult interested(),
-    @required TResult attending(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() interested,
+    required TResult Function() attending,
   }) {
-    assert(interested != null);
-    assert(attending != null);
     return interested();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult interested(),
-    TResult attending(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? interested,
+    TResult Function()? attending,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (interested != null) {
       return interested();
     }
@@ -138,23 +140,20 @@ class _$_InterestedActivityDetailsEvent
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult interested(_InterestedActivityDetailsEvent value),
-    @required TResult attending(_AttendingActivityDetailsEvent value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InterestedActivityDetailsEvent value) interested,
+    required TResult Function(_AttendingActivityDetailsEvent value) attending,
   }) {
-    assert(interested != null);
-    assert(attending != null);
     return interested(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult interested(_InterestedActivityDetailsEvent value),
-    TResult attending(_AttendingActivityDetailsEvent value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InterestedActivityDetailsEvent value)? interested,
+    TResult Function(_AttendingActivityDetailsEvent value)? attending,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (interested != null) {
       return interested(this);
     }
@@ -190,6 +189,7 @@ class __$AttendingActivityDetailsEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_AttendingActivityDetailsEvent
     implements _AttendingActivityDetailsEvent {
   const _$_AttendingActivityDetailsEvent();
@@ -209,23 +209,20 @@ class _$_AttendingActivityDetailsEvent
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult interested(),
-    @required TResult attending(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() interested,
+    required TResult Function() attending,
   }) {
-    assert(interested != null);
-    assert(attending != null);
     return attending();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult interested(),
-    TResult attending(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? interested,
+    TResult Function()? attending,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (attending != null) {
       return attending();
     }
@@ -234,23 +231,20 @@ class _$_AttendingActivityDetailsEvent
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult interested(_InterestedActivityDetailsEvent value),
-    @required TResult attending(_AttendingActivityDetailsEvent value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InterestedActivityDetailsEvent value) interested,
+    required TResult Function(_AttendingActivityDetailsEvent value) attending,
   }) {
-    assert(interested != null);
-    assert(attending != null);
     return attending(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult interested(_InterestedActivityDetailsEvent value),
-    TResult attending(_AttendingActivityDetailsEvent value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InterestedActivityDetailsEvent value)? interested,
+    TResult Function(_AttendingActivityDetailsEvent value)? attending,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (attending != null) {
       return attending(this);
     }
@@ -267,8 +261,7 @@ abstract class _AttendingActivityDetailsEvent implements ActivityDetailsEvent {
 class _$ActivityDetailsStateTearOff {
   const _$ActivityDetailsStateTearOff();
 
-// ignore: unused_element
-  _ActivityDetailsState call({@required Activity activity}) {
+  _ActivityDetailsState call({required Activity activity}) {
     return _ActivityDetailsState(
       activity: activity,
     );
@@ -276,15 +269,15 @@ class _$ActivityDetailsStateTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ActivityDetailsState = _$ActivityDetailsStateTearOff();
 
 /// @nodoc
 mixin _$ActivityDetailsState {
-  Activity get activity;
+  Activity get activity => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $ActivityDetailsStateCopyWith<ActivityDetailsState> get copyWith;
+  $ActivityDetailsStateCopyWith<ActivityDetailsState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -308,18 +301,18 @@ class _$ActivityDetailsStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object activity = freezed,
+    Object? activity = freezed,
   }) {
     return _then(_value.copyWith(
-      activity: activity == freezed ? _value.activity : activity as Activity,
+      activity: activity == freezed
+          ? _value.activity
+          : activity // ignore: cast_nullable_to_non_nullable
+              as Activity,
     ));
   }
 
   @override
   $ActivityCopyWith<$Res> get activity {
-    if (_value.activity == null) {
-      return null;
-    }
     return $ActivityCopyWith<$Res>(_value.activity, (value) {
       return _then(_value.copyWith(activity: value));
     });
@@ -352,18 +345,21 @@ class __$ActivityDetailsStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object activity = freezed,
+    Object? activity = freezed,
   }) {
     return _then(_ActivityDetailsState(
-      activity: activity == freezed ? _value.activity : activity as Activity,
+      activity: activity == freezed
+          ? _value.activity
+          : activity // ignore: cast_nullable_to_non_nullable
+              as Activity,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_ActivityDetailsState implements _ActivityDetailsState {
-  const _$_ActivityDetailsState({@required this.activity})
-      : assert(activity != null);
+  const _$_ActivityDetailsState({required this.activity});
 
   @override
   final Activity activity;
@@ -394,12 +390,13 @@ class _$_ActivityDetailsState implements _ActivityDetailsState {
 }
 
 abstract class _ActivityDetailsState implements ActivityDetailsState {
-  const factory _ActivityDetailsState({@required Activity activity}) =
+  const factory _ActivityDetailsState({required Activity activity}) =
       _$_ActivityDetailsState;
 
   @override
-  Activity get activity;
+  Activity get activity => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ActivityDetailsStateCopyWith<_ActivityDetailsState> get copyWith;
+  _$ActivityDetailsStateCopyWith<_ActivityDetailsState> get copyWith =>
+      throw _privateConstructorUsedError;
 }

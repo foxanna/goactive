@@ -1,45 +1,47 @@
 name: goactive
-description: An example of mobile application developed with Flutter by Anna Domashych
+description: An example of a mobile application developed with Flutter by Anna Domashych
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.13.0 <3.0.0"
 
 dependencies:
+  auto_route: ^2.2.0
+  cached_network_image: ^3.0.0
+  dartx: ^0.7.1
   flutter:
     sdk: flutter
+  flutter_bloc: ^7.0.1
   flutter_localizations:
     sdk: flutter
-
-  auto_route: ^1.0.0-beta.10
-  cached_network_image: ^2.3.2+1
-  get_it: ^5.0.2
-  i69n: ^1.1.0
-  injectable: ^1.1.2
-  intl: ^0.16.1
-  flutter_bloc: ^6.0.5
-  shimmer: ^1.1.1
+  get_it: ^7.1.3
+  i69n: ^2.0.1
+  injectable: ^1.4.1
+  intl: ^0.17.0
+  shimmer: ^2.0.0
 
 dev_dependencies:
+  auto_route_generator: ^2.1.0
+  build_runner:
+  extra_pedantic: 1.2.0
+  flutter_launcher_icons: ^0.9.0
+#  flutter_launcher_name:
+#    git:
+#      url: https://github.com/ride4sun/flutter_launcher_name
+#      ref: "0.9.1"
   flutter_test:
     sdk: flutter
-
-  auto_route_generator: ^1.0.0-beta.11
-  build_runner:
-  extra_pedantic: ^1.2.0
-  flutter_launcher_name: ^0.0.1
-  flutter_launcher_icons: ^0.7.5
-  freezed: ^0.12.7
-  google_fonts: ^1.1.0
-  injectable_generator: ^1.1.2
-  json_serializable: ^3.5.1
-  mockito: ^4.1.1
+  freezed: ^0.14.2
+  google_fonts: ^2.1.0
+  injectable_generator: ^1.4.1
+  json_serializable: ^4.1.3
+  mocktail: ^0.1.4
 
 flutter:
   uses-material-design: true
-
-flutter_launcher_name:
-  name: "GoActive!"
+#
+#flutter_launcher_name:
+#  name: "GoActive!"
 
 flutter_icons:
   android: "ic_launcher"

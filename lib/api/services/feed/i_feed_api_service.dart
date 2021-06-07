@@ -1,7 +1,7 @@
 import 'package:goactive/api/models/activity.dart';
 
 abstract class IFeedApiService {
-  Future<Iterable<Activity>> getFeed({String lastActivityId});
+  Future<Iterable<Activity>> getFeed({String? lastActivityId});
 
   Future<Activity> createActivity(Activity activity);
 }

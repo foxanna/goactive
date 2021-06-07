@@ -1,14 +1,14 @@
 part of 'new_activity_bloc.dart';
 
 @freezed
-abstract class NewActivityEvent with _$NewActivityEvent {
+class NewActivityEvent with _$NewActivityEvent {
   const factory NewActivityEvent.create() = _CreateNewActivityEvent;
 
   const factory NewActivityEvent.updateTitle({
-    @required String title,
+    required String title,
   }) = _UpdateTitleNewActivityEvent;
 
   const factory NewActivityEvent.updateDetails({
-    @required String details,
+    required String details,
   }) = _UpdateDetailsNewActivityEvent;
 }

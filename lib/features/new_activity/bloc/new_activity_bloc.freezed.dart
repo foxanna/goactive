@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'new_activity_bloc.dart';
 
@@ -9,24 +9,24 @@ part of 'new_activity_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$NewActivityEventTearOff {
   const _$NewActivityEventTearOff();
 
-// ignore: unused_element
   _CreateNewActivityEvent create() {
     return const _CreateNewActivityEvent();
   }
 
-// ignore: unused_element
-  _UpdateTitleNewActivityEvent updateTitle({@required String title}) {
+  _UpdateTitleNewActivityEvent updateTitle({required String title}) {
     return _UpdateTitleNewActivityEvent(
       title: title,
     );
   }
 
-// ignore: unused_element
-  _UpdateDetailsNewActivityEvent updateDetails({@required String details}) {
+  _UpdateDetailsNewActivityEvent updateDetails({required String details}) {
     return _UpdateDetailsNewActivityEvent(
       details: details,
     );
@@ -34,37 +34,41 @@ class _$NewActivityEventTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $NewActivityEvent = _$NewActivityEventTearOff();
 
 /// @nodoc
 mixin _$NewActivityEvent {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult create(),
-    @required TResult updateTitle(String title),
-    @required TResult updateDetails(String details),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() create,
+    required TResult Function(String title) updateTitle,
+    required TResult Function(String details) updateDetails,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult create(),
-    TResult updateTitle(String title),
-    TResult updateDetails(String details),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? create,
+    TResult Function(String title)? updateTitle,
+    TResult Function(String details)? updateDetails,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult create(_CreateNewActivityEvent value),
-    @required TResult updateTitle(_UpdateTitleNewActivityEvent value),
-    @required TResult updateDetails(_UpdateDetailsNewActivityEvent value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CreateNewActivityEvent value) create,
+    required TResult Function(_UpdateTitleNewActivityEvent value) updateTitle,
+    required TResult Function(_UpdateDetailsNewActivityEvent value)
+        updateDetails,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult create(_CreateNewActivityEvent value),
-    TResult updateTitle(_UpdateTitleNewActivityEvent value),
-    TResult updateDetails(_UpdateDetailsNewActivityEvent value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CreateNewActivityEvent value)? create,
+    TResult Function(_UpdateTitleNewActivityEvent value)? updateTitle,
+    TResult Function(_UpdateDetailsNewActivityEvent value)? updateDetails,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -104,6 +108,7 @@ class __$CreateNewActivityEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_CreateNewActivityEvent implements _CreateNewActivityEvent {
   const _$_CreateNewActivityEvent();
 
@@ -122,26 +127,22 @@ class _$_CreateNewActivityEvent implements _CreateNewActivityEvent {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult create(),
-    @required TResult updateTitle(String title),
-    @required TResult updateDetails(String details),
+  TResult when<TResult extends Object?>({
+    required TResult Function() create,
+    required TResult Function(String title) updateTitle,
+    required TResult Function(String details) updateDetails,
   }) {
-    assert(create != null);
-    assert(updateTitle != null);
-    assert(updateDetails != null);
     return create();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult create(),
-    TResult updateTitle(String title),
-    TResult updateDetails(String details),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? create,
+    TResult Function(String title)? updateTitle,
+    TResult Function(String details)? updateDetails,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (create != null) {
       return create();
     }
@@ -150,26 +151,23 @@ class _$_CreateNewActivityEvent implements _CreateNewActivityEvent {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult create(_CreateNewActivityEvent value),
-    @required TResult updateTitle(_UpdateTitleNewActivityEvent value),
-    @required TResult updateDetails(_UpdateDetailsNewActivityEvent value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CreateNewActivityEvent value) create,
+    required TResult Function(_UpdateTitleNewActivityEvent value) updateTitle,
+    required TResult Function(_UpdateDetailsNewActivityEvent value)
+        updateDetails,
   }) {
-    assert(create != null);
-    assert(updateTitle != null);
-    assert(updateDetails != null);
     return create(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult create(_CreateNewActivityEvent value),
-    TResult updateTitle(_UpdateTitleNewActivityEvent value),
-    TResult updateDetails(_UpdateDetailsNewActivityEvent value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CreateNewActivityEvent value)? create,
+    TResult Function(_UpdateTitleNewActivityEvent value)? updateTitle,
+    TResult Function(_UpdateDetailsNewActivityEvent value)? updateDetails,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (create != null) {
       return create(this);
     }
@@ -205,18 +203,21 @@ class __$UpdateTitleNewActivityEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object title = freezed,
+    Object? title = freezed,
   }) {
     return _then(_UpdateTitleNewActivityEvent(
-      title: title == freezed ? _value.title : title as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_UpdateTitleNewActivityEvent implements _UpdateTitleNewActivityEvent {
-  const _$_UpdateTitleNewActivityEvent({@required this.title})
-      : assert(title != null);
+  const _$_UpdateTitleNewActivityEvent({required this.title});
 
   @override
   final String title;
@@ -246,26 +247,22 @@ class _$_UpdateTitleNewActivityEvent implements _UpdateTitleNewActivityEvent {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult create(),
-    @required TResult updateTitle(String title),
-    @required TResult updateDetails(String details),
+  TResult when<TResult extends Object?>({
+    required TResult Function() create,
+    required TResult Function(String title) updateTitle,
+    required TResult Function(String details) updateDetails,
   }) {
-    assert(create != null);
-    assert(updateTitle != null);
-    assert(updateDetails != null);
     return updateTitle(title);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult create(),
-    TResult updateTitle(String title),
-    TResult updateDetails(String details),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? create,
+    TResult Function(String title)? updateTitle,
+    TResult Function(String details)? updateDetails,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (updateTitle != null) {
       return updateTitle(title);
     }
@@ -274,26 +271,23 @@ class _$_UpdateTitleNewActivityEvent implements _UpdateTitleNewActivityEvent {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult create(_CreateNewActivityEvent value),
-    @required TResult updateTitle(_UpdateTitleNewActivityEvent value),
-    @required TResult updateDetails(_UpdateDetailsNewActivityEvent value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CreateNewActivityEvent value) create,
+    required TResult Function(_UpdateTitleNewActivityEvent value) updateTitle,
+    required TResult Function(_UpdateDetailsNewActivityEvent value)
+        updateDetails,
   }) {
-    assert(create != null);
-    assert(updateTitle != null);
-    assert(updateDetails != null);
     return updateTitle(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult create(_CreateNewActivityEvent value),
-    TResult updateTitle(_UpdateTitleNewActivityEvent value),
-    TResult updateDetails(_UpdateDetailsNewActivityEvent value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CreateNewActivityEvent value)? create,
+    TResult Function(_UpdateTitleNewActivityEvent value)? updateTitle,
+    TResult Function(_UpdateDetailsNewActivityEvent value)? updateDetails,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (updateTitle != null) {
       return updateTitle(this);
     }
@@ -302,13 +296,13 @@ class _$_UpdateTitleNewActivityEvent implements _UpdateTitleNewActivityEvent {
 }
 
 abstract class _UpdateTitleNewActivityEvent implements NewActivityEvent {
-  const factory _UpdateTitleNewActivityEvent({@required String title}) =
+  const factory _UpdateTitleNewActivityEvent({required String title}) =
       _$_UpdateTitleNewActivityEvent;
 
-  String get title;
+  String get title => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$UpdateTitleNewActivityEventCopyWith<_UpdateTitleNewActivityEvent>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -335,19 +329,22 @@ class __$UpdateDetailsNewActivityEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object details = freezed,
+    Object? details = freezed,
   }) {
     return _then(_UpdateDetailsNewActivityEvent(
-      details: details == freezed ? _value.details : details as String,
+      details: details == freezed
+          ? _value.details
+          : details // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_UpdateDetailsNewActivityEvent
     implements _UpdateDetailsNewActivityEvent {
-  const _$_UpdateDetailsNewActivityEvent({@required this.details})
-      : assert(details != null);
+  const _$_UpdateDetailsNewActivityEvent({required this.details});
 
   @override
   final String details;
@@ -377,26 +374,22 @@ class _$_UpdateDetailsNewActivityEvent
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult create(),
-    @required TResult updateTitle(String title),
-    @required TResult updateDetails(String details),
+  TResult when<TResult extends Object?>({
+    required TResult Function() create,
+    required TResult Function(String title) updateTitle,
+    required TResult Function(String details) updateDetails,
   }) {
-    assert(create != null);
-    assert(updateTitle != null);
-    assert(updateDetails != null);
     return updateDetails(details);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult create(),
-    TResult updateTitle(String title),
-    TResult updateDetails(String details),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? create,
+    TResult Function(String title)? updateTitle,
+    TResult Function(String details)? updateDetails,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (updateDetails != null) {
       return updateDetails(details);
     }
@@ -405,26 +398,23 @@ class _$_UpdateDetailsNewActivityEvent
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult create(_CreateNewActivityEvent value),
-    @required TResult updateTitle(_UpdateTitleNewActivityEvent value),
-    @required TResult updateDetails(_UpdateDetailsNewActivityEvent value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CreateNewActivityEvent value) create,
+    required TResult Function(_UpdateTitleNewActivityEvent value) updateTitle,
+    required TResult Function(_UpdateDetailsNewActivityEvent value)
+        updateDetails,
   }) {
-    assert(create != null);
-    assert(updateTitle != null);
-    assert(updateDetails != null);
     return updateDetails(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult create(_CreateNewActivityEvent value),
-    TResult updateTitle(_UpdateTitleNewActivityEvent value),
-    TResult updateDetails(_UpdateDetailsNewActivityEvent value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CreateNewActivityEvent value)? create,
+    TResult Function(_UpdateTitleNewActivityEvent value)? updateTitle,
+    TResult Function(_UpdateDetailsNewActivityEvent value)? updateDetails,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (updateDetails != null) {
       return updateDetails(this);
     }
@@ -433,35 +423,32 @@ class _$_UpdateDetailsNewActivityEvent
 }
 
 abstract class _UpdateDetailsNewActivityEvent implements NewActivityEvent {
-  const factory _UpdateDetailsNewActivityEvent({@required String details}) =
+  const factory _UpdateDetailsNewActivityEvent({required String details}) =
       _$_UpdateDetailsNewActivityEvent;
 
-  String get details;
+  String get details => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$UpdateDetailsNewActivityEventCopyWith<_UpdateDetailsNewActivityEvent>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 class _$NewActivityStateTearOff {
   const _$NewActivityStateTearOff();
 
-// ignore: unused_element
-  EditingNewActivityState editing({@required Activity activity}) {
+  EditingNewActivityState editing({required Activity activity}) {
     return EditingNewActivityState(
       activity: activity,
     );
   }
 
-// ignore: unused_element
-  CreatingNewActivityState creating({@required Activity activity}) {
+  CreatingNewActivityState creating({required Activity activity}) {
     return CreatingNewActivityState(
       activity: activity,
     );
   }
 
-// ignore: unused_element
-  CreatedNewActivityState created({@required Activity activity}) {
+  CreatedNewActivityState created({required Activity activity}) {
     return CreatedNewActivityState(
       activity: activity,
     );
@@ -469,42 +456,46 @@ class _$NewActivityStateTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $NewActivityState = _$NewActivityStateTearOff();
 
 /// @nodoc
 mixin _$NewActivityState {
-  Activity get activity;
+  Activity get activity => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult editing(Activity activity),
-    @required TResult creating(Activity activity),
-    @required TResult created(Activity activity),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(Activity activity) editing,
+    required TResult Function(Activity activity) creating,
+    required TResult Function(Activity activity) created,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult editing(Activity activity),
-    TResult creating(Activity activity),
-    TResult created(Activity activity),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Activity activity)? editing,
+    TResult Function(Activity activity)? creating,
+    TResult Function(Activity activity)? created,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult editing(EditingNewActivityState value),
-    @required TResult creating(CreatingNewActivityState value),
-    @required TResult created(CreatedNewActivityState value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(EditingNewActivityState value) editing,
+    required TResult Function(CreatingNewActivityState value) creating,
+    required TResult Function(CreatedNewActivityState value) created,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult editing(EditingNewActivityState value),
-    TResult creating(CreatingNewActivityState value),
-    TResult created(CreatedNewActivityState value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EditingNewActivityState value)? editing,
+    TResult Function(CreatingNewActivityState value)? creating,
+    TResult Function(CreatedNewActivityState value)? created,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $NewActivityStateCopyWith<NewActivityState> get copyWith;
+  $NewActivityStateCopyWith<NewActivityState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -528,18 +519,18 @@ class _$NewActivityStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object activity = freezed,
+    Object? activity = freezed,
   }) {
     return _then(_value.copyWith(
-      activity: activity == freezed ? _value.activity : activity as Activity,
+      activity: activity == freezed
+          ? _value.activity
+          : activity // ignore: cast_nullable_to_non_nullable
+              as Activity,
     ));
   }
 
   @override
   $ActivityCopyWith<$Res> get activity {
-    if (_value.activity == null) {
-      return null;
-    }
     return $ActivityCopyWith<$Res>(_value.activity, (value) {
       return _then(_value.copyWith(activity: value));
     });
@@ -572,18 +563,21 @@ class _$EditingNewActivityStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object activity = freezed,
+    Object? activity = freezed,
   }) {
     return _then(EditingNewActivityState(
-      activity: activity == freezed ? _value.activity : activity as Activity,
+      activity: activity == freezed
+          ? _value.activity
+          : activity // ignore: cast_nullable_to_non_nullable
+              as Activity,
     ));
   }
 }
 
 /// @nodoc
+
 class _$EditingNewActivityState implements EditingNewActivityState {
-  const _$EditingNewActivityState({@required this.activity})
-      : assert(activity != null);
+  const _$EditingNewActivityState({required this.activity});
 
   @override
   final Activity activity;
@@ -614,26 +608,22 @@ class _$EditingNewActivityState implements EditingNewActivityState {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult editing(Activity activity),
-    @required TResult creating(Activity activity),
-    @required TResult created(Activity activity),
+  TResult when<TResult extends Object?>({
+    required TResult Function(Activity activity) editing,
+    required TResult Function(Activity activity) creating,
+    required TResult Function(Activity activity) created,
   }) {
-    assert(editing != null);
-    assert(creating != null);
-    assert(created != null);
     return editing(activity);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult editing(Activity activity),
-    TResult creating(Activity activity),
-    TResult created(Activity activity),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Activity activity)? editing,
+    TResult Function(Activity activity)? creating,
+    TResult Function(Activity activity)? created,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (editing != null) {
       return editing(activity);
     }
@@ -642,26 +632,22 @@ class _$EditingNewActivityState implements EditingNewActivityState {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult editing(EditingNewActivityState value),
-    @required TResult creating(CreatingNewActivityState value),
-    @required TResult created(CreatedNewActivityState value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(EditingNewActivityState value) editing,
+    required TResult Function(CreatingNewActivityState value) creating,
+    required TResult Function(CreatedNewActivityState value) created,
   }) {
-    assert(editing != null);
-    assert(creating != null);
-    assert(created != null);
     return editing(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult editing(EditingNewActivityState value),
-    TResult creating(CreatingNewActivityState value),
-    TResult created(CreatedNewActivityState value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EditingNewActivityState value)? editing,
+    TResult Function(CreatingNewActivityState value)? creating,
+    TResult Function(CreatedNewActivityState value)? created,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (editing != null) {
       return editing(this);
     }
@@ -670,14 +656,15 @@ class _$EditingNewActivityState implements EditingNewActivityState {
 }
 
 abstract class EditingNewActivityState implements NewActivityState {
-  const factory EditingNewActivityState({@required Activity activity}) =
+  const factory EditingNewActivityState({required Activity activity}) =
       _$EditingNewActivityState;
 
   @override
-  Activity get activity;
+  Activity get activity => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $EditingNewActivityStateCopyWith<EditingNewActivityState> get copyWith;
+  $EditingNewActivityStateCopyWith<EditingNewActivityState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -707,18 +694,21 @@ class _$CreatingNewActivityStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object activity = freezed,
+    Object? activity = freezed,
   }) {
     return _then(CreatingNewActivityState(
-      activity: activity == freezed ? _value.activity : activity as Activity,
+      activity: activity == freezed
+          ? _value.activity
+          : activity // ignore: cast_nullable_to_non_nullable
+              as Activity,
     ));
   }
 }
 
 /// @nodoc
+
 class _$CreatingNewActivityState implements CreatingNewActivityState {
-  const _$CreatingNewActivityState({@required this.activity})
-      : assert(activity != null);
+  const _$CreatingNewActivityState({required this.activity});
 
   @override
   final Activity activity;
@@ -749,26 +739,22 @@ class _$CreatingNewActivityState implements CreatingNewActivityState {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult editing(Activity activity),
-    @required TResult creating(Activity activity),
-    @required TResult created(Activity activity),
+  TResult when<TResult extends Object?>({
+    required TResult Function(Activity activity) editing,
+    required TResult Function(Activity activity) creating,
+    required TResult Function(Activity activity) created,
   }) {
-    assert(editing != null);
-    assert(creating != null);
-    assert(created != null);
     return creating(activity);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult editing(Activity activity),
-    TResult creating(Activity activity),
-    TResult created(Activity activity),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Activity activity)? editing,
+    TResult Function(Activity activity)? creating,
+    TResult Function(Activity activity)? created,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (creating != null) {
       return creating(activity);
     }
@@ -777,26 +763,22 @@ class _$CreatingNewActivityState implements CreatingNewActivityState {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult editing(EditingNewActivityState value),
-    @required TResult creating(CreatingNewActivityState value),
-    @required TResult created(CreatedNewActivityState value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(EditingNewActivityState value) editing,
+    required TResult Function(CreatingNewActivityState value) creating,
+    required TResult Function(CreatedNewActivityState value) created,
   }) {
-    assert(editing != null);
-    assert(creating != null);
-    assert(created != null);
     return creating(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult editing(EditingNewActivityState value),
-    TResult creating(CreatingNewActivityState value),
-    TResult created(CreatedNewActivityState value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EditingNewActivityState value)? editing,
+    TResult Function(CreatingNewActivityState value)? creating,
+    TResult Function(CreatedNewActivityState value)? created,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (creating != null) {
       return creating(this);
     }
@@ -805,14 +787,15 @@ class _$CreatingNewActivityState implements CreatingNewActivityState {
 }
 
 abstract class CreatingNewActivityState implements NewActivityState {
-  const factory CreatingNewActivityState({@required Activity activity}) =
+  const factory CreatingNewActivityState({required Activity activity}) =
       _$CreatingNewActivityState;
 
   @override
-  Activity get activity;
+  Activity get activity => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $CreatingNewActivityStateCopyWith<CreatingNewActivityState> get copyWith;
+  $CreatingNewActivityStateCopyWith<CreatingNewActivityState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -841,18 +824,21 @@ class _$CreatedNewActivityStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object activity = freezed,
+    Object? activity = freezed,
   }) {
     return _then(CreatedNewActivityState(
-      activity: activity == freezed ? _value.activity : activity as Activity,
+      activity: activity == freezed
+          ? _value.activity
+          : activity // ignore: cast_nullable_to_non_nullable
+              as Activity,
     ));
   }
 }
 
 /// @nodoc
+
 class _$CreatedNewActivityState implements CreatedNewActivityState {
-  const _$CreatedNewActivityState({@required this.activity})
-      : assert(activity != null);
+  const _$CreatedNewActivityState({required this.activity});
 
   @override
   final Activity activity;
@@ -883,26 +869,22 @@ class _$CreatedNewActivityState implements CreatedNewActivityState {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult editing(Activity activity),
-    @required TResult creating(Activity activity),
-    @required TResult created(Activity activity),
+  TResult when<TResult extends Object?>({
+    required TResult Function(Activity activity) editing,
+    required TResult Function(Activity activity) creating,
+    required TResult Function(Activity activity) created,
   }) {
-    assert(editing != null);
-    assert(creating != null);
-    assert(created != null);
     return created(activity);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult editing(Activity activity),
-    TResult creating(Activity activity),
-    TResult created(Activity activity),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Activity activity)? editing,
+    TResult Function(Activity activity)? creating,
+    TResult Function(Activity activity)? created,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (created != null) {
       return created(activity);
     }
@@ -911,26 +893,22 @@ class _$CreatedNewActivityState implements CreatedNewActivityState {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult editing(EditingNewActivityState value),
-    @required TResult creating(CreatingNewActivityState value),
-    @required TResult created(CreatedNewActivityState value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(EditingNewActivityState value) editing,
+    required TResult Function(CreatingNewActivityState value) creating,
+    required TResult Function(CreatedNewActivityState value) created,
   }) {
-    assert(editing != null);
-    assert(creating != null);
-    assert(created != null);
     return created(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult editing(EditingNewActivityState value),
-    TResult creating(CreatingNewActivityState value),
-    TResult created(CreatedNewActivityState value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EditingNewActivityState value)? editing,
+    TResult Function(CreatingNewActivityState value)? creating,
+    TResult Function(CreatedNewActivityState value)? created,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (created != null) {
       return created(this);
     }
@@ -939,12 +917,13 @@ class _$CreatedNewActivityState implements CreatedNewActivityState {
 }
 
 abstract class CreatedNewActivityState implements NewActivityState {
-  const factory CreatedNewActivityState({@required Activity activity}) =
+  const factory CreatedNewActivityState({required Activity activity}) =
       _$CreatedNewActivityState;
 
   @override
-  Activity get activity;
+  Activity get activity => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $CreatedNewActivityStateCopyWith<CreatedNewActivityState> get copyWith;
+  $CreatedNewActivityStateCopyWith<CreatedNewActivityState> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -5,7 +5,7 @@ import 'package:goactive/features/new_activity/bloc/new_activity_bloc.dart';
 import 'package:goactive/utils/extensions/context_extensions.dart';
 
 class NewActivityDetails extends StatefulWidget {
-  const NewActivityDetails({Key key}) : super(key: key);
+  const NewActivityDetails({Key? key}) : super(key: key);
 
   @override
   _NewActivityDetailsState createState() => _NewActivityDetailsState();
@@ -18,9 +18,9 @@ class _NewActivityDetailsState extends State<NewActivityDetails> {
   void initState() {
     super.initState();
 
-    SchedulerBinding.instance.addPostFrameCallback((_) {
+    SchedulerBinding.instance!.addPostFrameCallback((_) {
       _textController.text =
-          context.bloc<NewActivityBloc>().state.activity.details;
+          context.read<NewActivityBloc>().state.activity.details ?? '';
     });
   }
 
@@ -36,7 +36,7 @@ class _NewActivityDetailsState extends State<NewActivityDetails> {
         controller: _textController,
         decoration: InputDecoration(labelText: context.translate().details),
         onChanged: (value) => context
-            .bloc<NewActivityBloc>()
+            .read<NewActivityBloc>()
             .add(NewActivityEvent.updateDetails(details: value)),
       );
 }

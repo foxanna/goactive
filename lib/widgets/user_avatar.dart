@@ -3,17 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:goactive/widgets/stub_user_avatar.dart';
 
 class UserAvatar extends StatelessWidget {
-  const UserAvatar({Key key, this.avatar, this.radius}) : super(key: key);
+  const UserAvatar({Key? key, this.avatar, this.radius}) : super(key: key);
 
-  final String avatar;
-  final double radius;
+  final String? avatar;
+  final double? radius;
 
   @override
   Widget build(BuildContext context) => avatar != null
       ? CircleAvatar(
           radius: radius,
-          backgroundImage: CachedNetworkImageProvider(avatar),
+          backgroundImage: CachedNetworkImageProvider(avatar!),
           backgroundColor: Theme.of(context).backgroundColor,
         )
-      : StubUserAvatar(radius: radius);
+      : radius != null
+          ? StubUserAvatar(radius: radius!)
+          : const SizedBox();
 }

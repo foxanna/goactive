@@ -7,7 +7,10 @@ import 'package:goactive/features/activity_details/presentation/views/activity_d
 import 'package:goactive/injection/ioc.dart';
 
 class ActivityDetailsPage extends StatelessWidget {
-  const ActivityDetailsPage({Key key, this.activity}) : super(key: key);
+  const ActivityDetailsPage({
+    Key? key,
+    required this.activity,
+  }) : super(key: key);
 
   final Activity activity;
 

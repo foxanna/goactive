@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:goactive/widgets/page_background.dart';
 
 class UnimplementedPage extends StatelessWidget {
-  const UnimplementedPage({Key key}) : super(key: key);
+  const UnimplementedPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -11,7 +11,7 @@ class UnimplementedPage extends StatelessWidget {
             child: Text(
               'This page is under construction',
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.subtitle1.copyWith(
+              style: Theme.of(context).textTheme.subtitle1!.copyWith(
                     color: Colors.white,
                   ),
             ),

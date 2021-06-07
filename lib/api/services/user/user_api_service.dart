@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:flutter/foundation.dart';
 import 'package:goactive/api/models/user.dart';
 import 'package:goactive/api/services/http/i_http_service.dart';
 import 'package:goactive/api/services/user/i_user_api_service.dart';
@@ -9,7 +8,7 @@ import 'package:injectable/injectable.dart';
 @LazySingleton(as: IUserApiService)
 class UserApiService implements IUserApiService {
   const UserApiService({
-    @required IHttpService httpService,
+    required IHttpService httpService,
   }) : _httpService = httpService;
 
   final IHttpService _httpService;

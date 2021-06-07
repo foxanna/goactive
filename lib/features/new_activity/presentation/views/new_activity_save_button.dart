@@ -6,7 +6,7 @@ import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/utils/extensions/context_extensions.dart';
 
 class NewActivitySaveButton extends StatelessWidget {
-  const NewActivitySaveButton({Key key}) : super(key: key);
+  const NewActivitySaveButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +22,14 @@ class NewActivitySaveButton extends StatelessWidget {
           disabledColor: Colors.white54,
           onPressed: state is EditingNewActivityState
               ? () => context
-                  .bloc<NewActivityBloc>()
+                  .read<NewActivityBloc>()
                   .add(const NewActivityEvent.create())
               : null,
           child: state is CreatingNewActivityState
               ? const CircularProgressIndicator()
               : Text(
                   translations.save,
-                  style: theme.textTheme.headline5
+                  style: theme.textTheme.headline5!
                       .copyWith(color: theme.primaryColor),
                 ),
         ),

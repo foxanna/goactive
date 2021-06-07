@@ -6,7 +6,10 @@ import 'package:goactive/utils/extensions/context_extensions.dart';
 import 'package:goactive/widgets/user_avatar.dart';
 
 class ActivityDetailsOrganizer extends StatelessWidget {
-  const ActivityDetailsOrganizer({Key key, this.organizer}) : super(key: key);
+  const ActivityDetailsOrganizer({
+    Key? key,
+    required this.organizer,
+  }) : super(key: key);
 
   final User organizer;
 
@@ -35,7 +38,7 @@ class ActivityDetailsOrganizer extends StatelessWidget {
               Icons.email,
               color: theme.primaryColor,
             ),
-            onPressed: () => Scaffold.of(context).showSnackBar(
+            onPressed: () => ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text(translations.notImplementedFeatureEmail),
               ),

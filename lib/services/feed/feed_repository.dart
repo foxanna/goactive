@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
 import 'package:goactive/api/models/activity.dart';
 import 'package:goactive/api/services/feed/i_feed_api_service.dart';
 import 'package:goactive/services/feed/i_feed_repository.dart';
@@ -9,7 +8,7 @@ import 'package:injectable/injectable.dart';
 @LazySingleton(as: IFeedRepository)
 class FeedRepository implements IFeedRepository {
   FeedRepository({
-    @required IFeedApiService apiService,
+    required IFeedApiService apiService,
   }) : _apiService = apiService;
 
   final IFeedApiService _apiService;
@@ -25,7 +24,7 @@ class FeedRepository implements IFeedRepository {
     try {
       final feed = await _apiService.getFeed(
           lastActivityId: _feedBackup.isNotEmpty ? _feedBackup.last.id : null);
-      _feedBackup.addAll(feed ?? <Activity>[]);
+      _feedBackup.addAll(feed);
       _feedController.sink.add(List.from(_feedBackup));
     } on Exception catch (e) {
       _feedController.sink.addError(e);

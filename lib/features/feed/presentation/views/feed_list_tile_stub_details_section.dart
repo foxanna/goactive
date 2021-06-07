@@ -6,7 +6,7 @@ import 'package:goactive/widgets/user_avatar.dart';
 import 'package:shimmer/shimmer.dart';
 
 class FeedListTileStubDetailsSection extends StatelessWidget {
-  const FeedListTileStubDetailsSection({Key key}) : super(key: key);
+  const FeedListTileStubDetailsSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

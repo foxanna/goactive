@@ -8,7 +8,7 @@ import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/styles/misc.dart';
 
 class ActivityDetailsPageContent extends StatelessWidget {
-  const ActivityDetailsPageContent({Key key}) : super(key: key);
+  const ActivityDetailsPageContent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) =>
@@ -25,9 +25,11 @@ class ActivityDetailsPageContent extends StatelessWidget {
                 delegate: SliverChildListDelegate(
                   [
                     ActivityDetailsStats(activity: state.activity),
-                    const SizedBox(height: defaultSpacing * 4),
-                    ActivityDetailsOrganizer(
-                        organizer: state.activity.organizer),
+                    if (state.activity.organizer != null) ...[
+                      const SizedBox(height: defaultSpacing * 4),
+                      ActivityDetailsOrganizer(
+                          organizer: state.activity.organizer!),
+                    ],
                     const SizedBox(height: defaultSpacing * 4),
                     Text(
                       state.activity.title,
@@ -36,17 +38,22 @@ class ActivityDetailsPageContent extends StatelessWidget {
                     const SizedBox(height: defaultSpacing),
                     Text(
                       dateFormat.format(state.activity.date.toLocal()),
-                      style: textTheme.bodyText2.copyWith(
-                        color: theme.textTheme.caption.color,
+                      style: textTheme.bodyText2!.copyWith(
+                        color: theme.textTheme.caption!.color,
                       ),
                     ),
-                    const SizedBox(height: defaultSpacing * 2),
-                    Text(
-                      state.activity.details,
-                      style: textTheme.subtitle1,
-                    ),
-                    const SizedBox(height: defaultSpacing * 4),
-                    ActivityDetailsLocation(location: state.activity.location),
+                    if (state.activity.details != null) ...[
+                      const SizedBox(height: defaultSpacing * 2),
+                      Text(
+                        state.activity.details!,
+                        style: textTheme.subtitle1,
+                      ),
+                    ],
+                    if (state.activity.location != null) ...[
+                      const SizedBox(height: defaultSpacing * 4),
+                      ActivityDetailsLocation(
+                          location: state.activity.location!),
+                    ],
                   ],
                 ),
               ),

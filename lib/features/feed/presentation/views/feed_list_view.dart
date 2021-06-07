@@ -6,17 +6,17 @@ import 'package:goactive/styles/dimensions.dart';
 
 class FeedListView extends StatelessWidget {
   const FeedListView({
-    Key key,
-    this.feed,
-    this.trailingStubCount = 0,
+    Key? key,
+    required this.feed,
     this.footer,
+    this.trailingStubCount = 0,
   })  : _childrenCount =
             feed.length + trailingStubCount + (footer != null ? 1 : 0),
         super(key: key);
 
   final List<Activity> feed;
   final int trailingStubCount;
-  final Widget footer;
+  final Widget? footer;
 
   final int _childrenCount;
 

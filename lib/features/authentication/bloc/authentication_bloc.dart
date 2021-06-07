@@ -14,8 +14,8 @@ part 'authentication_state.dart';
 class AuthenticationBloc
     extends Bloc<AuthenticationEvent, AuthenticationState> {
   AuthenticationBloc({
-    @required IUserRepository repository,
-  })  : _repository = repository,
+    required IUserRepository repository,
+  })   : _repository = repository,
         super(const AuthenticationState.initial());
 
   final IUserRepository _repository;

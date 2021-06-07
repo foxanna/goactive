@@ -10,7 +10,7 @@ import 'package:goactive/utils/extensions/context_extensions.dart';
 import 'package:goactive/widgets/page_background.dart';
 
 class FeedPage extends StatelessWidget {
-  const FeedPage({Key key}) : super(key: key);
+  const FeedPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => BlocProvider(

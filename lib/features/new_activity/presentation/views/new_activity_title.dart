@@ -5,7 +5,7 @@ import 'package:goactive/features/new_activity/bloc/new_activity_bloc.dart';
 import 'package:goactive/utils/extensions/context_extensions.dart';
 
 class NewActivityTitle extends StatefulWidget {
-  const NewActivityTitle({Key key}) : super(key: key);
+  const NewActivityTitle({Key? key}) : super(key: key);
 
   @override
   _NewActivityTitleState createState() => _NewActivityTitleState();
@@ -18,9 +18,9 @@ class _NewActivityTitleState extends State<NewActivityTitle> {
   void initState() {
     super.initState();
 
-    SchedulerBinding.instance.addPostFrameCallback((_) {
+    SchedulerBinding.instance!.addPostFrameCallback((_) {
       _textController.text =
-          context.bloc<NewActivityBloc>().state.activity.title;
+          context.read<NewActivityBloc>().state.activity.title;
     });
   }
 
@@ -36,7 +36,7 @@ class _NewActivityTitleState extends State<NewActivityTitle> {
         controller: _textController,
         decoration: InputDecoration(labelText: context.translate().title),
         onChanged: (value) => context
-            .bloc<NewActivityBloc>()
+            .read<NewActivityBloc>()
             .add(NewActivityEvent.updateTitle(title: value)),
       );
 }

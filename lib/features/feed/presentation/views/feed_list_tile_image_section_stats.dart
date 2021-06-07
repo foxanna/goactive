@@ -4,8 +4,10 @@ import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/styles/misc.dart';
 
 class FeedListTileImageSectionStats extends StatelessWidget {
-  const FeedListTileImageSectionStats({Key key, this.activity})
-      : super(key: key);
+  const FeedListTileImageSectionStats({
+    Key? key,
+    required this.activity,
+  }) : super(key: key);
 
   final Activity activity;
 
@@ -13,7 +15,7 @@ class FeedListTileImageSectionStats extends StatelessWidget {
   Widget build(BuildContext context) {
     const color = Colors.white;
     final textStyle =
-        Theme.of(context).textTheme.subtitle1.copyWith(color: color);
+        Theme.of(context).textTheme.subtitle1!.copyWith(color: color);
 
     return Padding(
       padding: defaultPadding / 2,

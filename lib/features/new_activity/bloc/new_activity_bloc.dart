@@ -5,6 +5,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:goactive/api/models/activity.dart';
 import 'package:goactive/services/feed/i_feed_repository.dart';
 import 'package:injectable/injectable.dart';
+import 'package:dartx/dartx.dart';
 
 part 'new_activity_bloc.freezed.dart';
 part 'new_activity_event.dart';
@@ -13,20 +14,21 @@ part 'new_activity_state.dart';
 @injectable
 class NewActivityBloc extends Bloc<NewActivityEvent, NewActivityState> {
   NewActivityBloc({
-    @required IFeedRepository repository,
-    @factoryParam @required @nullable Activity activity,
-  })  : _repository = repository,
+    required IFeedRepository repository,
+    @factoryParam required Activity? activity,
+  })   : _repository = repository,
         _initialActivity = activity,
         super(NewActivityState.editing(
           activity: activity ??
-              const Activity(
+              Activity(
                 title: '',
                 details: '',
+                date: DateTime.now(),
               ),
         ));
 
   final IFeedRepository _repository;
-  final Activity _initialActivity;
+  final Activity? _initialActivity;
 
   @override
   Stream<NewActivityState> mapEventToState(NewActivityEvent event) async* {
@@ -67,7 +69,7 @@ class NewActivityBloc extends Bloc<NewActivityEvent, NewActivityState> {
   }
 
   void validateActivity(Activity activity) {
-    if (activity.title.isEmpty || activity.details.isEmpty) {
+    if (activity.title.isNullOrEmpty || activity.details.isNullOrEmpty) {
       throw Exception();
     }
   }

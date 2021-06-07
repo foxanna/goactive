@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'location.dart';
 
@@ -8,6 +8,10 @@ part of 'location.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Location _$LocationFromJson(Map<String, dynamic> json) {
   return _Location.fromJson(json);
 }
@@ -16,11 +20,10 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
 class _$LocationTearOff {
   const _$LocationTearOff();
 
-// ignore: unused_element
   _Location call(
-      {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'latitude') double latitude,
-      @JsonKey(name: 'longitude') double longitude}) {
+      {@JsonKey(name: 'name') required String name,
+      @JsonKey(name: 'latitude') required double latitude,
+      @JsonKey(name: 'longitude') required double longitude}) {
     return _Location(
       name: name,
       latitude: latitude,
@@ -28,28 +31,27 @@ class _$LocationTearOff {
     );
   }
 
-// ignore: unused_element
   Location fromJson(Map<String, Object> json) {
     return Location.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Location = _$LocationTearOff();
 
 /// @nodoc
 mixin _$Location {
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'latitude')
-  double get latitude;
+  double get latitude => throw _privateConstructorUsedError;
   @JsonKey(name: 'longitude')
-  double get longitude;
+  double get longitude => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LocationCopyWith<Location> get copyWith;
+  $LocationCopyWith<Location> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -72,14 +74,23 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
 
   @override
   $Res call({
-    Object name = freezed,
-    Object latitude = freezed,
-    Object longitude = freezed,
+    Object? name = freezed,
+    Object? latitude = freezed,
+    Object? longitude = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
-      latitude: latitude == freezed ? _value.latitude : latitude as double,
-      longitude: longitude == freezed ? _value.longitude : longitude as double,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      latitude: latitude == freezed
+          ? _value.latitude
+          : latitude // ignore: cast_nullable_to_non_nullable
+              as double,
+      longitude: longitude == freezed
+          ? _value.longitude
+          : longitude // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -106,26 +117,34 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
-    Object latitude = freezed,
-    Object longitude = freezed,
+    Object? name = freezed,
+    Object? latitude = freezed,
+    Object? longitude = freezed,
   }) {
     return _then(_Location(
-      name: name == freezed ? _value.name : name as String,
-      latitude: latitude == freezed ? _value.latitude : latitude as double,
-      longitude: longitude == freezed ? _value.longitude : longitude as double,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      latitude: latitude == freezed
+          ? _value.latitude
+          : latitude // ignore: cast_nullable_to_non_nullable
+              as double,
+      longitude: longitude == freezed
+          ? _value.longitude
+          : longitude // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Location with DiagnosticableTreeMixin implements _Location {
   const _$_Location(
-      {@JsonKey(name: 'name') this.name,
-      @JsonKey(name: 'latitude') this.latitude,
-      @JsonKey(name: 'longitude') this.longitude});
+      {@JsonKey(name: 'name') required this.name,
+      @JsonKey(name: 'latitude') required this.latitude,
+      @JsonKey(name: 'longitude') required this.longitude});
 
   factory _$_Location.fromJson(Map<String, dynamic> json) =>
       _$_$_LocationFromJson(json);
@@ -189,22 +208,23 @@ class _$_Location with DiagnosticableTreeMixin implements _Location {
 
 abstract class _Location implements Location {
   const factory _Location(
-      {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'latitude') double latitude,
-      @JsonKey(name: 'longitude') double longitude}) = _$_Location;
+      {@JsonKey(name: 'name') required String name,
+      @JsonKey(name: 'latitude') required double latitude,
+      @JsonKey(name: 'longitude') required double longitude}) = _$_Location;
 
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
   @override
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'latitude')
-  double get latitude;
+  double get latitude => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'longitude')
-  double get longitude;
+  double get longitude => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$LocationCopyWith<_Location> get copyWith;
+  _$LocationCopyWith<_Location> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -5,12 +5,13 @@ import 'package:goactive/injection/ioc.config.dart';
 final GetIt _getIt = GetIt.instance;
 
 @injectableInit
-void configureDependencies({String environment}) =>
+void configureDependencies({String? environment}) =>
     $initGetIt(_getIt, environment: environment);
 
-T resolve<T>() => _getIt<T>();
+T resolve<T extends Object>() => _getIt<T>();
 
-T resolveWithParameter<T, TP>({TP parameter}) => _getIt<T>(param1: parameter);
+T resolveWithParameter<T extends Object, TP>({TP? parameter}) =>
+    _getIt<T>(param1: parameter);
 
 GetIt configureTestDependencies() {
   _getIt.reset();

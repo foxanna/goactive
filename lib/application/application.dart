@@ -9,7 +9,7 @@ import 'package:goactive/routes/router.gr.dart';
 import 'package:goactive/styles/theme.dart';
 
 class GoActiveApplication extends StatelessWidget {
-  const GoActiveApplication({Key key}) : super(key: key);
+  const GoActiveApplication({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => BlocProvider(

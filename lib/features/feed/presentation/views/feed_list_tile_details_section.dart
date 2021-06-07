@@ -5,7 +5,10 @@ import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/widgets/user_avatar.dart';
 
 class FeedListTileDetailsSection extends StatelessWidget {
-  const FeedListTileDetailsSection({Key key, this.activity}) : super(key: key);
+  const FeedListTileDetailsSection({
+    Key? key,
+    required this.activity,
+  }) : super(key: key);
 
   final Activity activity;
 
@@ -19,21 +22,22 @@ class FeedListTileDetailsSection extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Row(
-            children: [
-              UserAvatar(
-                avatar: activity.organizer.avatar,
-                radius: userAvatarRadius,
-              ),
-              const SizedBox(width: defaultSpacing),
-              Text(
-                activity.organizer.name,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: textTheme.caption,
-              ),
-            ],
-          ),
+          if (activity.organizer != null)
+            Row(
+              children: [
+                UserAvatar(
+                  avatar: activity.organizer!.avatar,
+                  radius: userAvatarRadius,
+                ),
+                const SizedBox(width: defaultSpacing),
+                Text(
+                  activity.organizer!.name,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: textTheme.caption,
+                ),
+              ],
+            ),
           const SizedBox(height: defaultSpacing * 2),
           Text(
             activity.title,
@@ -41,13 +45,15 @@ class FeedListTileDetailsSection extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             style: textTheme.headline5,
           ),
-          const SizedBox(height: defaultSpacing * 2),
-          Text(
-            activity.details,
-            maxLines: 3,
-            overflow: TextOverflow.ellipsis,
-            style: textTheme.bodyText2,
-          ),
+          if (activity.details != null) ...[
+            const SizedBox(height: defaultSpacing * 2),
+            Text(
+              activity.details!,
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
+              style: textTheme.bodyText2,
+            ),
+          ],
         ],
       ),
     );

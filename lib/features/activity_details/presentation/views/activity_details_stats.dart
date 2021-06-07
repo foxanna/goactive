@@ -6,7 +6,10 @@ import 'package:goactive/styles/dimensions.dart';
 import 'package:goactive/utils/extensions/context_extensions.dart';
 
 class ActivityDetailsStats extends StatelessWidget {
-  const ActivityDetailsStats({Key key, this.activity}) : super(key: key);
+  const ActivityDetailsStats({
+    Key? key,
+    required this.activity,
+  }) : super(key: key);
 
   final Activity activity;
 
@@ -23,7 +26,7 @@ class ActivityDetailsStats extends StatelessWidget {
           icon: Icon(activity.isInterested ? Icons.star : Icons.star_border,
               color: theme.primaryColor),
           onPressed: () => context
-              .bloc<ActivityDetailsBloc>()
+              .read<ActivityDetailsBloc>()
               .add(const ActivityDetailsEvent.interested()),
         ),
         Text('${activity.interested}'),
@@ -33,7 +36,7 @@ class ActivityDetailsStats extends StatelessWidget {
           icon: Icon(activity.isAttending ? Icons.check : Icons.done_outline,
               color: theme.primaryColor),
           onPressed: () => context
-              .bloc<ActivityDetailsBloc>()
+              .read<ActivityDetailsBloc>()
               .add(const ActivityDetailsEvent.attending()),
         ),
         Text('${activity.attending}'),

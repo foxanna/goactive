@@ -35,7 +35,9 @@ ThemeData createTheme() {
     cupertinoOverrideTheme: const CupertinoThemeData(
       primaryColor: Colors.white,
     ),
-    cursorColor: Colors.white,
+    textSelectionTheme: const TextSelectionThemeData(
+      cursorColor: Colors.white,
+    ),
     textTheme: GoogleFonts.ubuntuTextTheme(),
   );
 

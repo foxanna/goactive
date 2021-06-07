@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:goactive/api/models/activity.dart';
 import 'package:goactive/services/feed/feed_repository.dart';
-import 'package:mockito/mockito.dart';
+import 'package:mocktail/mocktail.dart';
 
 import '../../data_generator.dart';
 import '../../mocks.dart';
@@ -13,7 +13,7 @@ void main() {
       final expectedFeed = generateTestActivities(20);
 
       final feedApiServiceMock = FeedApiServiceMock();
-      when(feedApiServiceMock.getFeed(lastActivityId: null))
+      when(() => feedApiServiceMock.getFeed(lastActivityId: null))
           .thenAnswer((_) => Future.value(expectedFeed));
 
       final feedRepository = FeedRepository(apiService: feedApiServiceMock);
@@ -30,7 +30,7 @@ void main() {
       final expectedException = Exception();
 
       final feedApiServiceMock = FeedApiServiceMock();
-      when(feedApiServiceMock.getFeed(lastActivityId: null))
+      when(() => feedApiServiceMock.getFeed(lastActivityId: null))
           .thenAnswer((_) => Future.error(expectedException));
 
       final feedRepository = FeedRepository(apiService: feedApiServiceMock);
@@ -49,9 +49,10 @@ void main() {
           firstId: expectedFeed1.length);
 
       final feedApiServiceMock = FeedApiServiceMock();
-      when(feedApiServiceMock.getFeed(lastActivityId: null))
+      when(() => feedApiServiceMock.getFeed(lastActivityId: null))
           .thenAnswer((_) => Future.value(expectedFeed1));
-      when(feedApiServiceMock.getFeed(lastActivityId: expectedFeed1.last.id))
+      when(() =>
+              feedApiServiceMock.getFeed(lastActivityId: expectedFeed1.last.id))
           .thenAnswer((_) => Future.value(expectedFeed2));
 
       final feedRepository = FeedRepository(apiService: feedApiServiceMock);
@@ -82,9 +83,10 @@ void main() {
       ];
 
       final feedApiServiceMock = FeedApiServiceMock();
-      when(feedApiServiceMock.getFeed(lastActivityId: null))
+      when(() => feedApiServiceMock.getFeed(lastActivityId: null))
           .thenAnswer((_) => Future.value(expectedFeed1));
-      when(feedApiServiceMock.getFeed(lastActivityId: expectedFeed1.last.id))
+      when(() =>
+              feedApiServiceMock.getFeed(lastActivityId: expectedFeed1.last.id))
           .thenAnswer((_) => secondFeedCallAnswers.removeAt(0)());
 
       final feedRepository = FeedRepository(apiService: feedApiServiceMock);
@@ -115,7 +117,7 @@ void main() {
       final expectedFeed = List<Activity>.from(originalFeed)..[0] = newActivity;
 
       final feedApiServiceMock = FeedApiServiceMock();
-      when(feedApiServiceMock.getFeed(lastActivityId: null))
+      when(() => feedApiServiceMock.getFeed(lastActivityId: null))
           .thenAnswer((_) => Future.value(originalFeed));
 
       final feedRepository = FeedRepository(apiService: feedApiServiceMock);

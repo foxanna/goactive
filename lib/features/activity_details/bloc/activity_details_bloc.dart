@@ -14,10 +14,10 @@ part 'activity_details_state.dart';
 class ActivityDetailsBloc
     extends Bloc<ActivityDetailsEvent, ActivityDetailsState> {
   ActivityDetailsBloc({
-    @required IFeedRepository repository,
-    @factoryParam @required Activity activity,
-  })  : _repository = repository,
-        super(ActivityDetailsState(activity: activity));
+    required IFeedRepository repository,
+    @factoryParam required Activity? activity,
+  })   : _repository = repository,
+        super(ActivityDetailsState(activity: activity!));
 
   final IFeedRepository _repository;
 

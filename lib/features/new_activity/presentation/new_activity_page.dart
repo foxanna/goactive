@@ -8,9 +8,12 @@ import 'package:goactive/utils/extensions/context_extensions.dart';
 import 'package:goactive/widgets/page_background.dart';
 
 class NewActivityPage extends StatelessWidget {
-  const NewActivityPage({Key key, this.activity}) : super(key: key);
+  const NewActivityPage({
+    Key? key,
+    required this.activity,
+  }) : super(key: key);
 
-  final Activity activity;
+  final Activity? activity;
 
   @override
   Widget build(BuildContext context) => BlocProvider(

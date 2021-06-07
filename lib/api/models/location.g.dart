@@ -9,8 +9,8 @@ part of 'location.dart';
 _$_Location _$_$_LocationFromJson(Map<String, dynamic> json) {
   return _$_Location(
     name: json['name'] as String,
-    latitude: (json['latitude'] as num)?.toDouble(),
-    longitude: (json['longitude'] as num)?.toDouble(),
+    latitude: (json['latitude'] as num).toDouble(),
+    longitude: (json['longitude'] as num).toDouble(),
   );
 }
 

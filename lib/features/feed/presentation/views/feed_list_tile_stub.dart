@@ -3,7 +3,7 @@ import 'package:goactive/features/feed/presentation/views/feed_list_tile_stub_de
 import 'package:goactive/features/feed/presentation/views/feed_list_tile_stub_image_section.dart';
 
 class FeedListTileStub extends StatelessWidget {
-  const FeedListTileStub({Key key}) : super(key: key);
+  const FeedListTileStub({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => Card(

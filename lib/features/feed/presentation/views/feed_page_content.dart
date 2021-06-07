@@ -5,7 +5,7 @@ import 'package:goactive/features/feed/presentation/views/feed_list_view.dart';
 import 'package:goactive/widgets/error_message.dart';
 
 class FeedPageContent extends StatelessWidget {
-  const FeedPageContent({Key key}) : super(key: key);
+  const FeedPageContent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => BlocBuilder<FeedBloc, FeedState>(

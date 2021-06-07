@@ -13,8 +13,8 @@ part 'feed_bloc.freezed.dart';
 @injectable
 class FeedBloc extends Bloc<FeedEvent, FeedState> {
   FeedBloc({
-    @required IFeedRepository repository,
-  })  : _repository = repository,
+    required IFeedRepository repository,
+  })   : _repository = repository,
         super(FeedState.initial()) {
     _feedSubscription = _repository.feed.listen(
       (feed) => add(FeedEvent.updated(feed: feed)),
@@ -25,7 +25,7 @@ class FeedBloc extends Bloc<FeedEvent, FeedState> {
 
   final IFeedRepository _repository;
 
-  StreamSubscription<List<Activity>> _feedSubscription;
+  late final StreamSubscription<List<Activity>> _feedSubscription;
 
   @override
   Stream<FeedState> mapEventToState(FeedEvent event) async* {
@@ -69,6 +69,6 @@ class FeedBloc extends Bloc<FeedEvent, FeedState> {
   Future<void> close() async {
     await super.close();
 
-    await _feedSubscription?.cancel();
+    await _feedSubscription.cancel();
   }
 }

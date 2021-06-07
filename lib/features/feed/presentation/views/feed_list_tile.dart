@@ -8,7 +8,10 @@ import 'package:goactive/injection/ioc.dart';
 import 'package:goactive/routes/router.gr.dart';
 
 class FeedListTile extends StatelessWidget {
-  const FeedListTile({Key key, this.activity}) : super(key: key);
+  const FeedListTile({
+    Key? key,
+    required this.activity,
+  }) : super(key: key);
 
   final Activity activity;
 
@@ -39,9 +42,9 @@ class FeedListTile extends StatelessWidget {
       );
 
   Future<void> _onActivityTap(BuildContext context) async {
-    final state = context.bloc<AuthenticationBloc>().state;
+    final state = context.read<AuthenticationBloc>().state;
     if (state is AuthenticatedAuthenticationState &&
-        state.user.id == activity.organizer.id) {
+        state.user.id == activity.organizer?.id) {
       await resolve<GoActiveRouter>()
           .push(NewActivityPageRoute(activity: activity));
     } else {

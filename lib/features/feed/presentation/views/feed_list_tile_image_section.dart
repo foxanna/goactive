@@ -7,7 +7,10 @@ import 'package:goactive/features/feed/presentation/views/stub_activity_image.da
 import 'package:goactive/widgets/image_bottom_gradient.dart';
 
 class FeedListTileImageSection extends StatelessWidget {
-  const FeedListTileImageSection({Key key, this.activity}) : super(key: key);
+  const FeedListTileImageSection({
+    Key? key,
+    required this.activity,
+  }) : super(key: key);
 
   final Activity activity;
 
@@ -19,9 +22,9 @@ class FeedListTileImageSection extends StatelessWidget {
           children: [
             if (activity.image != null)
               Hero(
-                tag: activity.image,
+                tag: activity.image!,
                 child: CachedNetworkImage(
-                  imageUrl: activity.image,
+                  imageUrl: activity.image!,
                   fit: BoxFit.cover,
                 ),
               )

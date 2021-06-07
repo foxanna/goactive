@@ -3,7 +3,10 @@ import 'package:goactive/styles/colors.dart';
 import 'package:goactive/styles/dimensions.dart';
 
 class StubActivityImage extends StatelessWidget {
-  const StubActivityImage({Key key, this.height = 0}) : super(key: key);
+  const StubActivityImage({
+    Key? key,
+    this.height = 0,
+  }) : super(key: key);
 
   final double height;
 

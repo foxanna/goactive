@@ -3,7 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goactive/features/feed/bloc/feed_bloc.dart';
 
 class FeedPageContentContainer extends StatefulWidget {
-  const FeedPageContentContainer({Key key, this.slivers}) : super(key: key);
+  const FeedPageContentContainer({
+    Key? key,
+    required this.slivers,
+  }) : super(key: key);
 
   final List<Widget> slivers;
 
@@ -41,7 +44,7 @@ class _FeedPageContentContainerState extends State<FeedPageContentContainer> {
 
   void _loadMoreIfRequested() {
     if (_scrollController.position.extentAfter < 500) {
-      context.bloc<FeedBloc>().add(const FeedEvent.loadMoreRequested());
+      context.read<FeedBloc>().add(const FeedEvent.loadMoreRequested());
     }
   }
 }
