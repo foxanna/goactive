@@ -25,10 +25,10 @@ dev_dependencies:
   build_runner:
   extra_pedantic: 1.2.0
   flutter_launcher_icons: ^0.9.0
-#  flutter_launcher_name:
-#    git:
-#      url: https://github.com/ride4sun/flutter_launcher_name
-#      ref: "0.9.1"
+  flutter_launcher_name:
+    git:
+      url: https://github.com/ride4sun/flutter_launcher_name
+      ref: "0.9.1"
   flutter_test:
     sdk: flutter
   freezed: ^0.14.2
@@ -39,9 +39,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-#
-#flutter_launcher_name:
-#  name: "GoActive!"
+
+flutter_launcher_name:
+  name: "GoActive!"
 
 flutter_icons:
   android: "ic_launcher"
