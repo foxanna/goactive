@@ -39,6 +39,9 @@ ThemeData createTheme() {
       cursorColor: Colors.white,
     ),
     textTheme: GoogleFonts.ubuntuTextTheme(),
+    appBarTheme: const AppBarTheme(
+      brightness: Brightness.dark,
+    ),
   );
 
   return base;
