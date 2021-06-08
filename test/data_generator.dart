@@ -25,8 +25,8 @@ Activity generateTestActivity(int id) => Activity(
       organizer: generateTestUser(id),
       interested: id % 10,
       attending: id % 10,
-      isInterested: id % 2 == 0,
-      isAttending: id % 2 != 0,
+      isInterested: id.isEven,
+      isAttending: id.isOdd,
     );
 
 List<Activity> generateTestActivities(int count, {int firstId = 0}) =>
