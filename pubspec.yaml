@@ -23,7 +23,7 @@ dependencies:
 dev_dependencies:
   auto_route_generator: ^2.1.0
   build_runner:
-  extra_pedantic: 1.2.0
+  extra_pedantic: ^1.5.0
   flutter_launcher_icons: ^0.9.0
   flutter_launcher_name:
     git:
